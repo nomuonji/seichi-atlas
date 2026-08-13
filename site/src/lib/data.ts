@@ -21,6 +21,21 @@ export const photoFiles = photosManifestRaw as Record<string, { file: string }>;
 export function photoFor(locationId: string): string | null {
   return photoFiles[locationId]?.file || null;
 }
+
+// Representative photo for a work: prefers a confirmed appearance's location photo.
+export function workCover(workId: string): string | null {
+  const apprs = appearancesForWork(workId)
+    .slice()
+    .sort((a, b) => {
+      const rank = { confirmed: 0, likely: 1, disputed: 2 } as const;
+      return rank[a.confidence] - rank[b.confidence];
+    });
+  for (const a of apprs) {
+    const f = photoFor(a.location_id);
+    if (f) return f;
+  }
+  return null;
+}
 export const prefectures = prefecturesRaw as { id: string; name_en: string; name_ja: string; region: string }[];
 export const stats = statsRaw as DataBundle['stats'];
 

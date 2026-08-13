@@ -4,7 +4,7 @@ import MapExplorer from '../components/MapExplorer.astro';
 import Icon from '../components/Icon.astro';
 import Mark from '../components/Mark.astro';
 import { works, locations, appearances, stats } from '../lib/data';
-import { locationsForWork, dayTripLocationsForWork } from '../lib/data';
+import { locationsForWork, dayTripLocationsForWork, workCover } from '../lib/data';
 
 const featured = [...works]
   .sort((a, b) => {
@@ -64,12 +64,16 @@ const totalConfirmed = appearances.filter((a) => a.confidence === 'confirmed').l
             {
               featured.map((w) => {
                 const daytrip = dayTripLocationsForWork(w.id).length;
+                const cover = workCover(w.id);
                 return (
                   <li class="hero__item">
                     <a class="hero__item-link" href={`/anime/${w.slug}/`}>
-                      <span class="hero__item-title">{w.title_en}</span>
-                      <span class="hero__item-meta mono">
-                        {stats.perWork[w.id]?.total || 0} sites · {daytrip} day-trip
+                      {cover && <span class="hero__item-thumb"><img src={cover} alt="" loading="lazy" decoding="async" /></span>}
+                      <span class="hero__item-txt">
+                        <span class="hero__item-title">{w.title_en}</span>
+                        <span class="hero__item-meta mono">
+                          {stats.perWork[w.id]?.total || 0} sites · {daytrip} day-trip
+                        </span>
                       </span>
                       <Icon name="chevron-right" size={16} />
                     </a>
@@ -222,17 +226,32 @@ const totalConfirmed = appearances.filter((a) => a.confidence === 'confirmed').l
   .hero__item:first-child { border-top: 0; }
   .hero__item-link {
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 0.1rem 1rem;
+    grid-template-columns: 44px 1fr auto;
+    gap: 0.8rem;
     align-items: center;
-    padding: 0.85rem 0;
+    padding: 0.7rem 0;
     text-decoration: none;
     color: var(--text);
   }
+  .hero__item-thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--paper-sunken);
+    flex-shrink: 0;
+  }
+  .hero__item-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .hero__item-txt { display: flex; flex-direction: column; gap: 0.1rem; min-width: 0; }
   .hero__item-link:hover .hero__item-title { color: var(--accent); }
-  .hero__item-title { font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; transition: color 0.15s ease; }
+  .hero__item-title { font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; transition: color 0.15s ease; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .hero__item-meta { font-size: 0.7rem; color: var(--text-faint); }
-  .hero__item-link svg { grid-column: 2; grid-row: 1 / 3; color: var(--text-faint); }
+  .hero__item-link svg { color: var(--text-faint); }
   .hero__aside-note { font-size: 0.7rem; color: var(--text-faint); text-align: center; }
 
   @media (max-width: 1023px) {

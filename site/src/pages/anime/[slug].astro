@@ -1,7 +1,7 @@
 ﻿---
 import Base from '../../layouts/Base.astro';
 import Icon from '../../components/Icon.astro';
-import { workBySlug, locationsForWork, dayTripLocationsForWork, appearancesForWork, prefectureById, locations } from '../../lib/data';
+import { workBySlug, locationsForWork, dayTripLocationsForWork, appearancesForWork, prefectureById, locations, photoFor } from '../../lib/data';
 
 export function getStaticPaths() {
   return [...workBySlug.keys()].map((slug) => ({
@@ -71,21 +71,29 @@ const aliases = work.aliases?.filter((a) => a.toLowerCase() !== work.title_en.to
         {locs.map((l) => {
           const tf = l.travel_from?.tokyo;
           const vis = l.visitability;
+          const cover = photoFor(l.id);
           return (
             <a class="loc-card" href={`/location/${l.slug}/`}>
-              <div class="loc-card__head">
-                <span class="loc-card__name">{l.name_en}</span>
-                <span class={`badge badge--${vis}`}>{vis}</span>
-              </div>
-              <span class="loc-card__ja mono">{l.name_ja}</span>
-              <div class="loc-card__meta mono">
-                {l.nearest_station?.name_en && <span><Icon name="train" size={13} /> {l.nearest_station.name_en}</span>}
-                {tf && <span><Icon name="clock" size={13} /> {tf.minutes} min from Tokyo</span>}
-              </div>
-              <div class="loc-card__foot">
-                <span class="loc-card__cat mono">{l.category}</span>
-                {l.entry_fee === 'paid' && <span class="badge">Paid entry</span>}
-                {l.car_required && <span class="badge">Car needed</span>}
+              {cover && (
+                <div class="loc-card__media">
+                  <img class="loc-card__img" src={cover} alt="" loading="lazy" decoding="async" />
+                </div>
+              )}
+              <div class="loc-card__body">
+                <div class="loc-card__head">
+                  <span class="loc-card__name">{l.name_en}</span>
+                  <span class={`badge badge--${vis}`}>{vis}</span>
+                </div>
+                <span class="loc-card__ja mono">{l.name_ja}</span>
+                <div class="loc-card__meta mono">
+                  {l.nearest_station?.name_en && <span><Icon name="train" size={13} /> {l.nearest_station.name_en}</span>}
+                  {tf && <span><Icon name="clock" size={13} /> {tf.minutes} min from Tokyo</span>}
+                </div>
+                <div class="loc-card__foot">
+                  <span class="loc-card__cat mono">{l.category}</span>
+                  {l.entry_fee === 'paid' && <span class="badge">Paid entry</span>}
+                  {l.car_required && <span class="badge">Car needed</span>}
+                </div>
               </div>
             </a>
           );
@@ -146,17 +154,32 @@ const aliases = work.aliases?.filter((a) => a.toLowerCase() !== work.title_en.to
   .loc-card {
     display: flex;
     flex-direction: column;
-    gap: 0.35rem;
-    padding: 1.1rem 1.2rem;
+    gap: 0;
+    padding: 0;
     border: 1px solid var(--paper-line);
     border-radius: var(--r-card);
     background: var(--paper-raised);
     box-shadow: var(--shadow-card);
     text-decoration: none;
     color: var(--text);
+    overflow: hidden;
     transition: border-color 0.15s ease, transform 0.15s ease;
   }
   .loc-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .loc-card__media {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--paper-sunken);
+  }
+  .loc-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .loc-card:hover .loc-card__img { transform: scale(1.03); }
+  .loc-card__body { display: flex; flex-direction: column; gap: 0.35rem; padding: 1.1rem 1.2rem; }
   .loc-card__head { display: flex; justify-content: space-between; gap: 0.6rem; align-items: center; }
   .loc-card__name { font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; }
   .loc-card__ja { font-size: 0.75rem; color: var(--text-faint); }
