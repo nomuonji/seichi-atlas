@@ -1588,5 +1588,665 @@
         "retrieved_at": "2026-08-13T00:00:00.000Z"
       }
     ]
+  },
+  {
+    "work_id": "slam-dunk",
+    "location_id": "koshigoe-station",
+    "scene_note_en": "Stop on the Enoden line the team rides to the coast.",
+    "scene_ref": "enoden",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.japan-guide.com/e/e2155.html",
+        "type": "news",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "slam-dunk",
+    "location_id": "gokurakuji-station",
+    "scene_note_en": "Quiet Enoden stop between the temple and the sea.",
+    "scene_ref": "enoden",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.japan-guide.com/e/e2155.html",
+        "type": "news",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "slam-dunk",
+    "location_id": "hase-station",
+    "scene_note_en": "Enoden station near Hase-dera in the travel montage.",
+    "scene_ref": "enoden",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.japan-guide.com/e/e2155.html",
+        "type": "news",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "slam-dunk",
+    "location_id": "yuigahama-station",
+    "scene_note_en": "Beach-side stop on the line to Kamakura.",
+    "scene_ref": "enoden",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.japan-guide.com/e/e2155.html",
+        "type": "news",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "slam-dunk",
+    "location_id": "katase-enoshima-station",
+    "scene_note_en": "Odakyu terminus at the Enoshima causeway.",
+    "scene_ref": "enoshima",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.japan-guide.com/e/e2155.html",
+        "type": "news",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "slam-dunk",
+    "location_id": "kamakura-komachi-dori",
+    "scene_note_en": "The shopping street off Kamakura Station.",
+    "scene_ref": "kamakura",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/slam-dunk",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "steins-gate",
+    "location_id": "yanagimori-shrine",
+    "scene_note_en": "Small shrine the characters pass in the station district.",
+    "scene_ref": "akihabara",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.japan-guide.com/e/e6435.html",
+        "type": "news",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "steins-gate",
+    "location_id": "yodobashi-akiba",
+    "scene_note_en": "Electronics store beside the Electric Town exit.",
+    "scene_ref": "akihabara",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.japan-guide.com/e/e6435.html",
+        "type": "news",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "steins-gate",
+    "location_id": "manseibashi",
+    "scene_note_en": "Bridge and old station viaduct at the edge of the scenes.",
+    "scene_ref": "akihabara",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/steins-gate",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "steins-gate",
+    "location_id": "jimbocho",
+    "scene_note_en": "Book district the characters mention while exploring.",
+    "scene_ref": "town",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/steins-gate",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "weathering-with-you",
+    "location_id": "odaiba-seaside-park",
+    "scene_note_en": "Bay-side promenade under the flooded sky.",
+    "scene_ref": "bay",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/weathering-with-you",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "weathering-with-you",
+    "location_id": "shibuya-miyashita-park",
+    "scene_note_en": "Elevated park in the Shibuya montage.",
+    "scene_ref": "shibuya",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/weathering-with-you",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "kimi-no-na-wa",
+    "location_id": "odaiba-seaside-park",
+    "scene_note_en": "Bay views in the Tokyo montage.",
+    "scene_ref": "tokyo",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/kimino-na-wa",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "kimi-no-na-wa",
+    "location_id": "jimbocho",
+    "scene_note_en": "Book-town streets in the city walks.",
+    "scene_ref": "tokyo",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/kimino-na-wa",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "bocchi-the-rock",
+    "location_id": "ogi-station",
+    "scene_note_en": "Station in the band's wider neighbourhood.",
+    "scene_ref": "town",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://bocchi.rocks/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "bocchi-the-rock",
+    "location_id": "nishi-ogi-station",
+    "scene_note_en": "Stop near the girls' homes.",
+    "scene_ref": "home",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://bocchi.rocks/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "bocchi-the-rock",
+    "location_id": "meidaimae-station",
+    "scene_note_en": "Transfer hub on the route between venues.",
+    "scene_ref": "trip",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/bocchi-the-rock",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "bocchi-the-rock",
+    "location_id": "koenji-pal-shotengai",
+    "scene_note_en": "Arcade near the live-music district.",
+    "scene_ref": "live",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/bocchi-the-rock",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "girls-last-tour",
+    "location_id": "kannonzaki-park",
+    "scene_note_en": "Headland park in the coastal skyline.",
+    "scene_ref": "coast",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/girls-last-tour",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "girls-last-tour",
+    "location_id": "hodosan-mountain",
+    "scene_note_en": "Mountain visible from the coast.",
+    "scene_ref": "coast",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/girls-last-tour",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "lucky-star",
+    "location_id": "gongendo-sakura-tsutsumi",
+    "scene_note_en": "Cherry-blossom embankment in the Saitama scenery.",
+    "scene_ref": "scenery",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.washinomiya.or.jp/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "lucky-star",
+    "location_id": "satte-station",
+    "scene_note_en": "Station used to reach the surrounding towns.",
+    "scene_ref": "route",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.washinomiya.or.jp/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "whisper-of-the-heart",
+    "location_id": "takao-fudo",
+    "scene_note_en": "Temple in the hills west of the story's town.",
+    "scene_ref": "hills",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/whisper-of-the-heart",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "whisper-of-the-heart",
+    "location_id": "koganei-park",
+    "scene_note_en": "Green park in the wider Tama scenery.",
+    "scene_ref": "town",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/whisper-of-the-heart",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "whisper-of-the-heart",
+    "location_id": "ghibli-museum",
+    "scene_note_en": "Museum of the studio behind the film, in Mitaka.",
+    "scene_ref": "studio",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.ghibli.jp/works/mimi/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "anohana",
+    "location_id": "nagatoro-iwadatami",
+    "scene_note_en": "River rock terraces on the Chichibu railway line.",
+    "scene_ref": "river",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.chichibu-railway.co.jp/anohana/",
+        "type": "municipal",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "anohana",
+    "location_id": "hodosan-mountain",
+    "scene_note_en": "Mountain along the route into the valley.",
+    "scene_ref": "valley",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.chichibu-railway.co.jp/anohana/",
+        "type": "municipal",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "doraemon",
+    "location_id": "chiba-city-zoo",
+    "scene_note_en": "Zoo in the wider Kanto area the characters visit.",
+    "scene_ref": "outing",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://dora-world.com/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "oregairu",
+    "location_id": "chiba-city-zoo",
+    "scene_note_en": "Zoo in the Chiba city scenes.",
+    "scene_ref": "chiba",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/oregairu",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "love-live",
+    "location_id": "jimbocho",
+    "scene_note_en": "Book district near the school commute.",
+    "scene_ref": "commute",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/love-live",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "whisper-of-the-heart",
+    "location_id": "kunitachi-station",
+    "scene_note_en": "Historic station on the line toward the Tama hills.",
+    "scene_ref": "line",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/whisper-of-the-heart",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "kimi-no-na-wa",
+    "location_id": "kunitachi-station",
+    "scene_note_en": "Station town in the west-Tokyo montage.",
+    "scene_ref": "tokyo",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/kimino-na-wa",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "oregairu",
+    "location_id": "chiba-jinja",
+    "scene_note_en": "Shrine at the heart of the city scenes.",
+    "scene_ref": "chiba",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/oregairu",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "oregairu",
+    "location_id": "chiba-koen",
+    "scene_note_en": "Central park in the city backdrop.",
+    "scene_ref": "chiba",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/oregairu",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "oregairu",
+    "location_id": "inohana-park",
+    "scene_note_en": "Hill park near the school district.",
+    "scene_ref": "chiba",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/oregairu",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "oregairu",
+    "location_id": "chiba-port-tower",
+    "scene_note_en": "Port tower in the waterfront scenes.",
+    "scene_ref": "port",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/oregairu",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "oregairu",
+    "location_id": "inage-kaigan",
+    "scene_note_en": "Seaside park on the city's coast.",
+    "scene_ref": "coast",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/oregairu",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "suzume",
+    "location_id": "shinjuku-east-exit",
+    "scene_note_en": "The busy station exit the characters move through.",
+    "scene_ref": "tokyo",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://suzume-tojimari-movie.jp/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "suzume",
+    "location_id": "shinjuku-south-exit",
+    "scene_note_en": "South side of the station in the city scenes.",
+    "scene_ref": "tokyo",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://suzume-tojimari-movie.jp/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "suzume",
+    "location_id": "shibuya-hikarie",
+    "scene_note_en": "Tower in the Shibuya streets.",
+    "scene_ref": "shibuya",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://suzume-tojimari-movie.jp/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "suzume",
+    "location_id": "hibiya-park",
+    "scene_note_en": "Park in the central-Tokyo scenes.",
+    "scene_ref": "tokyo",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://suzume-tojimari-movie.jp/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "suzume",
+    "location_id": "yoyogi-uehara-station",
+    "scene_note_en": "Station on the characters' route.",
+    "scene_ref": "tokyo",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://suzume-tojimari-movie.jp/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "suzume",
+    "location_id": "odaiba-seaside-park",
+    "scene_note_en": "Bay-side scenes in the final act.",
+    "scene_ref": "final",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://suzume-tojimari-movie.jp/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "suzume",
+    "location_id": "tokyo-tower",
+    "scene_note_en": "Tower across the Tokyo skyline.",
+    "scene_ref": "tokyo",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://suzume-tojimari-movie.jp/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
   }
 ]

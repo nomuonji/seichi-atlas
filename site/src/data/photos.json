@@ -988,5 +988,365 @@
     "artist": "Higa4",
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Suga_Shrine,_Shinjuku_02.jpg",
     "name_ja": "須賀神社 男坂"
+  },
+  "koshigoe-station": {
+    "title": "File:Koshigoe-sta-building-2018.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Koshigoe-sta-building-2018.jpg/1280px-Koshigoe-sta-building-2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY-SA 4.0",
+    "artist": "Kansai-good",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Koshigoe-sta-building-2018.jpg",
+    "name_ja": "腰越駅"
+  },
+  "gokurakuji-station": {
+    "title": "File:Enoden-EN11-Gokurakuji-station-building-20200315-143624.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Enoden-EN11-Gokurakuji-station-building-20200315-143624.jpg/1280px-Enoden-EN11-Gokurakuji-station-building-20200315-143624.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 675,
+    "license": "CC BY-SA 4.0",
+    "artist": "LERK",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Enoden-EN11-Gokurakuji-station-building-20200315-143624.jpg",
+    "name_ja": "極楽寺駅"
+  },
+  "hase-station": {
+    "title": "File:Hase station oct 2018 22.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Hase_station_oct_2018_22.jpg/1280px-Hase_station_oct_2018_22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY-SA 4.0",
+    "artist": "Chacmool",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Hase_station_oct_2018_22.jpg",
+    "name_ja": "長谷駅"
+  },
+  "yuigahama-station": {
+    "title": "File:Enoden-EN13-Yuigahama-station-entrance-20200315-150834.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Enoden-EN13-Yuigahama-station-entrance-20200315-150834.jpg/1280px-Enoden-EN13-Yuigahama-station-entrance-20200315-150834.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 675,
+    "license": "CC BY-SA 4.0",
+    "artist": "LERK",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Enoden-EN13-Yuigahama-station-entrance-20200315-150834.jpg",
+    "name_ja": "由比ヶ浜駅"
+  },
+  "katase-enoshima-station": {
+    "title": "File:Katase-Enoshima Station 2020-03-22 (1) sa.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Katase-Enoshima_Station_2020-03-22_%281%29_sa.jpg/1280px-Katase-Enoshima_Station_2020-03-22_%281%29_sa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 800,
+    "license": "CC BY 4.0",
+    "artist": "Araisyohei",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Katase-Enoshima_Station_2020-03-22_(1)_sa.jpg",
+    "name_ja": "片瀬江ノ島駅"
+  },
+  "kamakura-komachi-dori": {
+    "title": "File:Komachi-dori Kamakura.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Komachi-dori_Kamakura.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 1200,
+    "height": 1600,
+    "license": "CC BY-SA 4.0",
+    "artist": "U-Kane",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Komachi-dori_Kamakura.jpg",
+    "name_ja": "小町通り"
+  },
+  "yanagimori-shrine": {
+    "title": "File:柳森神社の入り口.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/%E6%9F%B3%E6%A3%AE%E7%A5%9E%E7%A4%BE%E3%81%AE%E5%85%A5%E3%82%8A%E5%8F%A3.jpg/1280px-%E6%9F%B3%E6%A3%AE%E7%A5%9E%E7%A4%BE%E3%81%AE%E5%85%A5%E3%82%8A%E5%8F%A3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 800,
+    "license": "CC BY-SA 4.0",
+    "artist": "この",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:%E6%9F%B3%E6%A3%AE%E7%A5%9E%E7%A4%BE%E3%81%AE%E5%85%A5%E3%82%8A%E5%8F%A3.jpg",
+    "name_ja": "柳森神社"
+  },
+  "yodobashi-akiba": {
+    "title": "File:Yodobashi-Akiba 2015.JPG",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Yodobashi-Akiba_2015.JPG/1280px-Yodobashi-Akiba_2015.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY-SA 4.0",
+    "artist": "正和",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Yodobashi-Akiba_2015.JPG",
+    "name_ja": "ヨドバシAkiba"
+  },
+  "manseibashi": {
+    "title": "File:Manseibashi-Downside.JPG",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Manseibashi-Downside.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY-SA 3.0",
+    "artist": "妖精書士",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Manseibashi-Downside.JPG",
+    "name_ja": "万世橋"
+  },
+  "jimbocho": {
+    "title": "File:Kandajimbocho book street chiyoda 2009.JPG",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kandajimbocho_book_street_chiyoda_2009.JPG/1280px-Kandajimbocho_book_street_chiyoda_2009.JPG",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY-SA 3.0",
+    "artist": "Kamemaru2000",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Kandajimbocho_book_street_chiyoda_2009.JPG",
+    "name_ja": "神保町"
+  },
+  "odaiba-seaside-park": {
+    "title": "File:お台場海浜公園 - panoramio (16).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/%E3%81%8A%E5%8F%B0%E5%A0%B4%E6%B5%B7%E6%B5%9C%E5%85%AC%E5%9C%92_-_panoramio_%2816%29.jpg/1280px-%E3%81%8A%E5%8F%B0%E5%A0%B4%E6%B5%B7%E6%B5%9C%E5%85%AC%E5%9C%92_-_panoramio_%2816%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY 3.0",
+    "artist": "kanesue",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:%E3%81%8A%E5%8F%B0%E5%A0%B4%E6%B5%B7%E6%B5%9C%E5%85%AC%E5%9C%92_-_panoramio_(16).jpg",
+    "name_ja": "お台場海浜公園"
+  },
+  "shibuya-miyashita-park": {
+    "title": "File:Miyashita Park 200802j.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Miyashita_Park_200802j.jpg/1280px-Miyashita_Park_200802j.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 801,
+    "license": "CC BY-SA 4.0",
+    "artist": "江戸村のとくぞう",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Miyashita_Park_200802j.jpg",
+    "name_ja": "渋谷宮下公園"
+  },
+  "takao-fudo": {
+    "title": "File:高幡不動尊 不動堂.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/%E9%AB%98%E5%B9%A1%E4%B8%8D%E5%8B%95%E5%B0%8A_%E4%B8%8D%E5%8B%95%E5%A0%82.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 1200,
+    "height": 901,
+    "license": "Public domain",
+    "artist": "No machine-readable author provided. Stanislaus assumed (based on copyright claims).",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:%E9%AB%98%E5%B9%A1%E4%B8%8D%E5%8B%95%E5%B0%8A_%E4%B8%8D%E5%8B%95%E5%A0%82.jpg",
+    "name_ja": "高幡不動尊"
+  },
+  "kunitachi-station": {
+    "title": "File:Kunitachi station 2009-01-14 (1) sa.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Kunitachi_station_2009-01-14_%281%29_sa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY-SA 4.0",
+    "artist": "Syohei Arai",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Kunitachi_station_2009-01-14_(1)_sa.jpg",
+    "name_ja": "国立駅"
+  },
+  "koganei-park": {
+    "title": "File:Koganei-Park.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Koganei-Park.jpg/1280px-Koganei-Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 385,
+    "license": "CC BY 3.0",
+    "artist": "Itasan",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Koganei-Park.jpg",
+    "name_ja": "小金井公園"
+  },
+  "ghibli-museum": {
+    "title": "File:Ghibli Museum, Mitaka, Tokyo, 20240823 1131 5545.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Ghibli_Museum%2C_Mitaka%2C_Tokyo%2C_20240823_1131_5545.jpg/1280px-Ghibli_Museum%2C_Mitaka%2C_Tokyo%2C_20240823_1131_5545.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 1803,
+    "license": "CC BY 4.0",
+    "artist": "Jakub Hałun",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Ghibli_Museum,_Mitaka,_Tokyo,_20240823_1131_5545.jpg",
+    "name_ja": "三鷹の森ジブリ美術館"
+  },
+  "gongendo-sakura-tsutsumi": {
+    "title": "File:権現堂桜堤 01.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/%E6%A8%A9%E7%8F%BE%E5%A0%82%E6%A1%9C%E5%A0%A4_01.jpg/1280px-%E6%A8%A9%E7%8F%BE%E5%A0%82%E6%A1%9C%E5%A0%A4_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 800,
+    "license": "CC BY-SA 4.0",
+    "artist": "くろふね",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:%E6%A8%A9%E7%8F%BE%E5%A0%82%E6%A1%9C%E5%A0%A4_01.jpg",
+    "name_ja": "権現堂桜堤"
+  },
+  "satte-station": {
+    "title": "File:Satte Station east.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Satte_Station_east.jpg/1280px-Satte_Station_east.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY-SA 4.0",
+    "artist": "Kaze315",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Satte_Station_east.jpg",
+    "name_ja": "幸手駅"
+  },
+  "kannonzaki-park": {
+    "title": "File:Kannonzaki park 01.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kannonzaki_park_01.jpg/1280px-Kannonzaki_park_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY-SA 4.0",
+    "artist": "Quercus acuta",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Kannonzaki_park_01.jpg",
+    "name_ja": "観音崎公園"
+  },
+  "nagatoro-iwadatami": {
+    "title": "File:Nagatoro Iwadatami (1955556739).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Nagatoro_Iwadatami_%281955556739%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 1200,
+    "height": 800,
+    "license": "CC BY-SA 2.0",
+    "artist": "Yamaguchi Yoshiaki from Japan",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Nagatoro_Iwadatami_(1955556739).jpg",
+    "name_ja": "長瀞岩畳"
+  },
+  "hodosan-mountain": {
+    "title": "File:Trail of Mount Hodo 14.png",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Trail_of_Mount_Hodo_14.png/1280px-Trail_of_Mount_Hodo_14.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 1600,
+    "license": "CC BY-SA 4.0",
+    "artist": "Tmv",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Trail_of_Mount_Hodo_14.png",
+    "name_ja": "宝登山"
+  },
+  "ogi-station": {
+    "title": "File:JRE Ogikubo-STA Platform3-4.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/JRE_Ogikubo-STA_Platform3-4.jpg/1280px-JRE_Ogikubo-STA_Platform3-4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 800,
+    "license": "CC BY-SA 4.0",
+    "artist": "MaedaAkihiko",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:JRE_Ogikubo-STA_Platform3-4.jpg",
+    "name_ja": "荻窪駅"
+  },
+  "nishi-ogi-station": {
+    "title": "File:JR Chuo-Main-Line Nishi-Ogikubo Station Platform 3・4.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/JR_Chuo-Main-Line_Nishi-Ogikubo_Station_Platform_3%E3%83%BB4.jpg/1280px-JR_Chuo-Main-Line_Nishi-Ogikubo_Station_Platform_3%E3%83%BB4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 645,
+    "license": "CC BY-SA 4.0",
+    "artist": "Mister0124",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:JR_Chuo-Main-Line_Nishi-Ogikubo_Station_Platform_3%E3%83%BB4.jpg",
+    "name_ja": "西荻窪駅"
+  },
+  "meidaimae-station": {
+    "title": "File:Meidaimae-STA Central-Gate.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Meidaimae-STA_Central-Gate.jpg/1280px-Meidaimae-STA_Central-Gate.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 800,
+    "license": "CC BY-SA 4.0",
+    "artist": "MaedaAkihiko",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Meidaimae-STA_Central-Gate.jpg",
+    "name_ja": "明大前駅"
+  },
+  "koenji-pal-shotengai": {
+    "title": "File:高円寺パル商店街の上 - panoramio.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/%E9%AB%98%E5%86%86%E5%AF%BA%E3%83%91%E3%83%AB%E5%95%86%E5%BA%97%E8%A1%97%E3%81%AE%E4%B8%8A_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY-SA 3.0",
+    "artist": "tinbotu",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:%E9%AB%98%E5%86%86%E5%AF%BA%E3%83%91%E3%83%AB%E5%95%86%E5%BA%97%E8%A1%97%E3%81%AE%E4%B8%8A_-_panoramio.jpg",
+    "name_ja": "高円寺パル商店街"
+  },
+  "chiba-city-zoo": {
+    "title": "File:千葉市動物公園正門.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/%E5%8D%83%E8%91%89%E5%B8%82%E5%8B%95%E7%89%A9%E5%85%AC%E5%9C%92%E6%AD%A3%E9%96%80.jpg/1280px-%E5%8D%83%E8%91%89%E5%B8%82%E5%8B%95%E7%89%A9%E5%85%AC%E5%9C%92%E6%AD%A3%E9%96%80.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 800,
+    "license": "CC0",
+    "artist": "Misei sen",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:%E5%8D%83%E8%91%89%E5%B8%82%E5%8B%95%E7%89%A9%E5%85%AC%E5%9C%92%E6%AD%A3%E9%96%80.jpg",
+    "name_ja": "千葉市動物公園"
+  },
+  "chiba-jinja": {
+    "title": "File:千葉神社 Chiba Shrine (20838408802).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/%E5%8D%83%E8%91%89%E7%A5%9E%E7%A4%BE_Chiba_Shrine_%2820838408802%29.jpg/1280px-%E5%8D%83%E8%91%89%E7%A5%9E%E7%A4%BE_Chiba_Shrine_%2820838408802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 800,
+    "license": "CC BY 2.0",
+    "artist": "Toomore Chiang from Taipei, Taiwan",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:%E5%8D%83%E8%91%89%E7%A5%9E%E7%A4%BE_Chiba_Shrine_(20838408802).jpg",
+    "name_ja": "千葉神社"
+  },
+  "chiba-koen": {
+    "title": "File:Chiba Park with monorail.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Chiba_Park_with_monorail.jpg/1280px-Chiba_Park_with_monorail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 816,
+    "license": "CC BY-SA 3.0",
+    "artist": "掬茶",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Chiba_Park_with_monorail.jpg",
+    "name_ja": "千葉公園"
+  },
+  "inohana-park": {
+    "title": "File:Inohana8.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Inohana8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY-SA 4.0",
+    "artist": "Ibaraki101c",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Inohana8.jpg",
+    "name_ja": "亥鼻公園"
+  },
+  "chiba-port-tower": {
+    "title": "File:千葉ポートタワー01.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/%E5%8D%83%E8%91%89%E3%83%9D%E3%83%BC%E3%83%88%E3%82%BF%E3%83%AF%E3%83%BC01.jpg/1280px-%E5%8D%83%E8%91%89%E3%83%9D%E3%83%BC%E3%83%88%E3%82%BF%E3%83%AF%E3%83%BC01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 1800,
+    "license": "CC BY-SA 4.0",
+    "artist": "くろふね",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:%E5%8D%83%E8%91%89%E3%83%9D%E3%83%BC%E3%83%88%E3%82%BF%E3%83%AF%E3%83%BC01.jpg",
+    "name_ja": "千葉ポートタワー"
+  },
+  "inage-kaigan": {
+    "title": "File:稲毛海浜公園 - panoramio.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/%E7%A8%B2%E6%AF%9B%E6%B5%B7%E6%B5%9C%E5%85%AC%E5%9C%92_-_panoramio.jpg/1280px-%E7%A8%B2%E6%AF%9B%E6%B5%B7%E6%B5%9C%E5%85%AC%E5%9C%92_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY-SA 3.0",
+    "artist": "ogajud",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:%E7%A8%B2%E6%AF%9B%E6%B5%B7%E6%B5%9C%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+    "name_ja": "稲毛海浜公園"
+  },
+  "shinjuku-east-exit": {
+    "title": "File:新宿駅東口(降車) - panoramio.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/%E6%96%B0%E5%AE%BF%E9%A7%85%E6%9D%B1%E5%8F%A3%28%E9%99%8D%E8%BB%8A%29_-_panoramio.jpg/1280px-%E6%96%B0%E5%AE%BF%E9%A7%85%E6%9D%B1%E5%8F%A3%28%E9%99%8D%E8%BB%8A%29_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 795,
+    "license": "CC BY-SA 3.0",
+    "artist": "KΛNΛTΛ",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:%E6%96%B0%E5%AE%BF%E9%A7%85%E6%9D%B1%E5%8F%A3(%E9%99%8D%E8%BB%8A)_-_panoramio.jpg",
+    "name_ja": "新宿駅東口"
+  },
+  "shibuya-hikarie": {
+    "title": "File:Shibuya Hikarie Ⅱ.JPG",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Shibuya_Hikarie_%E2%85%A1.JPG/1280px-Shibuya_Hikarie_%E2%85%A1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 1827,
+    "license": "CC BY-SA 3.0",
+    "artist": "Kakidai",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Shibuya_Hikarie_%E2%85%A1.JPG",
+    "name_ja": "渋谷ヒカリエ"
+  },
+  "shinjuku-south-exit": {
+    "title": "File:Shinjuku Expressway Bus Terminal 2020.JPG",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Shinjuku_Expressway_Bus_Terminal_2020.JPG/1280px-Shinjuku_Expressway_Bus_Terminal_2020.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY 3.0",
+    "artist": "江戸前鰻 at Japanese Wikipedia\n\n This photo was taken with iPhone 11",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Shinjuku_Expressway_Bus_Terminal_2020.JPG",
+    "name_ja": "新宿駅南口"
+  },
+  "hibiya-park": {
+    "title": "File:Hibiya Park09bs3200.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Hibiya_Park09bs3200.jpg/1280px-Hibiya_Park09bs3200.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 800,
+    "license": "CC BY 2.5",
+    "artist": "663highland",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Hibiya_Park09bs3200.jpg",
+    "name_ja": "日比谷公園"
+  },
+  "yoyogi-uehara-station": {
+    "title": "File:TokyoMetro-C01-Yoyogi-uehara-station-sign-20190420-165814.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/TokyoMetro-C01-Yoyogi-uehara-station-sign-20190420-165814.jpg/1280px-TokyoMetro-C01-Yoyogi-uehara-station-sign-20190420-165814.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 675,
+    "license": "CC BY-SA 4.0",
+    "artist": "LERK",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:TokyoMetro-C01-Yoyogi-uehara-station-sign-20190420-165814.jpg",
+    "name_ja": "代々木上原駅"
   }
 }

@@ -90,11 +90,17 @@ async function checkLicense(title) {
 async function main() {
   const locations = loadLocations();
 
-  const results = {};
-  let okCount = 0;
+  // Load existing results so a rerun only fills missing photos
+  let results = {};
+  try {
+    results = JSON.parse(readFileSync(join(OUT_DIR, 'photos.json'), 'utf8'));
+  } catch { /* first run */ }
+
+  let okCount = Object.keys(results).length;
   let missCount = 0;
 
   for (const loc of locations) {
+    if (results[loc.id]) continue; // already have one
     const terms = loc.name_ja.replace(/^駅$/, '').trim();
     process.stdout.write(`${loc.id}: searching "${terms}" ... `);
 

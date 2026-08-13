@@ -213,5 +213,23 @@
     "anilist_id": 47917,
     "official_url": "https://bocchi.rocks/",
     "slug": "bocchi-the-rock"
+  },
+  {
+    "id": "suzume",
+    "title_en": "Suzume",
+    "title_ja": "すずめの戸締まり",
+    "title_romaji": "Suzume no Tojimari",
+    "aliases": [
+      "Suzume no Tojimari",
+      "Suzume",
+      "すずめ"
+    ],
+    "type": "film",
+    "year": 2022,
+    "studio": "CoMix Wave Films",
+    "mal_id": 53012,
+    "anilist_id": 143861,
+    "official_url": "https://suzume-tojimari-movie.jp/",
+    "slug": "suzume"
   }
 ]

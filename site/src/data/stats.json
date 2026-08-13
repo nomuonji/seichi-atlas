@@ -1,67 +1,72 @@
 {
-  "works": 12,
-  "locations": 100,
-  "appearances": 106,
+  "works": 13,
+  "locations": 136,
+  "appearances": 150,
   "perWork": {
     "kimi-no-na-wa": {
-      "total": 14,
-      "confirmed": 5,
-      "daytrip": 14
-    },
-    "weathering-with-you": {
-      "total": 9,
-      "confirmed": 3,
-      "daytrip": 9
-    },
-    "slam-dunk": {
       "total": 17,
-      "confirmed": 4,
+      "confirmed": 5,
       "daytrip": 17
     },
+    "weathering-with-you": {
+      "total": 11,
+      "confirmed": 5,
+      "daytrip": 11
+    },
+    "slam-dunk": {
+      "total": 23,
+      "confirmed": 9,
+      "daytrip": 23
+    },
     "steins-gate": {
+      "total": 13,
+      "confirmed": 8,
+      "daytrip": 13
+    },
+    "love-live": {
+      "total": 6,
+      "confirmed": 3,
+      "daytrip": 6
+    },
+    "anohana": {
       "total": 9,
       "confirmed": 5,
       "daytrip": 9
     },
-    "love-live": {
+    "lucky-star": {
       "total": 5,
       "confirmed": 3,
       "daytrip": 5
-    },
-    "anohana": {
-      "total": 7,
-      "confirmed": 5,
-      "daytrip": 7
-    },
-    "lucky-star": {
-      "total": 3,
-      "confirmed": 2,
-      "daytrip": 3
     },
     "oregairu": {
-      "total": 7,
-      "confirmed": 0,
-      "daytrip": 7
+      "total": 13,
+      "confirmed": 5,
+      "daytrip": 13
     },
     "girls-last-tour": {
-      "total": 5,
+      "total": 7,
       "confirmed": 3,
-      "daytrip": 5
+      "daytrip": 7
     },
     "whisper-of-the-heart": {
+      "total": 8,
+      "confirmed": 3,
+      "daytrip": 8
+    },
+    "doraemon": {
       "total": 4,
       "confirmed": 2,
       "daytrip": 4
     },
-    "doraemon": {
-      "total": 3,
-      "confirmed": 2,
-      "daytrip": 3
-    },
     "bocchi-the-rock": {
-      "total": 23,
-      "confirmed": 2,
-      "daytrip": 23
+      "total": 27,
+      "confirmed": 4,
+      "daytrip": 27
+    },
+    "suzume": {
+      "total": 7,
+      "confirmed": 5,
+      "daytrip": 7
     }
   }
 }

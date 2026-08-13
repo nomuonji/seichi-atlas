@@ -493,5 +493,185 @@
     "file": "/photos/suga-shrine-steps.jpg",
     "ext": ".jpg",
     "bytes": 464944
+  },
+  "koshigoe-station": {
+    "file": "/photos/koshigoe-station.jpg",
+    "ext": ".jpg",
+    "bytes": 188380
+  },
+  "gokurakuji-station": {
+    "file": "/photos/gokurakuji-station.jpg",
+    "ext": ".jpg",
+    "bytes": 155845
+  },
+  "hase-station": {
+    "file": "/photos/hase-station.jpg",
+    "ext": ".jpg",
+    "bytes": 205487
+  },
+  "yuigahama-station": {
+    "file": "/photos/yuigahama-station.jpg",
+    "ext": ".jpg",
+    "bytes": 137058
+  },
+  "katase-enoshima-station": {
+    "file": "/photos/katase-enoshima-station.jpg",
+    "ext": ".jpg",
+    "bytes": 67659
+  },
+  "kamakura-komachi-dori": {
+    "file": "/photos/kamakura-komachi-dori.jpg",
+    "ext": ".jpg",
+    "bytes": 114040
+  },
+  "yanagimori-shrine": {
+    "file": "/photos/yanagimori-shrine.jpg",
+    "ext": ".jpg",
+    "bytes": 191715
+  },
+  "yodobashi-akiba": {
+    "file": "/photos/yodobashi-akiba.jpg",
+    "ext": ".jpg",
+    "bytes": 148846
+  },
+  "manseibashi": {
+    "file": "/photos/manseibashi.jpg",
+    "ext": ".jpg",
+    "bytes": 85404
+  },
+  "jimbocho": {
+    "file": "/photos/jimbocho.jpg",
+    "ext": ".jpg",
+    "bytes": 220162
+  },
+  "odaiba-seaside-park": {
+    "file": "/photos/odaiba-seaside-park.jpg",
+    "ext": ".jpg",
+    "bytes": 90129
+  },
+  "shibuya-miyashita-park": {
+    "file": "/photos/shibuya-miyashita-park.jpg",
+    "ext": ".jpg",
+    "bytes": 106417
+  },
+  "takao-fudo": {
+    "file": "/photos/takao-fudo.jpg",
+    "ext": ".jpg",
+    "bytes": 40261
+  },
+  "kunitachi-station": {
+    "file": "/photos/kunitachi-station.jpg",
+    "ext": ".jpg",
+    "bytes": 60909
+  },
+  "koganei-park": {
+    "file": "/photos/koganei-park.jpg",
+    "ext": ".jpg",
+    "bytes": 67276
+  },
+  "ghibli-museum": {
+    "file": "/photos/ghibli-museum.jpg",
+    "ext": ".jpg",
+    "bytes": 430993
+  },
+  "gongendo-sakura-tsutsumi": {
+    "file": "/photos/gongendo-sakura-tsutsumi.jpg",
+    "ext": ".jpg",
+    "bytes": 169869
+  },
+  "satte-station": {
+    "file": "/photos/satte-station.jpg",
+    "ext": ".jpg",
+    "bytes": 95286
+  },
+  "kannonzaki-park": {
+    "file": "/photos/kannonzaki-park.jpg",
+    "ext": ".jpg",
+    "bytes": 123808
+  },
+  "nagatoro-iwadatami": {
+    "file": "/photos/nagatoro-iwadatami.jpg",
+    "ext": ".jpg",
+    "bytes": 65482
+  },
+  "hodosan-mountain": {
+    "file": "/photos/hodosan-mountain.jpg",
+    "ext": ".jpg",
+    "bytes": 220603
+  },
+  "ogi-station": {
+    "file": "/photos/ogi-station.jpg",
+    "ext": ".jpg",
+    "bytes": 132892
+  },
+  "nishi-ogi-station": {
+    "file": "/photos/nishi-ogi-station.jpg",
+    "ext": ".jpg",
+    "bytes": 105700
+  },
+  "meidaimae-station": {
+    "file": "/photos/meidaimae-station.jpg",
+    "ext": ".jpg",
+    "bytes": 110823
+  },
+  "koenji-pal-shotengai": {
+    "file": "/photos/koenji-pal-shotengai.jpg",
+    "ext": ".jpg",
+    "bytes": 95209
+  },
+  "chiba-city-zoo": {
+    "file": "/photos/chiba-city-zoo.jpg",
+    "ext": ".jpg",
+    "bytes": 105961
+  },
+  "chiba-jinja": {
+    "file": "/photos/chiba-jinja.jpg",
+    "ext": ".jpg",
+    "bytes": 103505
+  },
+  "chiba-koen": {
+    "file": "/photos/chiba-koen.jpg",
+    "ext": ".jpg",
+    "bytes": 119515
+  },
+  "inohana-park": {
+    "file": "/photos/inohana-park.jpg",
+    "ext": ".jpg",
+    "bytes": 187064
+  },
+  "chiba-port-tower": {
+    "file": "/photos/chiba-port-tower.jpg",
+    "ext": ".jpg",
+    "bytes": 235614
+  },
+  "inage-kaigan": {
+    "file": "/photos/inage-kaigan.jpg",
+    "ext": ".jpg",
+    "bytes": 68598
+  },
+  "shinjuku-east-exit": {
+    "file": "/photos/shinjuku-east-exit.jpg",
+    "ext": ".jpg",
+    "bytes": 104933
+  },
+  "shibuya-hikarie": {
+    "file": "/photos/shibuya-hikarie.jpg",
+    "ext": ".jpg",
+    "bytes": 262710
+  },
+  "shinjuku-south-exit": {
+    "file": "/photos/shinjuku-south-exit.jpg",
+    "ext": ".jpg",
+    "bytes": 156092
+  },
+  "hibiya-park": {
+    "file": "/photos/hibiya-park.jpg",
+    "ext": ".jpg",
+    "bytes": 129288
+  },
+  "yoyogi-uehara-station": {
+    "file": "/photos/yoyogi-uehara-station.jpg",
+    "ext": ".jpg",
+    "bytes": 77018
   }
 }
