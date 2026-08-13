@@ -41,9 +41,50 @@ function fmtDate(iso: string) {
 // Photo for this location (local file path + credit from photos.json)
 const photoFile = photoFor(loc.id);
 const photoCredit = photoFile ? (photoCredits as Record<string, { title?: string; artist?: string; license?: string; pageUrl?: string }>)[loc.id] : null;
+
+// Structured data (JSON-LD) for rich results
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristAttraction',
+  '@id': `https://seichi.antonbase.com/location/${loc.slug}/`,
+  name: loc.name_en,
+  alternateName: [loc.name_ja, loc.address_ja].filter(Boolean),
+  url: `https://seichi.antonbase.com/location/${loc.slug}/`,
+  ...(photoFile ? { image: `https://seichi.antonbase.com${photoFile}` } : {}),
+  description:
+    appr[0]?.scene_note_en ||
+    `${loc.name_en} (${loc.name_ja}) — an anime pilgrimage location in ${pref?.name_en || loc.prefecture}.`,
+  isAccessibleForFree: loc.entry_fee !== 'paid',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: loc.address_ja,
+    addressCountry: 'JP',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: loc.lat,
+    longitude: loc.lng,
+  },
+  ...(loc.nearest_station
+    ? {
+        publicAccess: {
+          '@type': 'PublicTransport',
+          name: loc.nearest_station.name_en,
+          alternateName: loc.nearest_station.name_ja,
+        },
+      }
+    : {}),
+  subjectOf: works.map((w) => ({
+    '@type': 'CreativeWork',
+    name: w.title_en,
+    alternateName: w.title_ja,
+    url: `https://seichi.antonbase.com/anime/${w.slug}/`,
+  })),
+};
 ---
 
 <Base title={loc.name_en} description={`${loc.name_en} (${loc.name_ja}): anime pilgrimage location with access details, coordinates, and travel time from Tokyo.`}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <section class="section">
     <div class="container">
       <a class="breadcrumb" href="/prefecture"><span>← Places</span></a>

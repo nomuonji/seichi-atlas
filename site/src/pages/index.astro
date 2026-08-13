@@ -15,9 +15,33 @@ const featured = [...works]
   .slice(0, 6);
 
 const totalConfirmed = appearances.filter((a) => a.confidence === 'confirmed').length;
+
+// Structured data (JSON-LD): site identity
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': 'https://seichi.antonbase.com/#website',
+      url: 'https://seichi.antonbase.com/',
+      name: 'Seichi Atlas',
+      description:
+        'An anime pilgrimage database: real locations, exact coordinates, travel time from Tokyo, and whether you can actually visit.',
+      inLanguage: 'en',
+      publisher: { '@id': 'https://seichi.antonbase.com/#org' },
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://seichi.antonbase.com/#org',
+      name: 'Seichi Atlas',
+      url: 'https://seichi.antonbase.com/',
+    },
+  ],
+};
 ---
 
 <Base title="Anime pilgrimage, mapped">
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <section class="hero section section--paper">
     <div class="hero__mesh" aria-hidden="true"></div>
     <div class="container hero__grid">

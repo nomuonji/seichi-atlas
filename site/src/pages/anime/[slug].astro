@@ -35,9 +35,30 @@ const repScenes = appr
   .slice(0, 6)
   .map((a) => ({ appr: a, loc: locations.find((l) => l.id === a.location_id)! }))
   .filter((x) => x.loc && x.appr.scene_note_en);
+
+// Structured data (JSON-LD)
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': work.type === 'film' ? 'Movie' : work.type === 'ova' ? 'Movie' : 'TVSeries',
+  '@id': `https://seichi.antonbase.com/anime/${work.slug}/`,
+  name: work.title_en,
+  alternateName: [work.title_ja, work.title_romaji, ...(work.aliases || [])].filter(Boolean),
+  url: `https://seichi.antonbase.com/anime/${work.slug}/`,
+  ...(cover ? { image: `https://seichi.antonbase.com${cover}` } : {}),
+  datePublished: String(work.year),
+  ...(work.studio ? { productionCompany: { '@type': 'Organization', name: work.studio } } : {}),
+  ...(work.official_url ? { sameAs: work.official_url } : {}),
+  ...(work.mal_id ? { identifier: `myanimelist:${work.mal_id}` } : {}),
+  about: locs.map((l) => ({
+    '@type': 'TouristAttraction',
+    '@id': `https://seichi.antonbase.com/location/${l.slug}/`,
+    name: l.name_en,
+  })),
+};
 ---
 
 <Base title={work.title_en} description={`All verified anime pilgrimage locations for ${work.title_en} (${work.title_ja}), with coordinates, travel time from Tokyo, and access notes.`}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <section class="section section--paper">
     <div class="container">
       <a class="breadcrumb" href="/anime"><span>← All series</span></a>
