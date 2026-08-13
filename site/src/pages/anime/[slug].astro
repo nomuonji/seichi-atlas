@@ -57,7 +57,7 @@ const jsonLd = {
 };
 ---
 
-<Base title={work.title_en} description={`All verified anime pilgrimage locations for ${work.title_en} (${work.title_ja}), with coordinates, travel time from Tokyo, and access notes.`}>
+<Base title={work.title_en} description={`All verified anime pilgrimage locations for ${work.title_en} (${work.title_ja}), with coordinates, travel time from Tokyo, and access notes.`} ogImage={`/og/anime-${work.slug}.png`} ogType={work.type === 'film' || work.type === 'ova' ? 'video.movie' : 'video.tv_show'}>
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <section class="section section--paper">
     <div class="container">

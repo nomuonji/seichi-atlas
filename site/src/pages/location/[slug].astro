@@ -83,7 +83,7 @@ const jsonLd = {
 };
 ---
 
-<Base title={loc.name_en} description={`${loc.name_en} (${loc.name_ja}): anime pilgrimage location with access details, coordinates, and travel time from Tokyo.`}>
+<Base title={loc.name_en} description={`${loc.name_en} (${loc.name_ja}): anime pilgrimage location with access details, coordinates, and travel time from Tokyo.`} ogImage={`/og/location-${loc.slug}.png`} ogType="article">
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <section class="section">
     <div class="container">

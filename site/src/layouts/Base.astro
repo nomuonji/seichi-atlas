@@ -17,14 +17,18 @@ import Icon from '../components/Icon.astro';
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;   // path like /og/anime-kimi-no-na-wa.png
+  ogType?: string;    // website | article | video.movie | video.tv_show
+  twitterHandle?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, ogImage = '/og/home.png', ogType = 'website' } = Astro.props;
 const siteName = 'Seichi Atlas';
 const metaDescription =
   description ||
   'An anime pilgrimage database. Real locations, exact coordinates, travel time from Tokyo, and whether you can actually visit. Day-trip routes from the places that inspired your favourite series.';
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const ogImageUrl = new URL(ogImage, Astro.site).toString();
 ---
 
 <!doctype html>
@@ -36,15 +40,21 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
     <meta name="description" content={metaDescription} />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonical} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={title ? `${title} · ${siteName}` : siteName} />
     <meta property="og:description" content={metaDescription} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={`${Astro.site}og-image.svg`} />
+    <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title ? `${title} · Seichi Atlas` : 'Seichi Atlas · anime pilgrimage, mapped'} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title ? `${title} · ${siteName}` : siteName} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:site" content="@seichiatlas" />
+    <meta name="twitter:creator" content="@seichiatlas" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="theme-color" content="#1a1d22" />
