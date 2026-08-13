@@ -1,7 +1,39 @@
 # Seichi Atlas — アニメ聖地の構造化データベース（英語圏向け）
 
 > **このファイルが入口です。** 実装者はここを読んでから `docs/` に進んでください。
-> 現状：**設計のみ完了。コードは1行も書かれていません。**
+> 現状：**Phase 0 のサイト一式・154地点のシードデータ構築済み。**
+
+---
+
+## デプロイ（GitHub → Cloudflare Pages）
+
+サイトは `site/`（Astro）にあり、データは `data/*.yaml` → ビルド時に `site/src/data/*.json` へ変換される。
+
+### GitHub 連携の設定（Cloudflare ダッシュボード）
+
+リポジトリ: `nomuonji/seichi-atlas`（public、デフォルトブランチ `main`）
+
+Cloudflare Pages で「Create project → Connect to Git → nomuonji/seichi-atlas」を選び、以下を設定:
+
+| 項目 | 値 |
+|---|---|
+| **Production branch** | `main` |
+| **Build command** | `npm run build` |
+| **Build output directory** | `dist` |
+| **Root directory** | `site` |
+
+- `npm ci`（Astro 5 + maplibre-gl + fuse.js + js-yaml + sharp）がビルド時に自動実行される
+- ビルドスクリプトは `node ../scripts/build-data.mjs && astro build`。`root directory: site` なので `../scripts/` はリポジトリの `scripts/` を指し、データ変換 → 静的生成が走る
+- 出力は `site/dist` → `dist` を指定
+- ローカルで `cd site && npm run build` が通ることを確認済み（195ページ生成）
+
+### カスタムドメイン（任意）
+
+`seichiatlas.com` を Pages プロジェクトに追加し、DNS CNAME を `seichiatlas.com -> <project>.pages.dev`（または `sub -> <project>.pages.dev`）にする。`robots.txt`・sitemap・canonical は `site: https://seichiatlas.com` を参照済み。
+
+### オフライン / PWA
+
+`public/sw.js` が Service Worker、`public/manifest.webmanifest` が PWA マニフェスト。ビルド時に `dist/` へコピーされる。
 
 ---
 
@@ -74,11 +106,13 @@ seichi-atlas/
 - [x] 設計・要件定義（このドキュメント群）
 - [x] **Phase 0 のサイト一式を構築**（2026-08-13）
   - Astro 静的サイト `site/`（地図＋フィルタ＋作品/場所/都道府県ページ）
-  - シードデータ `data/`（**12作品・100地点・106 appearance**、座標は Nominatim で裏取り）
+  - シードデータ `data/`（**13作品・154地点・172 appearance**、座標は Nominatim で裏取り）
+  - 153地点にライセンス済み Commons 写真（CC0/CC BY/CC BY-SA/PD、帰属表記つき）
   - Export route（メール収集）・About / Sources / Contact / Legal / Privacy / 404
-  - sitemap / robots / ライト＋ダーク対応のデザインシステム
-- [ ] Phase 0：150地点へのデータ拡充とタスク 0-1〜0-8
-- [ ] Phase 0 ゲート判定
+  - sitemap / robots / ライト＋ダーク対応のデザインシステム / Service Worker / PWA
+- [x] **GitHub リポジトリ公開**（`nomuonji/seichi-atlas`、main ブランチ、195ページビルド確認済み）
+- [ ] Cloudflare Pages へのデプロイ（GitHub 連携、設定値は上記「デプロイ」欄）
+- [ ] Phase 0 ゲート判定（コミュニティ投下・クリック計測）
 - [ ] Phase 1 以降
 
-**次のアクション**：`docs/60_roadmap.md` の Phase 0 タスク 0-1（データ源の実在確認）と、0-5（残り作品の収集、シード 100 地点からの拡充）。サイトは `site/` で `npm run dev` により確認できる。
+**次のアクション**：Cloudflare Pages ダッシュボードで GitHub 連携デプロイ（README の「デプロイ」欄参照）→ カスタムドメイン設定 → コミュニティ投下。
