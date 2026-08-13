@@ -1,7 +1,7 @@
 {
-  "works": 13,
-  "locations": 154,
-  "appearances": 172,
+  "works": 16,
+  "locations": 170,
+  "appearances": 188,
   "perWork": {
     "kimi-no-na-wa": {
       "total": 20,
@@ -59,14 +59,29 @@
       "daytrip": 5
     },
     "bocchi-the-rock": {
-      "total": 31,
-      "confirmed": 5,
-      "daytrip": 31
+      "total": 32,
+      "confirmed": 6,
+      "daytrip": 32
     },
     "suzume": {
       "total": 8,
       "confirmed": 5,
       "daytrip": 8
+    },
+    "kochikame": {
+      "total": 5,
+      "confirmed": 5,
+      "daytrip": 5
+    },
+    "lycoris-recoil": {
+      "total": 5,
+      "confirmed": 4,
+      "daytrip": 5
+    },
+    "jujutsu-kaisen": {
+      "total": 5,
+      "confirmed": 5,
+      "daytrip": 5
     }
   }
 }

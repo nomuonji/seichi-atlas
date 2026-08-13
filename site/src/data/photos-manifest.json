@@ -763,5 +763,85 @@
     "file": "/photos/omotesando.jpg",
     "ext": ".jpg",
     "bytes": 151970
+  },
+  "kameari-station": {
+    "file": "/photos/kameari-station.jpg",
+    "ext": ".jpg",
+    "bytes": 107446
+  },
+  "kameari-park": {
+    "file": "/photos/kameari-park.jpg",
+    "ext": ".jpg",
+    "bytes": 77784
+  },
+  "shibamata-taishakuten": {
+    "file": "/photos/shibamata-taishakuten.jpg",
+    "ext": ".jpg",
+    "bytes": 104404
+  },
+  "katsushika-katori-shrine": {
+    "file": "/photos/katsushika-katori-shrine.jpg",
+    "ext": ".jpg",
+    "bytes": 227342
+  },
+  "kanamachi-station": {
+    "file": "/photos/kanamachi-station.jpg",
+    "ext": ".jpg",
+    "bytes": 123552
+  },
+  "ryogoku-station": {
+    "file": "/photos/ryogoku-station.jpg",
+    "ext": ".jpg",
+    "bytes": 117748
+  },
+  "ryogoku-kokugikan": {
+    "file": "/photos/ryogoku-kokugikan.jpg",
+    "ext": ".jpg",
+    "bytes": 128964
+  },
+  "kuramae-station": {
+    "file": "/photos/kuramae-station.jpg",
+    "ext": ".jpg",
+    "bytes": 250457
+  },
+  "yokoami-park": {
+    "file": "/photos/yokoami-park.jpg",
+    "ext": ".jpg",
+    "bytes": 209605
+  },
+  "edo-tokyo-museum": {
+    "file": "/photos/edo-tokyo-museum.jpg",
+    "ext": ".jpg",
+    "bytes": 104005
+  },
+  "shibuya-109": {
+    "file": "/photos/shibuya-109.jpg",
+    "ext": ".jpg",
+    "bytes": 184645
+  },
+  "shibuya-center-gai": {
+    "file": "/photos/shibuya-center-gai.jpg",
+    "ext": ".jpg",
+    "bytes": 153456
+  },
+  "shinjuku-gyoen": {
+    "file": "/photos/shinjuku-gyoen.jpg",
+    "ext": ".jpg",
+    "bytes": 149931
+  },
+  "yoyogi-station-jjk": {
+    "file": "/photos/yoyogi-station-jjk.jpg",
+    "ext": ".jpg",
+    "bytes": 111710
+  },
+  "shibuya-station-east": {
+    "file": "/photos/shibuya-station-east.jpg",
+    "ext": ".jpg",
+    "bytes": 172223
+  },
+  "koenji-kita": {
+    "file": "/photos/koenji-kita.jpg",
+    "ext": ".jpg",
+    "bytes": 128665
   }
 }

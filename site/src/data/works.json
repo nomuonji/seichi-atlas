@@ -231,5 +231,59 @@
     "anilist_id": 143861,
     "official_url": "https://suzume-tojimari-movie.jp/",
     "slug": "suzume"
+  },
+  {
+    "id": "kochikame",
+    "title_en": "Kochikame: Tokyo Beat Cops",
+    "title_ja": "こちら葛飾区亀有公園前派出所",
+    "title_romaji": "Kochira Katsushika-ku Kameari Kōen-mae Hashutsujo",
+    "aliases": [
+      "Kochikame",
+      "Kochira Katsushika",
+      "Tokyo Beat Cops",
+      "Kameari"
+    ],
+    "type": "tv",
+    "year": 1996,
+    "studio": "Gallop",
+    "mal_id": 3297,
+    "anilist_id": 3297,
+    "official_url": "https://www.j-kochikame.com/",
+    "slug": "kochikame"
+  },
+  {
+    "id": "lycoris-recoil",
+    "title_en": "Lycoris Recoil",
+    "title_ja": "リコリス・リコイル",
+    "title_romaji": "Rikorisu Rikoiru",
+    "aliases": [
+      "Lycoris Recoil",
+      "Ricoil"
+    ],
+    "type": "tv",
+    "year": 2022,
+    "studio": "A-1 Pictures",
+    "mal_id": 50709,
+    "anilist_id": 50709,
+    "official_url": "https://lycoris-recoil.com/",
+    "slug": "lycoris-recoil"
+  },
+  {
+    "id": "jujutsu-kaisen",
+    "title_en": "Jujutsu Kaisen",
+    "title_ja": "呪術廻戦",
+    "title_romaji": "Jujutsu Kaisen",
+    "aliases": [
+      "Jujutsu Kaisen",
+      "JJK",
+      "呪術廻戦"
+    ],
+    "type": "tv",
+    "year": 2020,
+    "studio": "MAPPA",
+    "mal_id": 40748,
+    "anilist_id": 40748,
+    "official_url": "https://jujutsukaisen.jp/",
+    "slug": "jujutsu-kaisen"
   }
 ]

@@ -2578,5 +2578,245 @@
         "retrieved_at": "2026-08-14T00:00:00.000Z"
       }
     ]
+  },
+  {
+    "work_id": "kochikame",
+    "location_id": "kameari-station",
+    "scene_note_en": "The station at the heart of the series' neighbourhood.",
+    "scene_ref": "kameari",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.j-kochikame.com/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "kochikame",
+    "location_id": "kameari-park",
+    "scene_note_en": "Park beside the famous police-box premise.",
+    "scene_ref": "kameari",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.j-kochikame.com/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "kochikame",
+    "location_id": "shibamata-taishakuten",
+    "scene_note_en": "Temple on the classic Shitamachi approach street.",
+    "scene_ref": "shitamachi",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.j-kochikame.com/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "kochikame",
+    "location_id": "katsushika-katori-shrine",
+    "scene_note_en": "Shrine in the station neighbourhood.",
+    "scene_ref": "kameari",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.j-kochikame.com/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "kochikame",
+    "location_id": "kanamachi-station",
+    "scene_note_en": "Station on the line into Shitamachi.",
+    "scene_ref": "shitamachi",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.j-kochikame.com/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "lycoris-recoil",
+    "location_id": "ryogoku-station",
+    "scene_note_en": "Station in the old-town district featured in the show.",
+    "scene_ref": "sumida",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://lycoris-recoil.com/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "lycoris-recoil",
+    "location_id": "ryogoku-kokugikan",
+    "scene_note_en": "Sumo arena landmark in the riverside scenes.",
+    "scene_ref": "sumida",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://lycoris-recoil.com/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "lycoris-recoil",
+    "location_id": "kuramae-station",
+    "scene_note_en": "Old-town station near the Sumida river.",
+    "scene_ref": "sumida",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://lycoris-recoil.com/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "lycoris-recoil",
+    "location_id": "yokoami-park",
+    "scene_note_en": "Quiet park in the district background.",
+    "scene_ref": "sumida",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://lycoris-recoil.com/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "lycoris-recoil",
+    "location_id": "edo-tokyo-museum",
+    "scene_note_en": "History museum near the arena.",
+    "scene_ref": "sumida",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://lycoris-recoil.com/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "jujutsu-kaisen",
+    "location_id": "shibuya-109",
+    "scene_note_en": "Landmark by the crossing in the Shibuya arc.",
+    "scene_ref": "shibuya",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://jujutsukaisen.jp/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "jujutsu-kaisen",
+    "location_id": "shibuya-center-gai",
+    "scene_note_en": "Neon street in the Shibuya scenes.",
+    "scene_ref": "shibuya",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://jujutsukaisen.jp/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "jujutsu-kaisen",
+    "location_id": "shinjuku-gyoen",
+    "scene_note_en": "Large garden at the edge of the city battles.",
+    "scene_ref": "tokyo",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://jujutsukaisen.jp/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "jujutsu-kaisen",
+    "location_id": "yoyogi-station-jjk",
+    "scene_note_en": "Station between the action districts.",
+    "scene_ref": "tokyo",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://jujutsukaisen.jp/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "jujutsu-kaisen",
+    "location_id": "shibuya-station-east",
+    "scene_note_en": "Busy east exit of Shibuya station.",
+    "scene_ref": "shibuya",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://jujutsukaisen.jp/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "bocchi-the-rock",
+    "location_id": "koenji-kita",
+    "scene_note_en": "North side of Koenji station in the band's town.",
+    "scene_ref": "town",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://bocchi.rocks/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
   }
 ]

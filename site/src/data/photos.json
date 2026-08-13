@@ -1528,5 +1528,165 @@
     "artist": "gog.creator",
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Omotesando_Avenue_at_sunset_from_pedestrian_bridge,_Jingumae,_Shibuya,_Tokyo.jpg",
     "name_ja": "表参道"
+  },
+  "kameari-station": {
+    "title": "File:JR Joban-Line Kameari Station Platform.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/JR_Joban-Line_Kameari_Station_Platform.jpg/1280px-JR_Joban-Line_Kameari_Station_Platform.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 659,
+    "license": "CC BY-SA 4.0",
+    "artist": "Mister0124",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:JR_Joban-Line_Kameari_Station_Platform.jpg",
+    "name_ja": "亀有駅"
+  },
+  "kameari-park": {
+    "title": "File:Kameari Park.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Kameari_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY-SA 3.0",
+    "artist": "",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Kameari_Park.jpg",
+    "name_ja": "亀有公園"
+  },
+  "shibamata-taishakuten": {
+    "title": "File:Shibamata Taishakuten.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Shibamata_Taishakuten.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 1200,
+    "height": 799,
+    "license": "Public domain",
+    "artist": "Los688",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Shibamata_Taishakuten.jpg",
+    "name_ja": "柴又帝釈天"
+  },
+  "katsushika-katori-shrine": {
+    "title": "File:Katori-jinja (Higashi-Mizumoto, Katsushika) 02.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Katori-jinja_%28Higashi-Mizumoto%2C_Katsushika%29_02.jpg/1280px-Katori-jinja_%28Higashi-Mizumoto%2C_Katsushika%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 900,
+    "license": "CC0",
+    "artist": "Higa4",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Katori-jinja_(Higashi-Mizumoto,_Katsushika)_02.jpg",
+    "name_ja": "葛飾区 香取神社"
+  },
+  "kanamachi-station": {
+    "title": "File:JR Joban-Line Kanamachi Station Platform.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/JR_Joban-Line_Kanamachi_Station_Platform.jpg/1280px-JR_Joban-Line_Kanamachi_Station_Platform.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 667,
+    "license": "CC BY-SA 4.0",
+    "artist": "Mister0124",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:JR_Joban-Line_Kanamachi_Station_Platform.jpg",
+    "name_ja": "金町駅"
+  },
+  "ryogoku-station": {
+    "title": "File:Toei Ryogoku-STA Platform1-2.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Toei_Ryogoku-STA_Platform1-2.jpg/1280px-Toei_Ryogoku-STA_Platform1-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 800,
+    "license": "CC BY-SA 4.0",
+    "artist": "MaedaAkihiko",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Toei_Ryogoku-STA_Platform1-2.jpg",
+    "name_ja": "両国駅"
+  },
+  "ryogoku-kokugikan": {
+    "title": "File:Ryogoku Kokugikan-1a.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Ryogoku_Kokugikan-1a.jpg/1280px-Ryogoku_Kokugikan-1a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 802,
+    "license": "CC BY-SA 4.0",
+    "artist": "江戸村のとくぞう",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Ryogoku_Kokugikan-1a.jpg",
+    "name_ja": "両国国技館"
+  },
+  "kuramae-station": {
+    "title": "File:Kuramae-Sta-A6.JPG",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Kuramae-Sta-A6.JPG/1280px-Kuramae-Sta-A6.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 1657,
+    "license": "CC BY 3.0",
+    "artist": "Nyao148",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Kuramae-Sta-A6.JPG",
+    "name_ja": "蔵前駅"
+  },
+  "yokoami-park": {
+    "title": "File:Tokyo air raid memorial.JPG",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Tokyo_air_raid_memorial.JPG/1280px-Tokyo_air_raid_memorial.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY-SA 3.0",
+    "artist": "Nick-D",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_air_raid_memorial.JPG",
+    "name_ja": "横網町公園"
+  },
+  "edo-tokyo-museum": {
+    "title": "File:Edo-Tokyo Museum.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Edo-Tokyo_Museum.jpg/1280px-Edo-Tokyo_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 960,
+    "license": "CC BY-SA 3.0",
+    "artist": "Wiiii",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Edo-Tokyo_Museum.jpg",
+    "name_ja": "江戸東京博物館"
+  },
+  "shibuya-109": {
+    "title": "File:渋谷109 Shibuya 109 - panoramio.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/%E6%B8%8B%E8%B0%B7109_Shibuya_109_-_panoramio.jpg/1280px-%E6%B8%8B%E8%B0%B7109_Shibuya_109_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 1600,
+    "license": "CC BY 3.0",
+    "artist": "Bohao Zhao",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:%E6%B8%8B%E8%B0%B7109_Shibuya_109_-_panoramio.jpg",
+    "name_ja": "渋谷109"
+  },
+  "shibuya-center-gai": {
+    "title": "File:渋谷センター街 - panoramio (3).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/%E6%B8%8B%E8%B0%B7%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E8%A1%97_-_panoramio_%283%29.jpg/1280px-%E6%B8%8B%E8%B0%B7%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E8%A1%97_-_panoramio_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY-SA 3.0",
+    "artist": "kcomiida",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:%E6%B8%8B%E8%B0%B7%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E8%A1%97_-_panoramio_(3).jpg",
+    "name_ja": "渋谷センター街"
+  },
+  "shinjuku-gyoen": {
+    "title": "File:Shinjuku Gyoen National Garden and NTT DoCoMo Yoyogi Building, Tokyo, Japan.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Shinjuku_Gyoen_National_Garden_and_NTT_DoCoMo_Yoyogi_Building%2C_Tokyo%2C_Japan.jpg/1280px-Shinjuku_Gyoen_National_Garden_and_NTT_DoCoMo_Yoyogi_Building%2C_Tokyo%2C_Japan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 800,
+    "license": "CC BY-SA 4.0",
+    "artist": "Basile Morin",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Shinjuku_Gyoen_National_Garden_and_NTT_DoCoMo_Yoyogi_Building,_Tokyo,_Japan.jpg",
+    "name_ja": "新宿御苑"
+  },
+  "yoyogi-station-jjk": {
+    "title": "File:Yoyogi-Station-01.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Yoyogi-Station-01.jpg/1280px-Yoyogi-Station-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 800,
+    "license": "CC BY-SA 3.0",
+    "artist": "Rs1421",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Yoyogi-Station-01.jpg",
+    "name_ja": "代々木駅"
+  },
+  "shibuya-station-east": {
+    "title": "File:渋谷ヒカリエから見た渋谷駅東口.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/%E6%B8%8B%E8%B0%B7%E3%83%92%E3%82%AB%E3%83%AA%E3%82%A8%E3%81%8B%E3%82%89%E8%A6%8B%E3%81%9F%E6%B8%8B%E8%B0%B7%E9%A7%85%E6%9D%B1%E5%8F%A3.jpg/1280px-%E6%B8%8B%E8%B0%B7%E3%83%92%E3%82%AB%E3%83%AA%E3%82%A8%E3%81%8B%E3%82%89%E8%A6%8B%E3%81%9F%E6%B8%8B%E8%B0%B7%E9%A7%85%E6%9D%B1%E5%8F%A3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 900,
+    "license": "CC BY 4.0",
+    "artist": "Misei sen",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:%E6%B8%8B%E8%B0%B7%E3%83%92%E3%82%AB%E3%83%AA%E3%82%A8%E3%81%8B%E3%82%89%E8%A6%8B%E3%81%9F%E6%B8%8B%E8%B0%B7%E9%A7%85%E6%9D%B1%E5%8F%A3.jpg",
+    "name_ja": "渋谷駅東口"
+  },
+  "koenji-kita": {
+    "title": "File:四文屋 高円寺北口IMG 20220929 210435 HDR 01.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/%E5%9B%9B%E6%96%87%E5%B1%8B_%E9%AB%98%E5%86%86%E5%AF%BA%E5%8C%97%E5%8F%A3IMG_20220929_210435_HDR_01.jpg/1280px-%E5%9B%9B%E6%96%87%E5%B1%8B_%E9%AB%98%E5%86%86%E5%AF%BA%E5%8C%97%E5%8F%A3IMG_20220929_210435_HDR_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 1200,
+    "height": 1200,
+    "license": "CC BY-SA 4.0",
+    "artist": "経済特区",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:%E5%9B%9B%E6%96%87%E5%B1%8B_%E9%AB%98%E5%86%86%E5%AF%BA%E5%8C%97%E5%8F%A3IMG_20220929_210435_HDR_01.jpg",
+    "name_ja": "高円寺北口"
   }
 }
