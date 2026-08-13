@@ -3353,3 +3353,451 @@
   etiquette_en:
     - "Quiet residential area."
   last_verified: 2026-08-14
+
+- id: koenji-hikawa-shrine
+  name_en: "Koenji Hikawa Shrine"
+  name_ja: "高円寺氷川神社"
+  lat: 35.704526
+  lng: 139.651015
+  address_ja: "東京都杉並区高円寺南4丁目24-8"
+  address_en: "4-24-8 Koenji-Minami, Suginami, Tokyo"
+  prefecture: tokyo
+  municipality: suginami
+  category: shrine
+  visitability: public
+  visitability_note_en: "Local shrine at the heart of Koenji."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Koenji Station"
+    name_ja: "高円寺駅"
+    lines: ["JR Chuo Line"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 18, transfers: 0, fare_jpy: 210 }
+  etiquette_en:
+    - "Residential shrine; visit quietly."
+  last_verified: 2026-08-14
+
+- id: mejiro-station
+  name_en: "Mejiro Station"
+  name_ja: "目白駅"
+  lat: 35.720338
+  lng: 139.706189
+  address_ja: "東京都豊島区目白3丁目"
+  address_en: "3-chome Mejiro, Toshima, Tokyo"
+  prefecture: tokyo
+  municipality: toshima
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Mejiro Station"
+    name_ja: "目白駅"
+    lines: ["JR Yamanote"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 20, transfers: 0, fare_jpy: 220 }
+  etiquette_en:
+    - "Elegant residential station."
+  last_verified: 2026-08-14
+
+- id: sunshine-city
+  name_en: "Sunshine City"
+  name_ja: "サンシャインシティ"
+  lat: 35.728971
+  lng: 139.716738
+  address_ja: "東京都豊島区東池袋3丁目1"
+  address_en: "3-1 Higashi-Ikebukuro, Toshima, Tokyo"
+  prefecture: tokyo
+  municipality: toshima
+  category: other
+  visitability: public
+  visitability_note_en: "Complex with an aquarium, observatory, and shopping."
+  entry_fee: paid
+  car_required: false
+  nearest_station:
+    name_en: "Higashi-Ikebukuro Station"
+    name_ja: "東池袋駅"
+    lines: ["Tokyo Metro Yurakucho"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 20, transfers: 1, fare_jpy: 220 }
+  etiquette_en:
+    - "Observatory and aquarium are paid."
+  last_verified: 2026-08-14
+
+- id: kabukicho
+  name_en: "Kabukicho"
+  name_ja: "歌舞伎町"
+  lat: 35.694543
+  lng: 139.702711
+  address_ja: "東京都新宿区歌舞伎町"
+  address_en: "Kabukicho, Shinjuku, Tokyo"
+  prefecture: tokyo
+  municipality: shinjuku
+  category: shotengai
+  visitability: public
+  visitability_note_en: "Tokyo's famous entertainment district."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Shinjuku Station"
+    name_ja: "新宿駅"
+    lines: ["JR", "Tokyo Metro"]
+    walk_min: 8
+  travel_from:
+    tokyo: { minutes: 16, transfers: 0, fare_jpy: 170 }
+  etiquette_en:
+    - "Packed at night; keep belongings close."
+  last_verified: 2026-08-14
+
+- id: kabukicho-tower
+  name_en: "Tokyu Kabukicho Tower"
+  name_ja: "東急歌舞伎町タワー"
+  lat: 35.695935
+  lng: 139.700657
+  address_ja: "東京都新宿区歌舞伎町1丁目29-1"
+  address_en: "1-29-1 Kabukicho, Shinjuku, Tokyo"
+  prefecture: tokyo
+  municipality: shinjuku
+  category: other
+  visitability: public
+  visitability_note_en: "Modern entertainment tower in Kabukicho."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Seibu-Shinjuku Station"
+    name_ja: "西武新宿駅"
+    lines: ["Seibu Shinjuku Line"]
+    walk_min: 2
+  travel_from:
+    tokyo: { minutes: 16, transfers: 0, fare_jpy: 170 }
+  etiquette_en:
+    - "Nightlife district; be mindful after dark."
+  last_verified: 2026-08-14
+
+- id: ebisu-garden-place
+  name_en: "Yebisu Garden Place"
+  name_ja: "恵比寿ガーデンプレイス"
+  lat: 35.642042
+  lng: 139.713560
+  address_ja: "東京都渋谷区恵比寿4丁目20"
+  address_en: "4-20 Ebisu, Shibuya, Tokyo"
+  prefecture: tokyo
+  municipality: shibuya
+  category: other
+  visitability: public
+  visitability_note_en: "Plaza with the clock tower and museum."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Ebisu Station"
+    name_ja: "恵比寿駅"
+    lines: ["JR Yamanote", "Tokyo Metro Hibiya"]
+    walk_min: 7
+  travel_from:
+    tokyo: { minutes: 18, transfers: 0, fare_jpy: 180 }
+  etiquette_en:
+    - "Popular for its winter illuminations."
+  last_verified: 2026-08-14
+
+- id: ginza-wako
+  name_en: "Wako Building"
+  name_ja: "銀座 和光"
+  lat: 35.671735
+  lng: 139.765007
+  address_ja: "東京都中央区銀座4丁目5-11"
+  address_en: "4-5-11 Ginza, Chuo, Tokyo"
+  prefecture: tokyo
+  municipality: chuo
+  category: shop
+  visitability: public
+  visitability_note_en: "Historic clock tower at Ginza's heart."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Ginza Station"
+    name_ja: "銀座駅"
+    lines: ["Tokyo Metro Ginza", "Marunouchi", "Hibiya"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 8, transfers: 0, fare_jpy: 170 }
+  etiquette_en:
+    - "Landmark clock tower; photograph from the crossing."
+  last_verified: 2026-08-14
+
+- id: tsukiji-outer-market
+  name_en: "Tsukiji Outer Market"
+  name_ja: "築地場外市場"
+  lat: 35.665388
+  lng: 139.770473
+  address_ja: "東京都中央区築地4丁目"
+  address_en: "4-chome Tsukiji, Chuo, Tokyo"
+  prefecture: tokyo
+  municipality: chuo
+  category: shotengai
+  visitability: public
+  visitability_note_en: "Street market of food stalls and knife shops."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Tsukiji Station"
+    name_ja: "築地駅"
+    lines: ["Tokyo Metro Hibiya"]
+    walk_min: 2
+  travel_from:
+    tokyo: { minutes: 15, transfers: 1, fare_jpy: 180 }
+  etiquette_en:
+    - "Eating while walking is discouraged; use stalls."
+  last_verified: 2026-08-14
+
+- id: shiba-park
+  name_en: "Shiba Park"
+  name_ja: "芝公園"
+  lat: 35.658256
+  lng: 139.746673
+  address_ja: "東京都港区芝公園"
+  address_en: "Shiba-koen, Minato, Tokyo"
+  prefecture: tokyo
+  municipality: minato
+  category: park
+  visitability: public
+  visitability_note_en: "Park around Tokyo Tower with temple grounds."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Shiba-koen Station"
+    name_ja: "芝公園駅"
+    lines: ["Toei Mita"]
+    walk_min: 2
+  travel_from:
+    tokyo: { minutes: 22, transfers: 1, fare_jpy: 240 }
+  etiquette_en:
+    - "Watch for the Tokyo Tower views."
+  last_verified: 2026-08-14
+
+- id: hamarikyu-garden
+  name_en: "Hama-rikyu Garden"
+  name_ja: "浜離宮恩賜庭園"
+  lat: 35.660176
+  lng: 139.763824
+  address_ja: "東京都中央区浜離宮庭園1-1"
+  address_en: "1-1 Hama-rikyu Teien, Chuo, Tokyo"
+  prefecture: tokyo
+  municipality: chuo
+  category: park
+  visitability: public
+  visitability_note_en: "Edo-era garden with a tidal pond."
+  entry_fee: paid
+  car_required: false
+  nearest_station:
+    name_en: "Shiodome Station"
+    name_ja: "汐留駅"
+    lines: ["Yurikamome", "Toei Oedo"]
+    walk_min: 8
+  travel_from:
+    tokyo: { minutes: 14, transfers: 1, fare_jpy: 180 }
+  etiquette_en:
+    - "Entry fee is cash at the gate."
+  last_verified: 2026-08-14
+
+- id: kappabashi
+  name_en: "Kappabashi Kitchen Town"
+  name_ja: "合羽橋道具街"
+  lat: 35.714271
+  lng: 139.788888
+  address_ja: "東京都台東区西浅草3丁目"
+  address_en: "3-chome Nishi-Asakusa, Taito, Tokyo"
+  prefecture: tokyo
+  municipality: taito
+  category: shotengai
+  visitability: public
+  visitability_note_en: "Cooking and restaurant-supply street."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Tawaramachi Station"
+    name_ja: "田原町駅"
+    lines: ["Tokyo Metro Ginza"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 15, transfers: 1, fare_jpy: 190 }
+  etiquette_en:
+    - "Sample knives and cookware at the shops."
+  last_verified: 2026-08-14
+
+- id: kawasaki-daishi
+  name_en: "Kawasaki Daishi"
+  name_ja: "川崎大師"
+  lat: 35.534252
+  lng: 139.729442
+  address_ja: "神奈川県川崎市川崎区大師町4-48"
+  address_en: "4-48 Daishi-machi, Kawasaki, Kanagawa"
+  prefecture: kanagawa
+  municipality: kawasaki
+  category: shrine
+  visitability: public
+  visitability_note_en: "One of Kanto's most-visited temples."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Kawasaki-Daishi Station"
+    name_ja: "川崎大師駅"
+    lines: ["Keikyu Daishi Line"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 45, transfers: 1, fare_jpy: 480 }
+  etiquette_en:
+    - "Bustling on the 1st and 21st of the month."
+  last_verified: 2026-08-14
+
+- id: kamakura-zaimokuza
+  name_en: "Zaimokuza Beach"
+  name_ja: "材木座海岸"
+  lat: 35.304849
+  lng: 139.550547
+  address_ja: "神奈川県鎌倉市材木座"
+  address_en: "Zaimokuza, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: nature
+  visitability: public
+  visitability_note_en: "Quieter beach east of Yuigahama."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Kamakura Station"
+    name_ja: "鎌倉駅"
+    lines: ["JR Yokosuka"]
+    walk_min: 18
+  travel_from:
+    tokyo: { minutes: 70, transfers: 0, fare_jpy: 890 }
+  etiquette_en:
+    - "Swim only in the marked season."
+  last_verified: 2026-08-14
+
+- id: kamakura-jufuku-ji
+  name_en: "Jufuku-ji"
+  name_ja: "寿福寺"
+  lat: 35.324322
+  lng: 139.550109
+  address_ja: "神奈川県鎌倉市扇ガ谷1丁目17-7"
+  address_en: "1-17-7 Ogigayatsu, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: shrine
+  visitability: public
+  visitability_note_en: "Zen temple near the station."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Kamakura Station"
+    name_ja: "鎌倉駅"
+    lines: ["JR Yokosuka"]
+    walk_min: 8
+  travel_from:
+    tokyo: { minutes: 66, transfers: 0, fare_jpy: 890 }
+  etiquette_en:
+    - "Small temple; quiet visit."
+  last_verified: 2026-08-14
+
+- id: kamakura-jomyo-ji
+  name_en: "Jomyo-ji"
+  name_ja: "浄妙寺"
+  lat: 35.323378
+  lng: 139.571324
+  address_ja: "神奈川県鎌倉市浄明寺3丁目8-31"
+  address_en: "3-8-31 Jomyoji, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: shrine
+  visitability: public
+  visitability_note_en: "Five Mountain temple with a rock garden."
+  entry_fee: paid
+  car_required: false
+  nearest_station:
+    name_en: "Kamakura Station"
+    name_ja: "鎌倉駅"
+    lines: ["JR Yokosuka"]
+    walk_min: 25
+  travel_from:
+    tokyo: { minutes: 75, transfers: 0, fare_jpy: 890 }
+  etiquette_en:
+    - "Entry fee for the gardens."
+  last_verified: 2026-08-14
+
+- id: kamakura-sugimoto-dera
+  name_en: "Sugimoto-dera"
+  name_ja: "杉本寺"
+  lat: 35.322629
+  lng: 139.567441
+  address_ja: "神奈川県鎌倉市二階堂4丁目2-25"
+  address_en: "4-2-25 Nikaido, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: shrine
+  visitability: public
+  visitability_note_en: "Kamakura's oldest temple."
+  entry_fee: paid
+  car_required: false
+  nearest_station:
+    name_en: "Kamakura Station"
+    name_ja: "鎌倉駅"
+    lines: ["JR Yokosuka"]
+    walk_min: 22
+  travel_from:
+    tokyo: { minutes: 72, transfers: 0, fare_jpy: 890 }
+  etiquette_en:
+    - "Steps are mossy; watch your footing."
+  last_verified: 2026-08-14
+
+- id: odaiba-tokyo-teleport
+  name_en: "Tokyo Teleport Station"
+  name_ja: "東京テレポート駅"
+  lat: 35.629757
+  lng: 139.778683
+  address_ja: "東京都江東区青海1丁目"
+  address_en: "1-chome Aomi, Koto, Tokyo"
+  prefecture: tokyo
+  municipality: koto
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Tokyo Teleport Station"
+    name_ja: "東京テレポート駅"
+    lines: ["Yurikamome"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 32, transfers: 1, fare_jpy: 460 }
+  etiquette_en:
+    - "Gateway to Odaiba's bayside sights."
+  last_verified: 2026-08-14
+
+- id: omotesando
+  name_en: "Omotesando"
+  name_ja: "表参道"
+  lat: 35.665161
+  lng: 139.712543
+  address_ja: "東京都港区北青山3丁目"
+  address_en: "3-chome Kita-Aoyama, Minato, Tokyo"
+  prefecture: tokyo
+  municipality: minato
+  category: shotengai
+  visitability: public
+  visitability_note_en: "Tree-lined avenue of flagship stores."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Omotesando Station"
+    name_ja: "表参道駅"
+    lines: ["Tokyo Metro Chiyoda", "Ginza", "Hanzomon"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 14, transfers: 1, fare_jpy: 200 }
+  etiquette_en:
+    - "Sunday street is closed to cars."
+  last_verified: 2026-08-14

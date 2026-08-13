@@ -673,5 +673,95 @@
     "file": "/photos/yoyogi-uehara-station.jpg",
     "ext": ".jpg",
     "bytes": 77018
+  },
+  "koenji-hikawa-shrine": {
+    "file": "/photos/koenji-hikawa-shrine.jpg",
+    "ext": ".jpg",
+    "bytes": 127828
+  },
+  "mejiro-station": {
+    "file": "/photos/mejiro-station.jpg",
+    "ext": ".jpg",
+    "bytes": 122013
+  },
+  "sunshine-city": {
+    "file": "/photos/sunshine-city.jpg",
+    "ext": ".jpg",
+    "bytes": 131877
+  },
+  "kabukicho": {
+    "file": "/photos/kabukicho.jpg",
+    "ext": ".jpg",
+    "bytes": 153550
+  },
+  "kabukicho-tower": {
+    "file": "/photos/kabukicho-tower.jpg",
+    "ext": ".jpg",
+    "bytes": 255949
+  },
+  "ebisu-garden-place": {
+    "file": "/photos/ebisu-garden-place.jpg",
+    "ext": ".jpg",
+    "bytes": 256408
+  },
+  "ginza-wako": {
+    "file": "/photos/ginza-wako.jpg",
+    "ext": ".jpg",
+    "bytes": 138133
+  },
+  "tsukiji-outer-market": {
+    "file": "/photos/tsukiji-outer-market.jpg",
+    "ext": ".jpg",
+    "bytes": 227861
+  },
+  "shiba-park": {
+    "file": "/photos/shiba-park.jpg",
+    "ext": ".jpg",
+    "bytes": 295920
+  },
+  "hamarikyu-garden": {
+    "file": "/photos/hamarikyu-garden.jpg",
+    "ext": ".jpg",
+    "bytes": 140042
+  },
+  "kappabashi": {
+    "file": "/photos/kappabashi.jpg",
+    "ext": ".jpg",
+    "bytes": 127051
+  },
+  "kawasaki-daishi": {
+    "file": "/photos/kawasaki-daishi.jpg",
+    "ext": ".jpg",
+    "bytes": 124996
+  },
+  "kamakura-zaimokuza": {
+    "file": "/photos/kamakura-zaimokuza.jpg",
+    "ext": ".jpg",
+    "bytes": 63970
+  },
+  "kamakura-jufuku-ji": {
+    "file": "/photos/kamakura-jufuku-ji.jpg",
+    "ext": ".jpg",
+    "bytes": 249990
+  },
+  "kamakura-jomyo-ji": {
+    "file": "/photos/kamakura-jomyo-ji.jpg",
+    "ext": ".jpg",
+    "bytes": 215245
+  },
+  "kamakura-sugimoto-dera": {
+    "file": "/photos/kamakura-sugimoto-dera.jpg",
+    "ext": ".jpg",
+    "bytes": 214384
+  },
+  "odaiba-tokyo-teleport": {
+    "file": "/photos/odaiba-tokyo-teleport.jpg",
+    "ext": ".jpg",
+    "bytes": 111052
+  },
+  "omotesando": {
+    "file": "/photos/omotesando.jpg",
+    "ext": ".jpg",
+    "bytes": 151970
   }
 }

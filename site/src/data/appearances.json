@@ -2248,5 +2248,335 @@
         "retrieved_at": "2026-08-14T00:00:00.000Z"
       }
     ]
+  },
+  {
+    "work_id": "bocchi-the-rock",
+    "location_id": "koenji-hikawa-shrine",
+    "scene_note_en": "Shrine near the band's live-music district.",
+    "scene_ref": "live",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://bocchi.rocks/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "bocchi-the-rock",
+    "location_id": "mejiro-station",
+    "scene_note_en": "Station in the wider town trips.",
+    "scene_ref": "trip",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/bocchi-the-rock",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "bocchi-the-rock",
+    "location_id": "kabukicho",
+    "scene_note_en": "Neon district in the city outings.",
+    "scene_ref": "trip",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/bocchi-the-rock",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "bocchi-the-rock",
+    "location_id": "ebisu-garden-place",
+    "scene_note_en": "Plaza in the day-out sequences.",
+    "scene_ref": "trip",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/bocchi-the-rock",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "weathering-with-you",
+    "location_id": "kabukicho",
+    "scene_note_en": "Neon streets under the rain.",
+    "scene_ref": "rain",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/weathering-with-you",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "weathering-with-you",
+    "location_id": "kabukicho-tower",
+    "scene_note_en": "New tower in the Shinjuku skyline.",
+    "scene_ref": "shinjuku",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/weathering-with-you",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "weathering-with-you",
+    "location_id": "sunshine-city",
+    "scene_note_en": "Tower district in the city montage.",
+    "scene_ref": "montage",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/weathering-with-you",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "kimi-no-na-wa",
+    "location_id": "kabukicho",
+    "scene_note_en": "Shinjuku's neon streets in the montage.",
+    "scene_ref": "tokyo",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/kimino-na-wa",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "kimi-no-na-wa",
+    "location_id": "ebisu-garden-place",
+    "scene_note_en": "Plaza in the Tokyo city walks.",
+    "scene_ref": "tokyo",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/kimino-na-wa",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "slam-dunk",
+    "location_id": "kamakura-zaimokuza",
+    "scene_note_en": "Beach in the coastal training scenes.",
+    "scene_ref": "beach",
+    "confidence": "confirmed",
+    "sources": [
+      {
+        "url": "https://www.japan-guide.com/e/e2155.html",
+        "type": "news",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "slam-dunk",
+    "location_id": "kamakura-jufuku-ji",
+    "scene_note_en": "Temple in the Kamakura walk scenes.",
+    "scene_ref": "kamakura",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/slam-dunk",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "slam-dunk",
+    "location_id": "kamakura-jomyo-ji",
+    "scene_note_en": "Temple along the Kamakura trails.",
+    "scene_ref": "kamakura",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/slam-dunk",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "slam-dunk",
+    "location_id": "kamakura-sugimoto-dera",
+    "scene_note_en": "Oldest temple in the hill walks.",
+    "scene_ref": "kamakura",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/slam-dunk",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "suzume",
+    "location_id": "odaiba-tokyo-teleport",
+    "scene_note_en": "Station on the way to the bay scenes.",
+    "scene_ref": "bay",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://suzume-tojimari-movie.jp/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "weathering-with-you",
+    "location_id": "ginza-wako",
+    "scene_note_en": "Clock tower in the Ginza montage.",
+    "scene_ref": "ginza",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/weathering-with-you",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "kimi-no-na-wa",
+    "location_id": "ginza-wako",
+    "scene_note_en": "Ginza landmark in the Tokyo montage.",
+    "scene_ref": "tokyo",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/kimino-na-wa",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "whisper-of-the-heart",
+    "location_id": "shiba-park",
+    "scene_note_en": "Park in the wider Tokyo scenery.",
+    "scene_ref": "town",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/whisper-of-the-heart",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "steins-gate",
+    "location_id": "kappabashi",
+    "scene_note_en": "Kitchen street near the old town scenes.",
+    "scene_ref": "town",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/steins-gate",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "doraemon",
+    "location_id": "kawasaki-daishi",
+    "scene_note_en": "Temple in the Kawasaki scenery.",
+    "scene_ref": "kawasaki",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://dora-world.com/",
+        "type": "official",
+        "lang": "ja",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "oregairu",
+    "location_id": "hamarikyu-garden",
+    "scene_note_en": "Garden in the city-daytrip scenes.",
+    "scene_ref": "trip",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/oregairu",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "oregairu",
+    "location_id": "tsukiji-outer-market",
+    "scene_note_en": "Market in the Tokyo outings.",
+    "scene_ref": "trip",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/oregairu",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "work_id": "love-live",
+    "location_id": "omotesando",
+    "scene_note_en": "Avenue in the city scenes.",
+    "scene_ref": "tokyo",
+    "confidence": "likely",
+    "sources": [
+      {
+        "url": "https://www.anime-stages.com/location/love-live",
+        "type": "fanblog",
+        "lang": "en",
+        "retrieved_at": "2026-08-14T00:00:00.000Z"
+      }
+    ]
   }
 ]
