@@ -1,0 +1,50 @@
+# Seichi Atlas — 出典マスタ
+# robots.txt の可否とレート制限を記録する。個人ブログは事実のみ抽出。
+
+- domain: japan-guide.com
+  name: "Japan Guide"
+  robots_ok: true
+  rate_sec: 2
+  last_crawl: 2026-08-13
+
+- domain: anime-stages.com
+  name: "Anime Stages (seichi database)"
+  robots_ok: true
+  rate_sec: 2
+  last_crawl: 2026-08-13
+
+- domain: chichibu-railway.co.jp
+  name: "Chichibu Railway (Anohana collaboration)"
+  robots_ok: true
+  rate_sec: 2
+  last_crawl: 2026-08-13
+
+- domain: washinomiya.or.jp
+  name: "Washinomiya Shrine"
+  robots_ok: true
+  rate_sec: 2
+  last_crawl: 2026-08-13
+
+- domain: ghibli.jp
+  name: "Studio Ghibli Official"
+  robots_ok: true
+  rate_sec: 2
+  last_crawl: 2026-08-13
+
+- domain: fujiko-museum.com
+  name: "Fujiko F. Fujio Museum"
+  robots_ok: true
+  rate_sec: 2
+  last_crawl: 2026-08-13
+
+- domain: bocchi.rocks
+  name: "Bocchi the Rock! Official"
+  robots_ok: true
+  rate_sec: 2
+  last_crawl: 2026-08-13
+
+- domain: seikaisei.jp
+  name: "Sei Kaisei (Your Name fan map)"
+  robots_ok: true
+  rate_sec: 3
+  last_crawl: 2026-08-13

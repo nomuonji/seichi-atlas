@@ -1,0 +1,217 @@
+[
+  {
+    "id": "kimi-no-na-wa",
+    "title_en": "Your Name.",
+    "title_ja": "君の名は。",
+    "title_romaji": "Kimi no Na wa.",
+    "aliases": [
+      "Kimi no Nawa",
+      "Your Name",
+      "Kimi no Na ha"
+    ],
+    "type": "film",
+    "year": 2016,
+    "studio": "CoMix Wave Films",
+    "mal_id": 32281,
+    "anilist_id": 21519,
+    "official_url": "https://www.kiminona.com/",
+    "slug": "kimi-no-na-wa"
+  },
+  {
+    "id": "weathering-with-you",
+    "title_en": "Weathering with You",
+    "title_ja": "天気の子",
+    "title_romaji": "Tenki no Ko",
+    "aliases": [
+      "Weathering With You",
+      "Tenki no Ko",
+      "Weathering"
+    ],
+    "type": "film",
+    "year": 2019,
+    "studio": "CoMix Wave Films",
+    "mal_id": 38826,
+    "anilist_id": 104578,
+    "official_url": "https://www.tenkinoko.com/",
+    "slug": "weathering-with-you"
+  },
+  {
+    "id": "slam-dunk",
+    "title_en": "Slam Dunk",
+    "title_ja": "スラムダンク",
+    "title_romaji": "Slam Dunk",
+    "aliases": [
+      "SLAM DUNK",
+      "Slam Dunk Movie"
+    ],
+    "type": "tv",
+    "year": 1993,
+    "studio": "Toei Animation",
+    "mal_id": 170,
+    "anilist_id": 170,
+    "official_url": "https://slamdunk-movie.jp/",
+    "slug": "slam-dunk"
+  },
+  {
+    "id": "steins-gate",
+    "title_en": "Steins;Gate",
+    "title_ja": "シュタインズ・ゲート",
+    "title_romaji": "Shutainzu Gēto",
+    "aliases": [
+      "Steins Gate",
+      "S;G",
+      "Steins;Gate 0"
+    ],
+    "type": "tv",
+    "year": 2011,
+    "studio": "White Fox",
+    "mal_id": 9253,
+    "anilist_id": 9253,
+    "official_url": "https://steinsgate.jp/",
+    "slug": "steins-gate"
+  },
+  {
+    "id": "love-live",
+    "title_en": "Love Live! School Idol Project",
+    "title_ja": "ラブライブ！ School Idol Project",
+    "title_romaji": "Rabu Raibu!",
+    "aliases": [
+      "Love Live",
+      "Love Live!",
+      "LoveLive!",
+      "μ's"
+    ],
+    "type": "tv",
+    "year": 2013,
+    "studio": "Sunrise",
+    "mal_id": 15051,
+    "anilist_id": 15051,
+    "official_url": "https://www.lovelive-anime.jp/",
+    "slug": "love-live"
+  },
+  {
+    "id": "anohana",
+    "title_en": "Anohana: The Flower We Saw That Day",
+    "title_ja": "あの日見た花の名前を僕達はまだ知らない。",
+    "title_romaji": "Ano Hi Mita Hana no Namae o Bokutachi wa Mada Shiranai.",
+    "aliases": [
+      "Anohana",
+      "AnoHana",
+      "Ano Hana"
+    ],
+    "type": "tv",
+    "year": 2011,
+    "studio": "A-1 Pictures",
+    "mal_id": 9989,
+    "anilist_id": 9989,
+    "official_url": "https://anohana.jp/",
+    "slug": "anohana"
+  },
+  {
+    "id": "lucky-star",
+    "title_en": "Lucky Star",
+    "title_ja": "らき☆すた",
+    "title_romaji": "Raki Suta",
+    "aliases": [
+      "Lucky☆Star",
+      "Raki Suta",
+      "LuckyStar"
+    ],
+    "type": "tv",
+    "year": 2007,
+    "studio": "Kyoto Animation",
+    "mal_id": 1887,
+    "anilist_id": 1887,
+    "official_url": "https://www.lucky-ch.com/",
+    "slug": "lucky-star"
+  },
+  {
+    "id": "oregairu",
+    "title_en": "My Teen Romantic Comedy SNAFU",
+    "title_ja": "やはり俺の青春ラブコメはまちがっている。",
+    "title_romaji": "Yahari Ore no Seishun Rabu Kome wa Machigatte Iru.",
+    "aliases": [
+      "Oregairu",
+      "SNAFU",
+      "My Teen Romantic Comedy",
+      "Yahari",
+      "oregairu"
+    ],
+    "type": "tv",
+    "year": 2013,
+    "studio": "Brain's Base",
+    "mal_id": 14813,
+    "anilist_id": 14813,
+    "official_url": "https://www.tbs.co.jp/anime/oregairu/",
+    "slug": "oregairu"
+  },
+  {
+    "id": "girls-last-tour",
+    "title_en": "Girls' Last Tour",
+    "title_ja": "少女終末旅行",
+    "title_romaji": "Shōjo Shūmatsu Ryokō",
+    "aliases": [
+      "Girls Last Tour",
+      "Shoujo Shuumatsu Ryouko",
+      "Shōjo Shūmatsu"
+    ],
+    "type": "tv",
+    "year": 2017,
+    "studio": "White Fox",
+    "mal_id": 35838,
+    "anilist_id": 35838,
+    "official_url": "http://girls-last-tour.com/",
+    "slug": "girls-last-tour"
+  },
+  {
+    "id": "whisper-of-the-heart",
+    "title_en": "Whisper of the Heart",
+    "title_ja": "耳をすませば",
+    "title_romaji": "Mimi o Sumaseba",
+    "aliases": [
+      "Mimi wo Sumaseba",
+      "Whisper of the Heart"
+    ],
+    "type": "film",
+    "year": 1995,
+    "studio": "Studio Ghibli",
+    "mal_id": 585,
+    "anilist_id": 585,
+    "official_url": "https://www.ghibli.jp/works/mimi/",
+    "slug": "whisper-of-the-heart"
+  },
+  {
+    "id": "doraemon",
+    "title_en": "Doraemon",
+    "title_ja": "ドラえもん",
+    "title_romaji": "Doraemon",
+    "aliases": [
+      "Doraemon the Movie"
+    ],
+    "type": "tv",
+    "year": 1979,
+    "studio": "Shin-Ei Animation",
+    "mal_id": 2471,
+    "anilist_id": 2471,
+    "official_url": "https://dora-world.com/",
+    "slug": "doraemon"
+  },
+  {
+    "id": "bocchi-the-rock",
+    "title_en": "Bocchi the Rock!",
+    "title_ja": "ぼっち・ざ・ろっく！",
+    "title_romaji": "Botchi za Rokku!",
+    "aliases": [
+      "Bocchi the Rock",
+      "Bocchi",
+      "BTR"
+    ],
+    "type": "tv",
+    "year": 2022,
+    "studio": "CloverWorks",
+    "mal_id": 47917,
+    "anilist_id": 47917,
+    "official_url": "https://bocchi.rocks/",
+    "slug": "bocchi-the-rock"
+  }
+]

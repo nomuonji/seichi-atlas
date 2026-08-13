@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Legal &amp; ethics" description="The rights and ethics rules that govern Seichi Atlas.">
+  <section class="section">
+    <div class="container prose">
+      <p class="micro">Legal &amp; ethics</p>
+      <h1 class="display-lg" style="margin:.7rem 0 1rem;">How this site stays honest</h1>
+
+      <h2>Independence</h2>
+      <p>
+        Seichi Atlas is an independent fan-made reference. It is not affiliated with, endorsed by,
+        or sponsored by any anime studio, publisher, or rights holder. All series titles are the
+        property of their respective owners. The trademarks and series names appear here solely to
+        identify the places associated with them.
+      </p>
+
+      <h2>What we don't publish</h2>
+      <ul>
+        <li>Screenshots, clips, or artwork from any anime</li>
+        <li>Character images or official logos</li>
+        <li>Plot summaries or transcript-like scene descriptions</li>
+        <li>Exact coordinates of private homes</li>
+      </ul>
+
+      <h2>Respect for real places</h2>
+      <p>
+        Seichi is a real neighbourhood for the people who live there. Some sites have been closed
+        after visitor misbehaviour. Our design choices reflect that: private residences are only
+        mapped to the nearest station, schools appear as exterior-only notes, and etiquette guidance
+        accompanies every site. <strong>Go quietly.</strong>
+      </p>
+
+      <h2>Takedown policy</h2>
+      <p>
+        If you hold rights over anything shown here, or you represent a location that prefers not to
+        be listed, write to rights@seichiatlas.com. We will remove the content promptly and without
+        argument.
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .prose { max-width: 68ch; }
+  .prose h2 { margin: 2.4rem 0 0.8rem; font-size: 1.35rem; }
+  .prose p { margin-bottom: 1rem; color: var(--text-muted); line-height: 1.7; }
+  .prose ul { margin: 0 0 1.4rem; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-muted); }
+  .prose li::marker { color: var(--accent); }
+</style>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "tokyo",
+    "name_en": "Tokyo",
+    "name_ja": "東京都",
+    "region": "Kanto"
+  },
+  {
+    "id": "kanagawa",
+    "name_en": "Kanagawa",
+    "name_ja": "神奈川県",
+    "region": "Kanto"
+  },
+  {
+    "id": "saitama",
+    "name_en": "Saitama",
+    "name_ja": "埼玉県",
+    "region": "Kanto"
+  },
+  {
+    "id": "chiba",
+    "name_en": "Chiba",
+    "name_ja": "千葉県",
+    "region": "Kanto"
+  }
+]

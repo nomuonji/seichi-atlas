@@ -1,0 +1,74 @@
+---
+import Base from '../layouts/Base.astro';
+import { appearances, locations } from '../lib/data';
+
+const sourceCounts: Record<string, { url: string; count: number }> = {};
+for (const a of appearances) {
+  for (const s of a.sources || []) {
+    try {
+      const host = new URL(s.url).hostname.replace('www.', '');
+      if (!sourceCounts[host]) sourceCounts[host] = { url: s.url, count: 0 };
+      sourceCounts[host].count += 1;
+    } catch { /* ignore malformed */ }
+  }
+}
+const top = Object.entries(sourceCounts).sort((a, b) => b[1].count - a[1].count).slice(0, 10);
+const newest = [...locations].sort((a, b) => b.last_verified.localeCompare(a.last_verified))[0];
+---
+
+<Base title="Sources" description="Where Seichi Atlas data comes from, and the licensing rules that apply.">
+  <section class="section">
+    <div class="container prose">
+      <p class="micro">Sources</p>
+      <h1 class="display-lg" style="margin:.7rem 0 1rem;">Where the data comes from</h1>
+      <p class="lede">
+        Facts only, never other people's writing. We extract place names, addresses, and coordinates
+        from official and community sources, and always link back to them.
+      </p>
+
+      <h2>Priority of sources</h2>
+      <ol>
+        <li>Municipal and tourism-association pages (official seichi collaborations)</li>
+        <li>The Anime Tourism Association's selected sites</li>
+        <li>Production-committee and official location maps</li>
+        <li>OpenStreetMap / Geospatial Information Authority of Japan (coordinates)</li>
+        <li>Wikipedia / Wikidata (metadata)</li>
+        <li>Community seichi databases (facts only, never prose)</li>
+      </ol>
+
+      <h2>Most-referenced sources in this build</h2>
+      <ul>
+        {top.map(([host, info]) => (
+          <li>
+            <a href={info.url} target="_blank" rel="noopener">{host}</a>
+            <span class="mono" style="color:var(--text-faint); font-size:.8rem;"> · {info.count} appearances</span>
+          </li>
+        ))}
+      </ul>
+
+      <h2>Freshness</h2>
+      <p>
+        Newest verification in the database: <strong class="mono">{newest.last_verified}</strong>.
+        Coordinates are checked against public sources on a rolling schedule; each site's page shows
+        its own last-verified date.
+      </p>
+
+      <h2>Licensing</h2>
+      <ul>
+        <li>Factual data (coordinates, addresses, access): <strong>CC BY-SA 4.0</strong></li>
+        <li>OpenStreetMap-derived data: <strong>ODbL</strong> (attribution to OSM contributors)</li>
+        <li>Site text, UI, and route tooling: standard copyright retained</li>
+      </ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .prose { max-width: 68ch; }
+  .prose h2 { margin: 2.4rem 0 0.8rem; font-size: 1.35rem; }
+  .prose p { margin-bottom: 1rem; color: var(--text-muted); line-height: 1.7; }
+  .prose ol, .prose ul { margin: 0 0 1.4rem; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-muted); }
+  .prose li::marker { color: var(--accent); }
+  .prose a { color: var(--accent); text-decoration: none; }
+  .prose a:hover { text-decoration: underline; }
+</style>

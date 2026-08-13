@@ -1,0 +1,70 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import { prefectures, locations, worksForLocation } from '../../lib/data';
+---
+
+<Base title="Places by prefecture" description="Anime pilgrimage locations across Tokyo, Kanagawa, Saitama, and Chiba, grouped by prefecture.">
+  <section class="section">
+    <div class="container">
+      <div class="page-head">
+        <p class="micro">Places index</p>
+        <h1 class="display-lg">By prefecture</h1>
+        <p class="lede">
+          {locations.length} verified locations across the Kanto day-trip zone. Each prefecture
+          links to its own map and list.
+        </p>
+      </div>
+
+      <div class="pref-hero">
+        {prefectures.map((p) => {
+          const locs = locations.filter((l) => l.prefecture === p.id);
+          const series = new Set(locs.flatMap((l) => l._works || []));
+          return (
+            <a class="pref-hero__card" href={`/prefecture/${p.id}/`}>
+              <div class="pref-hero__name">
+                <h2 class="display-lg">{p.name_en}</h2>
+                <span class="mono pref-hero__ja">{p.name_ja}</span>
+              </div>
+              <div class="pref-hero__stats">
+                <span class="pref-hero__stat mono">{locs.length} locations</span>
+                <span class="pref-hero__stat mono">{series.size} series</span>
+              </div>
+              <Icon name="arrow-up-right" size={22} />
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page-head { max-width: 58ch; margin-bottom: 2.4rem; }
+  .page-head h1 { margin: 0.7rem 0 0.8rem; }
+
+  .pref-hero { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
+  @media (max-width: 800px) { .pref-hero { grid-template-columns: 1fr; } }
+
+  .pref-hero__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    padding: 2rem;
+    border: 1px solid var(--paper-line);
+    border-radius: var(--r-card);
+    background: var(--paper-raised);
+    box-shadow: var(--shadow-card);
+    text-decoration: none;
+    color: var(--text);
+    overflow: hidden;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .pref-hero__card:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .pref-hero__card > svg { position: absolute; top: 1.8rem; right: 1.8rem; color: var(--accent); }
+  .pref-hero__name h2 { margin-bottom: 0.2rem; }
+  .pref-hero__ja { color: var(--text-faint); font-size: 0.8rem; }
+  .pref-hero__stats { display: flex; gap: 1.4rem; margin-top: auto; }
+  .pref-hero__stat { font-size: 0.75rem; color: var(--text-muted); }
+</style>

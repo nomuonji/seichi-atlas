@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output
+site/dist/
+site/.astro/
+
+# Logs
+*.log
+dev.log
+preview.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Data: seeds + verified payloads are committed; raw crawl artifacts are not
+data/.crawl/
+*.tmp

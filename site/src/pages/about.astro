@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { stats } from '../lib/data';
+---
+
+<Base title="About" description="What Seichi Atlas is, why it exists, and the rules that keep it accurate and respectful.">
+  <section class="section">
+    <div class="container prose">
+      <p class="micro">About</p>
+      <h1 class="display-lg" style="margin:.7rem 0 1rem;">An atlas for anime pilgrims</h1>
+      <p class="lede">
+        Seichi Atlas turns scattered Japanese-language fan notes into a structured database of
+        real anime locations: coordinates, travel time from Tokyo, whether you can actually visit,
+        and when the information was last checked.
+      </p>
+
+      <h2>Why coordinates matter</h2>
+      <p>
+        Search results will happily tell you <em>that</em> a stairway appears in a famous film.
+        They rarely tell you <em>where</em> it is, how long the train takes, or that the site has
+        since been closed. This site carries the facts that answer those questions, and nothing more:
+        no plot summaries, no reviews, no rankings. Just places, mapped.
+      </p>
+
+      <h2>How we keep it honest</h2>
+      <ul>
+        <li>Every location has a <strong>last-verified date</strong>, shown on the page.</li>
+        <li>Every claim carries <strong>confidence</strong>: confirmed, likely, or disputed.</li>
+        <li>Every appearance links to its <strong>source</strong>.</li>
+        <li>Closed and off-limits sites are kept on the map with a reason, not deleted.</li>
+        <li>Private homes are never given exact coordinates.</li>
+      </ul>
+
+      <h2>Data</h2>
+      <p>
+        Factual data (coordinates, addresses, access) is released under CC BY-SA 4.0 where
+        applicable. Site text and the route tooling keep normal copyright. Map data comes from
+        OpenStreetMap and carries the ODbL share-alike requirement.
+      </p>
+
+      <p class="mono" style="color:var(--text-faint); font-size:.8rem;">
+        Current build: {stats.works} series · {stats.locations} locations · Kanto day-trip edition
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .prose { max-width: 68ch; }
+  .prose h2 { margin: 2.4rem 0 0.8rem; font-size: 1.35rem; }
+  .prose p { margin-bottom: 1rem; color: var(--text-muted); line-height: 1.7; }
+  .prose ul { margin: 0 0 1.4rem; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-muted); }
+  .prose li::marker { color: var(--accent); }
+</style>

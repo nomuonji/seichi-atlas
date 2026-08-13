@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import MapExplorer from '../components/MapExplorer.astro';
+---
+
+<Base title="Interactive map" description="Filter anime pilgrimage sites by series, travel time from Tokyo, prefecture, and visitability. No index.">
+  <section class="section section--tight">
+    <div class="container">
+      <MapExplorer />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .container { max-width: 1500px; }
+</style>

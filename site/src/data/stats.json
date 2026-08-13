@@ -1,0 +1,67 @@
+{
+  "works": 12,
+  "locations": 100,
+  "appearances": 106,
+  "perWork": {
+    "kimi-no-na-wa": {
+      "total": 14,
+      "confirmed": 5,
+      "daytrip": 14
+    },
+    "weathering-with-you": {
+      "total": 9,
+      "confirmed": 3,
+      "daytrip": 9
+    },
+    "slam-dunk": {
+      "total": 17,
+      "confirmed": 4,
+      "daytrip": 17
+    },
+    "steins-gate": {
+      "total": 9,
+      "confirmed": 5,
+      "daytrip": 9
+    },
+    "love-live": {
+      "total": 5,
+      "confirmed": 3,
+      "daytrip": 5
+    },
+    "anohana": {
+      "total": 7,
+      "confirmed": 5,
+      "daytrip": 7
+    },
+    "lucky-star": {
+      "total": 3,
+      "confirmed": 2,
+      "daytrip": 3
+    },
+    "oregairu": {
+      "total": 7,
+      "confirmed": 0,
+      "daytrip": 7
+    },
+    "girls-last-tour": {
+      "total": 5,
+      "confirmed": 3,
+      "daytrip": 5
+    },
+    "whisper-of-the-heart": {
+      "total": 4,
+      "confirmed": 2,
+      "daytrip": 4
+    },
+    "doraemon": {
+      "total": 3,
+      "confirmed": 2,
+      "daytrip": 3
+    },
+    "bocchi-the-rock": {
+      "total": 23,
+      "confirmed": 2,
+      "daytrip": 23
+    }
+  }
+}

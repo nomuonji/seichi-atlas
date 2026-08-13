@@ -1,0 +1,117 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { works, stats } from '../lib/data';
+---
+
+<Base title="Export a route" description="Request a ready-to-use route export: Google Maps list, KML, or GPX for your anime pilgrimage day trip.">
+  <section class="section">
+    <div class="container route-page">
+      <div class="route-page__head">
+        <p class="micro">Route export</p>
+        <h1 class="display-lg">Your day trip, in your maps app</h1>
+        <p class="lede">
+          Route export is coming in the next phase. Leave your email and we'll send you the first
+          version: a Google Maps list, KML, and GPX of any series' day-trip seichi, ready to load.
+        </p>
+      </div>
+
+      <div class="route-page__grid">
+        <form class="route-form card" data-route-form>
+          <label class="route-form__label" for="email">Email address</label>
+          <input class="route-form__input" id="email" name="email" type="email" required placeholder="you@example.com" />
+          <label class="route-form__label" for="series">Which series are you planning?</label>
+          <select class="route-form__input" id="series" name="series">
+            <option value="">Any series</option>
+            {works.map((w) => (
+              <option value={w.id}>{w.title_en} ({w.year})</option>
+            ))}
+          </select>
+          <div class="route-form__check">
+            <input type="checkbox" id="pdf" name="pdf" />
+            <label for="pdf">Include the printable PDF (Japanese addresses)</label>
+          </div>
+          <button class="btn btn--primary btn--lg" type="submit">
+            <Icon name="download" size={18} /> Request export
+          </button>
+          <p class="route-form__fine mono" data-route-msg>
+            Phase 0 · we collect interest only. No spam.
+          </p>
+        </form>
+
+        <div class="route-formats">
+          <h2 class="display-md">Formats on the way</h2>
+          <ul class="route-formats__list">
+            <li class="route-format">
+              <Icon name="map" size={20} />
+              <div>
+                <strong>Google My Maps CSV</strong>
+                <span class="mono">load straight into Google Maps</span>
+              </div>
+            </li>
+            <li class="route-format">
+              <Icon name="download" size={20} />
+              <div>
+                <strong>GPX</strong>
+                <span class="mono">for GPS units and hiking apps</span>
+              </div>
+            </li>
+            <li class="route-format">
+              <Icon name="check" size={20} />
+              <div>
+                <strong>Print PDF</strong>
+                <span class="mono">Japanese addresses for taxi drivers</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  document.querySelector('[data-route-form]')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const series = document.getElementById('series').value;
+    const subject = encodeURIComponent(`Route export request · ${series || 'any series'}`);
+    const body = encodeURIComponent(`Please add me to the Seichi Atlas route-export waitlist.\n\nEmail: ${email}\nSeries: ${series || 'any'}`);
+    const msg = document.querySelector('[data-route-msg]');
+    if (msg) msg.textContent = 'Thanks · we\'ll be in touch. Opening your mail app to confirm…';
+    window.location.href = `mailto:route@seichiatlas.com?subject=${subject}&body=${body}`;
+  });
+</script>
+
+<style>
+  .route-page__head { max-width: 56ch; margin-bottom: 2.6rem; }
+  .route-page__head h1 { margin: 0.7rem 0 0.8rem; }
+
+  .route-page__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+  @media (max-width: 860px) { .route-page__grid { grid-template-columns: 1fr; } }
+
+  .route-form { padding: 1.8rem; display: flex; flex-direction: column; gap: 0.7rem; }
+  .route-form__label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); margin-top: 0.4rem; }
+  .route-form__input {
+    padding: 0.7rem 0.9rem;
+    border: 1px solid var(--ink-line);
+    border-radius: var(--r-ctrl);
+    background: var(--paper);
+    color: var(--text);
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+  }
+  .route-form__input:focus { outline: none; border-color: var(--accent); }
+  .route-form__check { display: flex; gap: 0.55rem; align-items: center; font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem; }
+  .route-form .btn { margin-top: 1rem; }
+  .route-form__fine { font-size: 0.72rem; color: var(--text-faint); }
+
+  .route-formats { padding: 1.8rem; border: 1px solid var(--paper-line); border-radius: var(--r-card); background: var(--paper-raised); }
+  .route-formats h2 { margin-bottom: 1.2rem; }
+  .route-formats__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .route-format { display: flex; gap: 0.9rem; align-items: flex-start; padding: 0.95rem 0; border-top: 1px solid var(--paper-line); }
+  .route-format:first-child { border-top: 0; }
+  .route-format svg { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+  .route-format strong { display: block; font-family: var(--font-display); font-size: 1rem; }
+  .route-format span { font-size: 0.72rem; color: var(--text-faint); }
+</style>

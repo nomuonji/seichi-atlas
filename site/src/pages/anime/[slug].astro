@@ -1,0 +1,167 @@
+﻿---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import { workBySlug, locationsForWork, dayTripLocationsForWork, appearancesForWork, prefectureById, locations } from '../../lib/data';
+
+export function getStaticPaths() {
+  return [...workBySlug.keys()].map((slug) => ({
+    params: { slug },
+    props: { work: workBySlug.get(slug) },
+  }));
+}
+
+const { work } = Astro.props;
+const locs = locationsForWork(work.id).sort((a, b) => a.name_en.localeCompare(b.name_en));
+const daytrip = dayTripLocationsForWork(work.id);
+const appr = appearancesForWork(work.id);
+const confirmedCount = appr.filter((a) => a.confidence === 'confirmed').length;
+const prefIds = [...new Set(locs.map((l) => l.prefecture))];
+const prefs = prefIds.map((p) => prefectureById.get(p)?.name_en || p);
+const aliases = work.aliases?.filter((a) => a.toLowerCase() !== work.title_en.toLowerCase());
+---
+
+<Base title={work.title_en} description={`All verified anime pilgrimage locations for ${work.title_en} (${work.title_ja}), with coordinates, travel time from Tokyo, and access notes.`}>
+  <section class="section section--paper">
+    <div class="container">
+      <a class="breadcrumb" href="/anime"><span>← All series</span></a>
+
+      <div class="work-head">
+        <div class="work-head__main">
+          <p class="micro">Anime · {work.year} · {work.studio}</p>
+          <h1 class="display-xl">{work.title_en}</h1>
+          <p class="work-head__ja mono">{work.title_ja}</p>
+          {aliases && aliases.length > 0 && (
+            <p class="work-head__aliases mono">
+              Also known as: {aliases.slice(0, 4).join(' · ')}
+            </p>
+          )}
+          <p class="lede work-head__lede">
+            {locs.length} mapped locations · {confirmedCount} confirmed · {daytrip.length} day-trip
+            from Tokyo
+          </p>
+          {work.official_url && (
+            <a class="btn btn--ghost btn--sm" href={work.official_url} target="_blank" rel="noopener">
+              <Icon name="external" size={15} /> Official site
+            </a>
+          )}
+        </div>
+      </div>
+
+      <div class="pref-strip">
+        <span class="micro">Prefectures</span>
+        <div class="pref-strip__chips">
+          {prefs.map((p) => <span class="badge">{p}</span>)}
+        </div>
+      </div>
+
+      <div class="daytrip-banner">
+        <Icon name="train" size={20} />
+        <div>
+          <strong>{daytrip.length} sites are reachable as a day trip from Tokyo</strong>
+          <span class="mono daytrip-banner__sub">
+            {daytrip.length > 0 ? 'open each site for the route and Japanese address' : 'all mapped sites are within reach'}
+          </span>
+        </div>
+        {daytrip.length > 0 && (
+          <a class="btn btn--primary btn--sm" href={`/anime/${work.slug}/day-trip/`}>View day-trip list</a>
+        )}
+      </div>
+
+      <div class="loc-grid">
+        {locs.map((l) => {
+          const tf = l.travel_from?.tokyo;
+          const vis = l.visitability;
+          return (
+            <a class="loc-card" href={`/location/${l.slug}/`}>
+              <div class="loc-card__head">
+                <span class="loc-card__name">{l.name_en}</span>
+                <span class={`badge badge--${vis}`}>{vis}</span>
+              </div>
+              <span class="loc-card__ja mono">{l.name_ja}</span>
+              <div class="loc-card__meta mono">
+                {l.nearest_station?.name_en && <span><Icon name="train" size={13} /> {l.nearest_station.name_en}</span>}
+                {tf && <span><Icon name="clock" size={13} /> {tf.minutes} min from Tokyo</span>}
+              </div>
+              <div class="loc-card__foot">
+                <span class="loc-card__cat mono">{l.category}</span>
+                {l.entry_fee === 'paid' && <span class="badge">Paid entry</span>}
+                {l.car_required && <span class="badge">Car needed</span>}
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .breadcrumb {
+    display: inline-block;
+    margin-bottom: 1.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .breadcrumb:hover { color: var(--accent); }
+
+  .work-head { display: grid; grid-template-columns: 1fr; gap: 1rem; max-width: 100%; }
+  .work-head__ja { color: var(--text-faint); font-size: 1rem; margin-top: 0.4rem; }
+  .work-head__aliases { color: var(--text-faint); font-size: 0.75rem; margin-top: 0.6rem; }
+  .work-head__lede { margin-top: 1.1rem; }
+
+  .pref-strip {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2.2rem 0 1.4rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--paper-line);
+  }
+  .pref-strip__chips { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+  .daytrip-banner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 1.2rem;
+    background: var(--accent-soft);
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+    border-radius: var(--r-card);
+    margin-bottom: 2.2rem;
+  }
+  .daytrip-banner svg { color: var(--accent); flex-shrink: 0; }
+  .daytrip-banner strong { font-family: var(--font-display); font-size: 1.02rem; }
+  .daytrip-banner__sub { display: block; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.15rem; }
+  .daytrip-banner .btn { margin-left: auto; flex-shrink: 0; }
+  @media (max-width: 640px) {
+    .daytrip-banner { flex-wrap: wrap; }
+    .daytrip-banner .btn { margin-left: 0; }
+  }
+
+  .loc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+  @media (max-width: 800px) { .loc-grid { grid-template-columns: 1fr; } }
+
+  .loc-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1.1rem 1.2rem;
+    border: 1px solid var(--paper-line);
+    border-radius: var(--r-card);
+    background: var(--paper-raised);
+    box-shadow: var(--shadow-card);
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .loc-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .loc-card__head { display: flex; justify-content: space-between; gap: 0.6rem; align-items: center; }
+  .loc-card__name { font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; }
+  .loc-card__ja { font-size: 0.75rem; color: var(--text-faint); }
+  .loc-card__meta { display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.3rem; }
+  .loc-card__meta span { display: inline-flex; align-items: center; gap: 0.3rem; }
+  .loc-card__foot { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
+  .loc-card__cat { font-size: 0.68rem; color: var(--text-faint); letter-spacing: 0.06em; text-transform: uppercase; }
+</style>

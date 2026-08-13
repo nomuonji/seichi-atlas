@@ -1,0 +1,196 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import { locationBySlug, worksForLocation, appearancesForLocation, prefectureById } from '../../lib/data';
+
+export function getStaticPaths() {
+  return [...locationBySlug.keys()].map((slug) => ({
+    params: { slug },
+    props: { loc: locationBySlug.get(slug) },
+  }));
+}
+
+const { loc } = Astro.props;
+const works = worksForLocation(loc.id);
+const appr = appearancesForLocation(loc.id);
+const pref = prefectureById.get(loc.prefecture);
+const tf = loc.travel_from?.tokyo;
+const visMap = { public: 'Open to the public', limited: 'Limited access', private: 'Private', closed: 'Closed' } as const;
+
+const catMap: Record<string, string> = {
+  station: 'Station', shrine: 'Shrine & temple', school: 'School', shotengai: 'Shopping street',
+  shop: 'Shop', bridge: 'Bridge', crossing: 'Crossing', park: 'Park', nature: 'Nature', other: 'Landmark',
+};
+
+function fmtDate(iso: string) {
+  const d = new Date(iso);
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+}
+---
+
+<Base title={loc.name_en} description={`${loc.name_en} (${loc.name_ja}): anime pilgrimage location with access details, coordinates, and travel time from Tokyo.`}>
+  <section class="section">
+    <div class="container">
+      <a class="breadcrumb" href="/prefecture"><span>← Places</span></a>
+
+      <div class="loc-head">
+        <div class="loc-head__main">
+          <p class="micro">{catMap[loc.category] || loc.category} · {pref?.name_en || loc.prefecture}</p>
+          <h1 class="display-xl">{loc.name_en}</h1>
+          <p class="loc-head__ja mono">{loc.name_ja} · {loc.address_ja}</p>
+          <div class="loc-head__badges">
+            <span class={`badge badge--${loc.visitability}`}>{visMap[loc.visitability as keyof typeof visMap] || loc.visitability}</span>
+            {loc.entry_fee === 'paid' && <span class="badge">Paid entry</span>}
+            {loc.entry_fee === 'free' && <span class="badge">Free</span>}
+            {loc.car_required && <span class="badge">Car needed</span>}
+            <span class="badge badge--outline">
+              <Icon name="check" size={12} /> verified {fmtDate(loc.last_verified)}
+            </span>
+          </div>
+        </div>
+
+        <div class="loc-head__coord mono">
+          <span class="loc-head__coord-label micro">Coordinates</span>
+          <span class="loc-head__coord-val">{loc.lat.toFixed(5)}, {loc.lng.toFixed(5)}</span>
+          <a class="loc-head__copy mono" href={`https://www.google.com/maps/search/${loc.lat},${loc.lng}`} target="_blank" rel="noopener">
+            <Icon name="external" size={13} /> Open in Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="loc-grid">
+        <div class="loc-panel card">
+          <h2 class="loc-panel__title display-md">How to get there</h2>
+          <div class="access-row">
+            <Icon name="train" size={18} />
+            <div>
+              <span class="access-row__label micro">Nearest station</span>
+              <span class="access-row__val">
+                {loc.nearest_station?.name_en || '·'}<span class="mono" style="color:var(--text-faint);"> {loc.nearest_station?.name_ja || ''}</span>
+              </span>
+              {loc.nearest_station?.walk_min && (
+                <span class="access-row__sub mono">{loc.nearest_station.walk_min} min walk</span>
+              )}
+            </div>
+          </div>
+          {tf && (
+            <div class="access-row">
+              <Icon name="clock" size={18} />
+              <div>
+                <span class="access-row__label micro">From Tokyo Station</span>
+                <span class="access-row__val mono">~{tf.minutes} min · {tf.transfers} transfer{tf.transfers === 1 ? '' : 's'}</span>
+                <span class="access-row__sub mono">≈ ¥{tf.fare_jpy}</span>
+              </div>
+            </div>
+          )}
+          <a class="btn btn--ghost btn--sm" href={`https://www.google.com/maps/dir/35.681236,139.767125/${loc.lat},${loc.lng}`} target="_blank" rel="noopener">
+            <Icon name="map" size={15} /> Directions from Tokyo
+          </a>
+        </div>
+
+        <div class="loc-panel card">
+          <h2 class="loc-panel__title display-md">Access &amp; manners</h2>
+          {loc.visitability_note_en && <p class="access-note">{loc.visitability_note_en}</p>}
+          {loc.etiquette_en && loc.etiquette_en.length > 0 && (
+            <ul class="etiquette">
+              {loc.etiquette_en.map((e) => <li><Icon name="check" size={15} /> {e}</li>)}
+            </ul>
+          )}
+          {!loc.etiquette_en?.length && (
+            <p class="access-note">Be respectful of this place and the people around it.</p>
+          )}
+        </div>
+      </div>
+
+      <div class="loc-panel card loc-appear">
+        <h2 class="loc-panel__title display-md">This place in anime</h2>
+        <div class="appear-list">
+          {appr.map((a) => {
+            const w = works.find((x) => x.id === a.work_id);
+            return (
+              <div class="appear-item">
+                <div class="appear-item__main">
+                  {w && <a class="appear-item__work" href={`/anime/${w.slug}/`}>{w.title_en}</a>}
+                  <span class="appear-item__note">{a.scene_note_en}</span>
+                </div>
+                <div class="appear-item__tags">
+                  <span className={`badge badge--${a.confidence}`}>{a.confidence}</span>
+                  {a.sources?.[0] && (
+                    <a class="appear-item__source mono" href={a.sources[0].url} target="_blank" rel="noopener">
+                      <Icon name="link" size={12} /> source
+                    </a>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .breadcrumb { display: inline-block; margin-bottom: 1.8rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-decoration: none; }
+  .breadcrumb:hover { color: var(--accent); }
+
+  .loc-head { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: start; margin-bottom: 2.4rem; }
+  .loc-head__ja { color: var(--text-faint); font-size: 0.95rem; margin-top: 0.5rem; }
+  .loc-head__badges { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.2rem; }
+  .loc-head__badges .badge { display: inline-flex; align-items: center; gap: 0.3rem; }
+
+  .loc-head__coord {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1rem 1.2rem;
+    background: var(--paper-raised);
+    border: 1px solid var(--paper-line);
+    border-radius: var(--r-card);
+    box-shadow: var(--shadow-card);
+    font-size: 0.85rem;
+    color: var(--text);
+  }
+  .loc-head__coord-label { font-size: 0.65rem; }
+  .loc-head__coord-val { letter-spacing: 0.02em; }
+  .loc-head__copy { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.72rem; color: var(--accent); text-decoration: none; }
+  @media (max-width: 720px) { .loc-head { grid-template-columns: 1fr; } }
+
+  .loc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1rem; }
+  @media (max-width: 800px) { .loc-grid { grid-template-columns: 1fr; } }
+
+  .loc-panel { padding: 1.4rem 1.5rem; }
+  .loc-panel__title { font-size: 1.15rem; margin-bottom: 1.1rem; }
+
+  .access-row { display: flex; gap: 0.9rem; padding: 0.85rem 0; border-top: 1px solid var(--paper-line); }
+  .access-row:first-of-type { border-top: 0; }
+  .access-row svg { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+  .access-row__label { display: block; margin-bottom: 0.2rem; }
+  .access-row__val { display: block; font-weight: 600; }
+  .access-row__sub { display: block; font-size: 0.72rem; color: var(--text-faint); }
+  .loc-panel .btn { margin-top: 1rem; }
+
+  .access-note { color: var(--text-muted); font-size: 0.95rem; line-height: 1.55; margin-bottom: 1rem; }
+  .etiquette { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+  .etiquette li { display: flex; gap: 0.55rem; align-items: flex-start; font-size: 0.92rem; color: var(--text-muted); }
+  .etiquette svg { color: var(--st-public); flex-shrink: 0; margin-top: 3px; }
+
+  .loc-appear { margin-top: 0; }
+  .appear-list { display: flex; flex-direction: column; }
+  .appear-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.2rem;
+    align-items: flex-start;
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--paper-line);
+  }
+  .appear-item:first-child { border-top: 0; }
+  .appear-item__main { display: flex; flex-direction: column; gap: 0.2rem; }
+  .appear-item__work { font-family: var(--font-display); font-weight: 600; color: var(--text); text-decoration: none; }
+  .appear-item__work:hover { color: var(--accent); }
+  .appear-item__note { font-size: 0.9rem; color: var(--text-muted); }
+  .appear-item__tags { display: flex; flex-direction: column; gap: 0.4rem; align-items: flex-end; flex-shrink: 0; }
+  .appear-item__source { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.7rem; color: var(--text-faint); text-decoration: none; }
+  .appear-item__source:hover { color: var(--accent); }
+</style>

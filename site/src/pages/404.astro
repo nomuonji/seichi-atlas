@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Page not found" description="The page you're looking for doesn't exist.">
+  <section class="section">
+    <div class="container notfound">
+      <p class="micro">404</p>
+      <h1 class="display-xl" style="margin:.7rem 0 1rem;">This spot isn't on the map.</h1>
+      <p class="lede">The page you're looking for doesn't exist, or it moved.</p>
+      <div class="notfound__ctas" style="margin-top:1.6rem;">
+        <a class="btn btn--primary" href="/">Back to the atlas</a>
+        <a class="btn btn--ghost" href="/anime">Browse series</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .notfound { max-width: 46ch; padding-block: 4rem; }
+</style>

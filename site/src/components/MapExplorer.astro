@@ -1,0 +1,644 @@
+---
+import Icon from './Icon.astro';
+import { works, locations, appearances, prefectures, stats } from '../lib/data';
+import type { Work, Location } from '../lib/types';
+
+// Serialize only what the client island needs.
+interface FilterState {
+  works: string[];
+  prefectures: string[];
+  maxMinutes: number;
+  categories: string[];
+  visitability: string[];
+  fee: string[];
+  carOk: boolean;
+  freshness: number;
+}
+
+const defaultState: FilterState = {
+  works: [],
+  prefectures: [],
+  maxMinutes: 240,
+  categories: [],
+  visitability: [],
+  fee: [],
+  carOk: false,
+  freshness: 0,
+};
+
+const categoryLabels: Record<string, string> = {
+  station: 'Station',
+  shrine: 'Shrine & temple',
+  school: 'School',
+  shotengai: 'Shopping street',
+  shop: 'Shop',
+  bridge: 'Bridge',
+  crossing: 'Crossing',
+  park: 'Park',
+  nature: 'Nature',
+  other: 'Landmark',
+};
+
+const workOptions = works.map((w) => ({ value: w.id, label: w.title_en }));
+const prefOptions = prefectures.map((p) => ({ value: p.id, label: p.name_en }));
+const catOptions = Object.entries(categoryLabels).map(([value, label]) => ({ value, label }));
+---
+
+<div class="explorer" id="explore">
+  <div class="explorer__map" data-map></div>
+
+  <aside class="explorer__panel" data-panel>
+    <div class="explorer__panel-head">
+      <div>
+        <span class="micro">Filter</span>
+        <h2 class="display-md">Find a seichi</h2>
+      </div>
+      <button class="explorer__reset" data-reset type="button">
+        Reset
+      </button>
+    </div>
+
+    <div class="filter-group">
+      <label class="filter-label" for="f-search">Series</label>
+      <div class="search-wrap">
+        <Icon name="pin" size={16} />
+        <input id="f-search" class="filter-search" type="text" placeholder="Your Name, Slam Dunk…" autocomplete="off" data-search />
+      </div>
+      <div class="chip-row" data-work-chips>
+        {workOptions.map((w) => (
+          <button class="chip" type="button" data-chip-work value={w.value}>{w.label}</button>
+        ))}
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label">Day-trip radius from Tokyo</span>
+      <div class="radius" data-radius>
+        <output class="radius__val mono" data-radius-val>{defaultState.maxMinutes} min</output>
+        <input type="range" min="30" max="240" step="30" value={defaultState.maxMinutes} data-range aria-label="Max travel time from Tokyo" />
+        <div class="radius__scale mono">
+          <span>30</span><span>60</span><span>90</span><span>120</span><span>180</span><span>240</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label">Prefecture</span>
+      <div class="chip-row" data-pref-chips>
+        {prefOptions.map((p) => (
+          <button class="chip" type="button" data-chip-pref value={p.value}>{p.label}</button>
+        ))}
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label">Category</span>
+      <div class="chip-row chip-row--wrap" data-cat-chips>
+        {catOptions.map((c) => (
+          <button class="chip" type="button" data-chip-cat value={c.value}>{c.label}</button>
+        ))}
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label">You can actually visit</span>
+      <div class="chip-row" data-vis-chips>
+        <button class="chip" type="button" data-chip-vis value="public">Open</button>
+        <button class="chip" type="button" data-chip-vis value="limited">Limited</button>
+      </div>
+      <p class="filter-hint">Private homes and closed sites are hidden by default.</p>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label">Entry fee</span>
+      <div class="chip-row" data-fee-chips>
+        <button class="chip" type="button" data-chip-fee value="free">Free</button>
+        <button class="chip" type="button" data-chip-fee value="paid">Paid</button>
+      </div>
+    </div>
+
+    <label class="switch-row">
+      <input type="checkbox" data-car />
+      <span class="switch"></span>
+      <span>Only reachable by public transport</span>
+    </label>
+
+    <div class="filter-group">
+      <span class="filter-label">Verified</span>
+      <div class="chip-row" data-fresh-chips>
+        <button class="chip" type="button" data-chip-fresh value="0">Any time</button>
+        <button class="chip" type="button" data-chip-fresh value="1">Past year</button>
+      </div>
+    </div>
+  </aside>
+
+  <section class="explorer__results" data-results aria-live="polite"></section>
+</div>
+
+<script>
+  import maplibregl from 'maplibre-gl';
+  import 'maplibre-gl/dist/maplibre-gl.css';
+  import Fuse from 'fuse.js';
+  import type { FilterState } from '../lib/types';
+
+  interface Props { }
+
+  const worksData = JSON.parse(document.getElementById('explorer-data')!.textContent || '{}');
+  const locationsData = JSON.parse(document.getElementById('explorer-locations')!.textContent || '[]');
+
+  interface LocationItem extends Record<string, unknown> {
+    id: string; slug: string; name_en: string; name_ja: string;
+    lat: number; lng: number; prefecture: string; category: string;
+    visitability: string; car_required: boolean; entry_fee?: string;
+    travel_from?: Record<string, { minutes: number }>;
+    last_verified: string; nearest_station?: { name_en: string; walk_min: number };
+    _works: string[];
+  }
+
+  const LOCS: LocationItem[] = locationsData;
+
+  const state: FilterState = {
+    works: [], prefectures: [], maxMinutes: 240, categories: [], visitability: [], fee: [], carOk: false, freshness: 0,
+  };
+
+  // ---- Map ----
+  const mapEl = document.querySelector<HTMLElement>('[data-map]')!;
+  const darkMapStyle = 'https://tiles.openfreemap.org/styles/dark';
+  const lightMapStyle = 'https://tiles.openfreemap.org/styles/liberty';
+  function currentMapStyle() {
+    return document.documentElement.getAttribute('data-theme') === 'dark' ? darkMapStyle : lightMapStyle;
+  }
+  const map = new maplibregl.Map({
+    container: mapEl,
+    style: currentMapStyle(),
+    center: [139.7, 35.45],
+    zoom: 8.2,
+    attributionControl: false,
+  });
+  map.addControl(new maplibregl.NavigationControl({ showCompass: true }), 'top-right');
+  map.addControl(new maplibregl.ScaleControl({ maxWidth: 120, unit: 'metric' }), 'bottom-left');
+
+  // ---- Custom source + layers (rebuilt after any style swap) ----
+  function ensureLayers() {
+    if (map.getSource('points')) return;
+    map.addSource('points', {
+      type: 'geojson',
+      data: { type: 'FeatureCollection', features: [] },
+      cluster: true,
+      clusterMaxZoom: 13,
+      clusterRadius: 44,
+    });
+    map.addLayer({
+      id: 'clusters',
+      type: 'circle',
+      source: 'points',
+      filter: ['has', 'point_count'],
+      paint: {
+        'circle-color': 'rgba(217,79,48,0.16)',
+        'circle-radius': ['step', ['get', 'point_count'], 18, 10, 22, 50, 26],
+        'circle-stroke-width': 1.4,
+        'circle-stroke-color': 'rgba(217,79,48,0.9)',
+      },
+    });
+    map.addLayer({
+      id: 'cluster-count',
+      type: 'symbol',
+      source: 'points',
+      filter: ['has', 'point_count'],
+      layout: {
+        'text-field': '{point_count_abbreviated}',
+        'text-font': ['Noto Sans Regular'],
+        'text-size': 11,
+      },
+      paint: { 'text-color': '#d94f30' },
+    });
+    map.addLayer({
+      id: 'pins',
+      type: 'circle',
+      source: 'points',
+      filter: ['!', ['has', 'point_count']],
+      paint: {
+        'circle-color': '#d94f30',
+        'circle-radius': 6,
+        'circle-stroke-width': 2,
+        'circle-stroke-color': 'rgba(255,255,255,0.9)',
+      },
+    });
+    map.on('click', 'pins', (e) => {
+      if (!e.features?.length) return;
+      const f = e.features[0];
+      const loc = LOCS.find((l) => l.id === f.properties?.id);
+      if (loc) selectLocation(loc);
+    });
+    map.on('mouseenter', 'pins', () => map.getCanvas().style.cursor = 'pointer');
+    map.on('mouseleave', 'pins', () => map.getCanvas().style.cursor = '');
+    map.on('click', 'clusters', (e) => {
+      const feat = e.features?.[0];
+      if (!feat) return;
+      const source = map.getSource('points') as maplibregl.GeoJSONSource;
+      const clusterId = feat.properties?.cluster_id;
+      source.getClusterExpansionZoom(clusterId, (err, zoom) => {
+        if (err || zoom === undefined) return;
+        map.easeTo({ center: (feat.geometry as GeoJSON.Point).coordinates as [number, number], zoom });
+      });
+    });
+  }
+
+  map.on('load', () => {
+    ensureLayers();
+    applyFilters();
+  });
+
+  // ---- Theme-aware style swap, preserving our layers ----
+  let currentStyleUrl = currentMapStyle();
+  function applyThemeStyle() {
+    const target = currentMapStyle();
+    if (target === currentStyleUrl) return;
+    currentStyleUrl = target;
+    const hadLayers = !!map.getSource('points');
+    map.setStyle(target);
+    if (hadLayers) map.once('load', () => { ensureLayers(); applyFilters(); });
+  }
+  document.querySelectorAll('[data-theme-toggle]').forEach((btn) => {
+    btn.addEventListener('click', applyThemeStyle);
+  });
+
+  // ---- Filter helpers ----
+  function matches(loc: LocationItem): boolean {
+    if (state.works.length && !state.works.some((w) => loc._works.includes(w))) return false;
+    if (state.prefectures.length && !state.prefectures.includes(loc.prefecture)) return false;
+    const tf = loc.travel_from?.tokyo?.minutes;
+    if (tf !== undefined && tf > state.maxMinutes) return false;
+    if (state.categories.length && !state.categories.includes(loc.category)) return false;
+    if (state.visitability.length && !state.visitability.includes(loc.visitability)) return false;
+    if (state.fee.length && loc.entry_fee && !state.fee.includes(loc.entry_fee)) return false;
+    if (state.carOk && loc.car_required) return false;
+    if (state.freshness) {
+      const d = new Date(loc.last_verified);
+      const cutoff = new Date();
+      cutoff.setFullYear(cutoff.getFullYear() - 1);
+      if (d < cutoff) return false;
+    }
+    return true;
+  }
+
+  function applyFilters() {
+    const filtered = LOCS.filter(matches);
+    const features = filtered.map((l) => ({
+      type: 'Feature' as const,
+      geometry: { type: 'Point' as const, coordinates: [l.lng, l.lat] },
+      properties: { id: l.id, name: l.name_en },
+    }));
+    (map.getSource('points') as maplibregl.GeoJSONSource)?.setData({ type: 'FeatureCollection', features });
+    renderResults(filtered);
+    syncUrl();
+  }
+
+  // ---- Results list ----
+  const resultsEl = document.querySelector<HTMLElement>('[data-results]')!;
+
+  function visitLabel(v: string) { return { public: 'Open', limited: 'Limited', private: 'Private', closed: 'Closed' }[v] || v; }
+
+  function renderResults(list: LocationItem[]) {
+    if (!list.length) {
+      resultsEl.innerHTML = `<div class="results-empty">
+        <div class="results-empty__icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16v.5"/></svg></div>
+        <p class="display-md" style="font-size:1.1rem;">No seichi match those filters.</p>
+        <p class="mono" style="color:var(--text-faint); font-size:.8rem;">Try widening the radius or clearing a category.</p>
+      </div>`;
+      return;
+    }
+    const byPref: Record<string, LocationItem[]> = {};
+    for (const l of list) { (byPref[l.prefecture] ||= []).push(l); }
+
+    let html = `<div class="results-bar">
+      <span class="mono results-count">${list.length} location${list.length === 1 ? '' : 's'}</span>
+      <a class="link-arrow" href="/route">Export route <span>→</span></a>
+    </div>`;
+    for (const [pref, locs] of Object.entries(byPref)) {
+      const prefMeta = Object.fromEntries(Object.entries({ tokyo: 'Tokyo', kanagawa: 'Kanagawa', saitama: 'Saitama', chiba: 'Chiba' }))[pref] || pref;
+      html += `<div class="results-pref">
+        <h3 class="results-pref__name">${prefMeta}</h3>
+        <div class="results-list">`;
+      for (const l of locs) {
+        const tf = l.travel_from?.tokyo?.minutes;
+        const worksNames = (l._works || [])
+          .map((id) => worksData[id]?.title_en || id)
+          .slice(0, 3)
+          .join(' · ');
+        html += `<a class="result" href="/location/${l.slug}/" data-result="${l.id}">
+          <div class="result__main">
+            <span class="result__name">${l.name_en}</span>
+            <span class="result__meta mono">${l.nearest_station?.name_en || '·'}${tf ? ` · ${tf} min from Tokyo` : ''}</span>
+          </div>
+          <div class="result__tags">
+            <span class="badge badge--${l.visitability}">${visitLabel(l.visitability)}</span>
+            ${l.entry_fee === 'paid' ? '<span class="badge">Paid</span>' : ''}
+            ${l.car_required ? '<span class="badge">Car</span>' : ''}
+          </div>
+          ${worksNames ? `<div class="result__works mono">${worksNames}</div>` : ''}
+        </a>`;
+      }
+      html += `</div></div>`;
+    }
+    resultsEl.innerHTML = html;
+
+    resultsEl.querySelectorAll<HTMLElement>('[data-result]').forEach((el) => {
+      el.addEventListener('mouseenter', () => highlightOnMap(el.dataset.result!));
+      el.addEventListener('mouseleave', () => clearHighlight());
+    });
+  }
+
+  function highlightOnMap(id: string) {
+    const loc = LOCS.find((l) => l.id === id);
+    if (!loc) return;
+    map.easeTo({ center: [loc.lng, loc.lat], zoom: 12, duration: 500 });
+  }
+  function clearHighlight() { }
+
+  function selectLocation(loc: LocationItem) {
+    map.easeTo({ center: [loc.lng, loc.lat], zoom: 14, duration: 600 });
+    const card = resultsEl.querySelector<HTMLElement>(`[data-result="${loc.id}"]`);
+    card?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  // ---- URL sync ----
+  function syncUrl() {
+    const params = new URLSearchParams();
+    if (state.works.length) params.set('works', state.works.join(','));
+    if (state.prefectures.length) params.set('prefs', state.prefectures.join(','));
+    if (state.maxMinutes !== 240) params.set('max_min', String(state.maxMinutes));
+    if (state.categories.length) params.set('cats', state.categories.join(','));
+    if (state.visitability.length) params.set('vis', state.visitability.join(','));
+    if (state.fee.length) params.set('fee', state.fee.join(','));
+    if (state.carOk) params.set('no_car', '1');
+    if (state.freshness) params.set('fresh', '1');
+    const qs = params.toString();
+    history.replaceState(null, '', qs ? `/map/?${qs}` : '/map/');
+  }
+
+  // ---- Chip helpers ----
+  function toggle(arr: string[], v: string) {
+    const i = arr.indexOf(v);
+    if (i >= 0) arr.splice(i, 1); else arr.push(v);
+  }
+
+  function bindChips(attr: string, target: keyof FilterState, isMulti = true) {
+    document.querySelectorAll<HTMLButtonElement>(`[${attr}]`).forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const val = btn.value || btn.getAttribute('data-val') || '';
+        if (isMulti) {
+          toggle(state[target] as string[], val);
+          btn.classList.toggle('is-on', (state[target] as string[]).includes(val));
+        } else {
+          state[target] = val as never;
+          document.querySelectorAll<HTMLButtonElement>(`[${attr}]`).forEach((b) =>
+            b.classList.toggle('is-on', (b.value || b.getAttribute('data-val') || '') === val));
+        }
+        applyFilters();
+      });
+    });
+  }
+
+  bindChips('data-chip-work', 'works');
+  bindChips('data-chip-pref', 'prefectures');
+  bindChips('data-chip-cat', 'categories');
+  bindChips('data-chip-vis', 'visitability');
+  bindChips('data-chip-fee', 'fee');
+  bindChips('data-chip-fresh', 'freshness', false);
+
+  // range
+  const range = document.querySelector<HTMLInputElement>('[data-range]')!;
+  const rangeVal = document.querySelector<HTMLOutputElement>('[data-radius-val]')!;
+  range.addEventListener('input', () => {
+    state.maxMinutes = Number(range.value);
+    rangeVal.textContent = `${state.maxMinutes} min`;
+    applyFilters();
+  });
+
+  // car
+  document.querySelector<HTMLInputElement>('[data-car]')!.addEventListener('change', (e) => {
+    state.carOk = (e.target as HTMLInputElement).checked;
+    applyFilters();
+  });
+
+  // search
+  const search = document.querySelector<HTMLInputElement>('[data-search]')!;
+  const fuse = new Fuse(LOCS, { keys: ['name_en', 'name_ja', '_works'], threshold: 0.3 });
+  search.addEventListener('input', () => {
+    const q = search.value.trim();
+    if (!q) { applyFilters(); return; }
+    const hits = fuse.search(q).slice(0, 8).map((r) => r.item);
+    renderResults(hits);
+  });
+
+  // reset
+  document.querySelector<HTMLButtonElement>('[data-reset]')!.addEventListener('click', () => {
+    state.works = []; state.prefectures = []; state.maxMinutes = 240;
+    state.categories = []; state.visitability = []; state.fee = [];
+    state.carOk = false; state.freshness = 0;
+    document.querySelectorAll('.chip.is-on').forEach((c) => c.classList.remove('is-on'));
+    range.value = '240'; rangeVal.textContent = '240 min';
+    (document.querySelector('[data-car]') as HTMLInputElement).checked = false;
+    search.value = '';
+    applyFilters();
+  });
+
+  // initial
+  applyFilters();
+</script>
+
+<!-- Serialized data for the island -->
+<script type="application/json" id="explorer-data" set:html={JSON.stringify(Object.fromEntries(works.map((w) => [w.id, { title_en: w.title_en, slug: w.slug }])))}></script>
+<script type="application/json" id="explorer-locations" set:html={JSON.stringify(
+  locations.map((l) => ({
+    id: l.id, slug: l.slug, name_en: l.name_en, name_ja: l.name_ja,
+    lat: l.lat, lng: l.lng, prefecture: l.prefecture, category: l.category,
+    visitability: l.visitability, car_required: l.car_required, entry_fee: l.entry_fee,
+    travel_from: l.travel_from, last_verified: l.last_verified,
+    nearest_station: l.nearest_station ? { name_en: l.nearest_station.name_en, walk_min: l.nearest_station.walk_min } : undefined,
+    _works: appearances.filter((a) => a.location_id === l.id).map((a) => a.work_id),
+  }))
+)}></script>
+
+<style>
+  .explorer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    grid-template-rows: minmax(420px, 58vh) auto;
+    gap: 1rem;
+    height: calc(100dvh - var(--nav-h) - 2rem);
+    min-height: 560px;
+  }
+  .explorer__map {
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: var(--r-card);
+    overflow: hidden;
+    border: 1px solid var(--paper-line);
+    box-shadow: var(--shadow-card);
+    background: #e8e6e0;
+  }
+  .explorer__panel {
+    grid-column: 2;
+    grid-row: 1;
+    overflow-y: auto;
+    padding: 1.2rem 1.2rem 1.6rem;
+    background: var(--paper-raised);
+    border: 1px solid var(--paper-line);
+    border-radius: var(--r-card);
+    box-shadow: var(--shadow-card);
+    overscroll-behavior: contain;
+  }
+  .explorer__results {
+    grid-column: 1;
+    grid-row: 2;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+    overscroll-behavior: contain;
+  }
+  .explorer__panel-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+  }
+  .explorer__reset {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: transparent;
+    border: 1px solid var(--paper-line);
+    border-radius: var(--r-ctrl);
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  .explorer__reset:hover { color: var(--accent); border-color: var(--accent); }
+
+  .filter-group { margin-bottom: 1.1rem; }
+  .filter-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin-bottom: 0.5rem;
+  }
+  .filter-hint { font-size: 0.78rem; color: var(--text-faint); margin-top: 0.4rem; }
+
+  .search-wrap { position: relative; }
+  .search-wrap svg { position: absolute; left: 0.7rem; top: 50%; transform: translateY(-50%); color: var(--text-faint); }
+  .filter-search {
+    width: 100%;
+    padding: 0.6rem 0.8rem 0.6rem 2.1rem;
+    border: 1px solid var(--ink-line);
+    border-radius: var(--r-ctrl);
+    background: var(--paper);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: border-color 0.15s ease;
+  }
+  .filter-search:focus { outline: none; border-color: var(--accent); }
+  .filter-search::placeholder { color: var(--text-faint); }
+
+  .chip-row { display: flex; gap: 0.45rem; flex-wrap: wrap; margin-top: 0.5rem; }
+  .chip {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    background: var(--paper);
+    border: 1px solid var(--ink-line);
+    border-radius: var(--r-pill);
+    padding: 0.3rem 0.75rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .chip:hover { color: var(--text); border-color: var(--text-muted); }
+  .chip.is-on {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+
+  .radius { margin-top: 0.2rem; }
+  .radius__val { display: block; font-size: 0.9rem; color: var(--accent); margin-bottom: 0.3rem; }
+  .radius input[type='range'] {
+    width: 100%;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+  .radius__scale { display: flex; justify-content: space-between; font-size: 0.66rem; color: var(--text-faint); margin-top: 0.2rem; }
+
+  .switch-row { display: flex; align-items: center; gap: 0.6rem; margin: 0.2rem 0 1.1rem; font-size: 0.9rem; color: var(--text-muted); cursor: pointer; }
+  .switch-row input { display: none; }
+  .switch {
+    width: 36px; height: 20px;
+    border-radius: 999px;
+    background: var(--paper-sunken);
+    border: 1px solid var(--ink-line);
+    position: relative;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+  }
+  .switch::after {
+    content: '';
+    position: absolute;
+    top: 2px; left: 2px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    transition: all 0.2s ease;
+  }
+  .switch-row input:checked + .switch { background: var(--accent); border-color: var(--accent); }
+  .switch-row input:checked + .switch::after { left: 18px; background: #fff; }
+
+  /* Results */
+  .results-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+  }
+  .results-count { color: var(--text-muted); font-size: 0.8rem; }
+  .results-pref { margin-bottom: 1.4rem; }
+  .results-pref__name {
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+  .results-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0.6rem; }
+  .result {
+    display: block;
+    padding: 0.8rem 0.9rem;
+    border: 1px solid var(--paper-line);
+    border-radius: var(--r-card);
+    background: var(--paper-raised);
+    box-shadow: var(--shadow-card);
+    text-decoration: none;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .result:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .result__main { display: flex; flex-direction: column; gap: 0.15rem; }
+  .result__name { font-family: var(--font-display); font-weight: 600; font-size: 1rem; color: var(--text); }
+  .result__meta { font-size: 0.72rem; color: var(--text-faint); }
+  .result__tags { display: flex; gap: 0.35rem; margin-top: 0.5rem; flex-wrap: wrap; }
+  .result__works { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.45rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .results-empty { padding: 3rem 1rem; text-align: center; color: var(--text-muted); }
+  .results-empty__icon { margin: 0 auto 1rem; width: 52px; height: 52px; border-radius: 50%; background: var(--paper-raised); display: flex; align-items: center; justify-content: center; border: 1px solid var(--paper-line); }
+
+  @media (max-width: 1023px) {
+    .explorer {
+      grid-template-columns: 1fr;
+      grid-template-rows: minmax(320px, 40vh) auto auto;
+      height: auto;
+      min-height: 0;
+    }
+    .explorer__map { grid-column: 1; grid-row: 1; }
+    .explorer__panel { grid-column: 1; grid-row: 2; max-height: none; overflow: visible; }
+    .explorer__results { grid-column: 1; grid-row: 3; }
+  }
+</style>

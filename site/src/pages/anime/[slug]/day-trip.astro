@@ -1,0 +1,141 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Icon from '../../../components/Icon.astro';
+import { workBySlug, dayTripLocationsForWork, appearancesForLocation } from '../../../lib/data';
+
+export function getStaticPaths() {
+  return [...workBySlug.keys()].map((slug) => ({
+    params: { slug },
+    props: { work: workBySlug.get(slug) },
+  }));
+}
+
+const { work } = Astro.props;
+const daytrip = dayTripLocationsForWork(work.id).sort((a, b) => {
+  const ta = a.travel_from?.tokyo?.minutes ?? 999;
+  const tb = b.travel_from?.tokyo?.minutes ?? 999;
+  return ta - tb;
+});
+const totalMinutes = daytrip.length
+  ? daytrip.reduce((acc, l) => acc + (l.travel_from?.tokyo?.minutes ?? 0), 0)
+  : 0;
+const maxMin = daytrip.length ? Math.max(...daytrip.map((l) => l.travel_from?.tokyo?.minutes ?? 0)) : 0;
+---
+
+<Base title={`${work.title_en} · day-trip seichi`} description={`The best ${work.title_en} (${work.title_ja}) anime pilgrimage locations for a day trip from Tokyo, ordered by travel time.`}>
+  <section class="section">
+    <div class="container">
+      <a class="breadcrumb" href={`/anime/${work.slug}/`}><span>← {work.title_en}</span></a>
+      <div class="page-head">
+        <p class="micro">Day-trip edition</p>
+        <h1 class="display-lg">{work.title_en}: a day of seichi</h1>
+        <p class="lede">
+          {daytrip.length} locations reachable from Tokyo in under 3 hours, ordered by how long
+          each takes to get to. {daytrip.length > 0 && `Farthest is ${maxMin} minutes away.`}
+        </p>
+        <div class="trip-summary">
+          <div class="trip-summary__item">
+            <span class="display-md mono">{daytrip.length}</span>
+            <span class="micro">stops</span>
+          </div>
+          <div class="trip-summary__item">
+            <span class="display-md mono">{totalMinutes}</span>
+            <span class="micro">total travel min</span>
+          </div>
+          <div class="trip-summary__item">
+            <span class="display-md mono">{work.year}</span>
+            <span class="micro">released</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="route-list">
+        {daytrip.map((l, i) => {
+          const tf = l.travel_from?.tokyo;
+          const worksOnSite = appearancesForLocation(l.id).length;
+          return (
+            <div class="route-row">
+              <span class="route-row__num mono">{String(i + 1).padStart(2, '0')}</span>
+              <div class="route-row__body">
+                <a class="route-row__name" href={`/location/${l.slug}/`}>{l.name_en}</a>
+                <span class="route-row__ja mono">{l.name_ja}</span>
+                {tf && (
+                  <div class="route-row__meta mono">
+                    <Icon name="clock" size={13} /> {tf.minutes} min · {tf.transfers} transfer{tf.transfers === 1 ? '' : 's'} · ¥{tf.fare_jpy}
+                  </div>
+                )}
+              </div>
+              <div class="route-row__tags">
+                <span class={`badge badge--${l.visitability}`}>{l.visitability}</span>
+                <span class="badge">{worksOnSite > 1 ? `${worksOnSite} series here` : 'exclusive'}</span>
+                {l.nearest_station && <span class="badge badge--outline">{l.nearest_station.name_en}</span>}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div class="route-cta">
+        <Icon name="map" size={22} />
+        <div>
+          <h2 class="display-md">Planning the route on your phone?</h2>
+          <p class="mono route-cta__sub">Export these as a Google Maps list or GPX track.</p>
+        </div>
+        <a class="btn btn--primary" href="/route">Export route</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .breadcrumb { display: inline-block; margin-bottom: 1.6rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-decoration: none; }
+  .breadcrumb:hover { color: var(--accent); }
+  .page-head { max-width: 62ch; margin-bottom: 2.4rem; }
+  .page-head h1 { margin: 0.7rem 0 0.8rem; }
+  .page-head .lede { margin-bottom: 1.6rem; }
+
+  .trip-summary { display: flex; gap: 2.4rem; padding: 1.2rem 0; border-top: 1px solid var(--paper-line); border-bottom: 1px solid var(--paper-line); }
+  .trip-summary__item { display: flex; flex-direction: column; gap: 0.15rem; }
+  .trip-summary__item .display-md { color: var(--accent); }
+
+  .route-list { margin-top: 2rem; }
+  .route-row {
+    display: grid;
+    grid-template-columns: 44px 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    border-top: 1px solid var(--paper-line);
+  }
+  .route-row:last-child { border-bottom: 1px solid var(--paper-line); }
+  .route-row__num { color: var(--accent); font-size: 0.85rem; }
+  .route-row__body { display: flex; flex-direction: column; gap: 0.2rem; }
+  .route-row__name { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; color: var(--text); text-decoration: none; }
+  .route-row__name:hover { color: var(--accent); }
+  .route-row__ja { font-size: 0.75rem; color: var(--text-faint); }
+  .route-row__meta { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.75rem; color: var(--text-muted); }
+  .route-row__tags { display: flex; gap: 0.4rem; flex-wrap: wrap; justify-content: flex-end; }
+  @media (max-width: 640px) {
+    .route-row { grid-template-columns: 32px 1fr; }
+    .route-row__tags { grid-column: 2; justify-content: flex-start; }
+  }
+
+  .route-cta {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    margin-top: 2.6rem;
+    padding: 1.4rem 1.6rem;
+    background: var(--accent-soft);
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+    border-radius: var(--r-card);
+  }
+  .route-cta svg { color: var(--accent); flex-shrink: 0; }
+  .route-cta .display-md { font-size: 1.15rem; }
+  .route-cta__sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem; }
+  .route-cta .btn { margin-left: auto; flex-shrink: 0; }
+  @media (max-width: 640px) {
+    .route-cta { flex-wrap: wrap; }
+    .route-cta .btn { margin-left: 0; }
+  }
+</style>

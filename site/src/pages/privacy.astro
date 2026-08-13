@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Privacy" description="Seichi Atlas privacy policy: no cookies, no tracking, no accounts.">
+  <section class="section">
+    <div class="container prose">
+      <p class="micro">Privacy</p>
+      <h1 class="display-lg" style="margin:.7rem 0 1rem;">Privacy, plainly</h1>
+
+      <h2>We collect almost nothing</h2>
+      <ul>
+        <li>No accounts, no login, no tracking cookies.</li>
+        <li>Analytics run on Cloudflare Web Analytics, which uses no cookies.</li>
+        <li>If you email us, we keep your message only to answer it.</li>
+      </ul>
+
+      <h2>Route waitlist</h2>
+      <p>
+        The route-export waitlist collects your email address for the sole purpose of notifying you
+        when export launches. It is never sold or shared. You can ask to be removed at any time.
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .prose { max-width: 68ch; }
+  .prose h2 { margin: 2.4rem 0 0.8rem; font-size: 1.35rem; }
+  .prose p { margin-bottom: 1rem; color: var(--text-muted); line-height: 1.7; }
+  .prose ul { margin: 0 0 1.4rem; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-muted); }
+  .prose li::marker { color: var(--accent); }
+</style>

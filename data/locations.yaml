@@ -1,0 +1,2468 @@
+﻿# Seichi Atlas — 場所マスタ
+# 座標は Nominatim (OpenStreetMap) による裏取り値（2026-08-13 検証）。
+# confidence は appearances.yaml 側で confirmed/likely/disputed のいずれかを付与。
+
+# ---------- TOKYO ----------
+
+- id: suga-shrine-steps
+  name_en: "Suga Shrine Steps"
+  name_ja: "須賀神社 男坂"
+  lat: 35.685334
+  lng: 139.722526
+  address_ja: "東京都新宿区須賀町5"
+  address_en: "5 Sugacho, Shinjuku, Tokyo"
+  prefecture: tokyo
+  municipality: shinjuku
+  category: shrine
+  visitability: public
+  visitability_note_en: "Public staircase. Residential neighbourhood, keep quiet."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Yotsuya-sanchome Station"
+    name_ja: "四谷三丁目駅"
+    lines: ["Tokyo Metro Marunouchi"]
+    walk_min: 7
+  travel_from:
+    tokyo: { minutes: 22, transfers: 1, fare_jpy: 220 }
+  etiquette_en:
+    - "Residents live here. Do not block the stairs."
+    - "Photographing the steps is fine; keep voices low."
+  last_verified: 2026-08-13
+
+- id: suga-shrine
+  name_en: "Suga Shrine"
+  name_ja: "須賀神社"
+  lat: 35.68556
+  lng: 139.72185
+  address_ja: "東京都新宿区須賀町5"
+  address_en: "5 Sugacho, Shinjuku, Tokyo"
+  prefecture: tokyo
+  municipality: shinjuku
+  category: shrine
+  visitability: public
+  visitability_note_en: "Active Shinto shrine; worshippers and priests on site."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Yotsuya-sanchome Station"
+    name_ja: "四谷三丁目駅"
+    lines: ["Tokyo Metro Marunouchi"]
+    walk_min: 6
+  travel_from:
+    tokyo: { minutes: 21, transfers: 1, fare_jpy: 220 }
+  etiquette_en:
+    - "Bow once before entering through the torii."
+    - "Do not enter the prayer hall."
+  last_verified: 2026-08-13
+
+- id: ntt-docomo-yoyogi
+  name_en: "NTT Docomo Yoyogi Building"
+  name_ja: "NTTドコモ代々木ビル"
+  lat: 35.684451
+  lng: 139.702884
+  address_ja: "東京都渋谷区代々木2丁目"
+  address_en: "Yoyogi 2-chome, Shibuya, Tokyo"
+  prefecture: tokyo
+  municipality: shibuya
+  category: other
+  visitability: public
+  visitability_note_en: "Corporate tower, exterior only from the street."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Yoyogi Station"
+    name_ja: "代々木駅"
+    lines: ["JR Yamanote", "JR Chuo-Sobu"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 18, transfers: 0, fare_jpy: 170 }
+  etiquette_en:
+    - "Street photography only; the building is private property."
+  last_verified: 2026-08-13
+
+- id: yotsuya-station-crossing
+  name_en: "Yotsuya Station Crossing"
+  name_ja: "四ツ谷駅前交差点"
+  lat: 35.686189
+  lng: 139.729367
+  address_ja: "東京都新宿区四谷1丁目"
+  address_en: "Yotsuya 1-chome, Shinjuku, Tokyo"
+  prefecture: tokyo
+  municipality: shinjuku
+  category: crossing
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Yotsuya Station"
+    name_ja: "四ツ谷駅"
+    lines: ["JR Chuo Line", "Tokyo Metro Marunouchi", "Tokyo Metro Namboku"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 12, transfers: 0, fare_jpy: 170 }
+  etiquette_en:
+    - "Busy junction; cross on green only."
+  last_verified: 2026-08-13
+
+- id: hie-shrine
+  name_en: "Hie Shrine"
+  name_ja: "日枝神社"
+  lat: 35.674685
+  lng: 139.739882
+  address_ja: "東京都千代田区永田町2丁目10-5"
+  address_en: "10-5 Nagatacho 2-chome, Chiyoda, Tokyo"
+  prefecture: tokyo
+  municipality: chiyoda
+  category: shrine
+  visitability: public
+  visitability_note_en: "Active shrine in a government district."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Tameike-Sanno Station"
+    name_ja: "溜池山王駅"
+    lines: ["Tokyo Metro Ginza", "Tokyo Metro Namboku"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 15, transfers: 1, fare_jpy: 180 }
+  etiquette_en:
+    - "Businesspeople visit during lunch; be respectful."
+  last_verified: 2026-08-13
+
+- id: shinjuku-station-west-exit
+  name_en: "Shinjuku Station West Exit"
+  name_ja: "新宿駅西口"
+  lat: 35.690856
+  lng: 139.698652
+  address_ja: "東京都新宿区西新宿1丁目"
+  address_en: "Nishi-Shinjuku 1-chome, Shinjuku, Tokyo"
+  prefecture: tokyo
+  municipality: shinjuku
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Shinjuku Station"
+    name_ja: "新宿駅"
+    lines: ["JR", "Odakyu", "Keio", "Tokyo Metro", "Toei"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 15, transfers: 0, fare_jpy: 170 }
+  etiquette_en:
+    - "One of the busiest stations in the world. Watch belongings."
+  last_verified: 2026-08-13
+
+- id: tokyo-metro-gov
+  name_en: "Tokyo Metropolitan Government Building"
+  name_ja: "東京都庁第一本庁舎"
+  lat: 35.690299
+  lng: 139.691546
+  address_ja: "東京都新宿区西新宿2丁目8-1"
+  address_en: "8-1 Nishi-Shinjuku 2-chome, Shinjuku, Tokyo"
+  prefecture: tokyo
+  municipality: shinjuku
+  category: other
+  visitability: public
+  visitability_note_en: "Free observation deck on floor 45."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Tochomae Station"
+    name_ja: "都庁前駅"
+    lines: ["Toei Oedo Line"]
+    walk_min: 1
+  travel_from:
+    tokyo: { minutes: 20, transfers: 1, fare_jpy: 240 }
+  etiquette_en:
+    - "Observation deck hours vary; check before going."
+  last_verified: 2026-08-13
+
+- id: kachidoki-bridge
+  name_en: "Kachidoki Bridge"
+  name_ja: "勝鬨橋"
+  lat: 35.662258
+  lng: 139.774896
+  address_ja: "東京都中央区勝どき1丁目"
+  address_en: "Kachidoki 1-chome, Chuo, Tokyo"
+  prefecture: tokyo
+  municipality: chuo
+  category: bridge
+  visitability: public
+  visitability_note_en: "Historic steel bridge, pedestrian walkable."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Kachidoki Station"
+    name_ja: "勝どき駅"
+    lines: ["Toei Oedo Line"]
+    walk_min: 3
+  travel_from:
+    tokyo: { minutes: 25, transfers: 1, fare_jpy: 240 }
+  etiquette_en:
+    - "Bicycles use the road; pedestrians keep to the walkway."
+  last_verified: 2026-08-13
+
+- id: yasuda-auditorium
+  name_en: "Yasuda Auditorium"
+  name_ja: "安田講堂"
+  lat: 35.713420
+  lng: 139.762303
+  address_ja: "東京都文京区本郷7丁目3-1"
+  address_en: "7-3-1 Hongo, Bunkyo, Tokyo"
+  prefecture: tokyo
+  municipality: bunkyo
+  category: school
+  visitability: limited
+  visitability_note_en: "University of Tokyo campus. Building interior off-limits; campus accessible."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Hongo-sanchome Station"
+    name_ja: "本郷三丁目駅"
+    lines: ["Tokyo Metro Marunouchi", "Toei Oedo"]
+    walk_min: 6
+  travel_from:
+    tokyo: { minutes: 22, transfers: 1, fare_jpy: 180 }
+  etiquette_en:
+    - "Students study here. Keep noise low."
+    - "Do not enter buildings; exterior photography only."
+  last_verified: 2026-08-13
+
+- id: tokyo-station-marunouchi
+  name_en: "Tokyo Station Marunouchi Side"
+  name_ja: "東京駅丸の内駅舎"
+  lat: 35.681151
+  lng: 139.765977
+  address_ja: "東京都千代田区丸の内1丁目"
+  address_en: "Marunouchi 1-chome, Chiyoda, Tokyo"
+  prefecture: tokyo
+  municipality: chiyoda
+  category: station
+  visitability: public
+  visitability_note_en: "Iconic red-brick facade."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Tokyo Station"
+    name_ja: "東京駅"
+    lines: ["JR Yamanote", "JR Chuo", "Shinkansen"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 0, transfers: 0, fare_jpy: 0 }
+  etiquette_en:
+    - "Crowded at rush hour; avoid filming the escalators."
+  last_verified: 2026-08-13
+
+- id: radio-kaikan
+  name_en: "Akihabara Radio Kaikan"
+  name_ja: "秋葉原ラジオ会館"
+  lat: 35.698115
+  lng: 139.771992
+  address_ja: "東京都千代田区外神田1丁目15-4"
+  address_en: "1-15-4 Sotokanda, Chiyoda, Tokyo"
+  prefecture: tokyo
+  municipality: chiyoda
+  category: shop
+  visitability: public
+  visitability_note_en: "Retail building with hobby shops."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Akihabara Station"
+    name_ja: "秋葉原駅"
+    lines: ["JR Yamanote", "JR Keihin-Tohoku", "JR Chuo-Sobu", "Tsukuba Express"]
+    walk_min: 3
+  travel_from:
+    tokyo: { minutes: 5, transfers: 0, fare_jpy: 150 }
+  etiquette_en:
+    - "No photography inside shops without permission."
+  last_verified: 2026-08-13
+
+- id: kanda-myojin
+  name_en: "Kanda Myojin Shrine"
+  name_ja: "神田明神"
+  lat: 35.701940
+  lng: 139.767739
+  address_ja: "東京都千代田区外神田2丁目16-2"
+  address_en: "2-16-2 Sotokanda, Chiyoda, Tokyo"
+  prefecture: tokyo
+  municipality: chiyoda
+  category: shrine
+  visitability: public
+  visitability_note_en: "Active shrine; hosts anime-adjacent events."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Ochanomizu Station"
+    name_ja: "御茶ノ水駅"
+    lines: ["JR Chuo Line"]
+    walk_min: 8
+  travel_from:
+    tokyo: { minutes: 8, transfers: 0, fare_jpy: 160 }
+  etiquette_en:
+    - "Worshippers queue for ceremonies; do not block pathways."
+  last_verified: 2026-08-13
+
+- id: akihabara-udx
+  name_en: "Akihabara UDX"
+  name_ja: "秋葉原UDX"
+  lat: 35.700370
+  lng: 139.772610
+  address_ja: "東京都千代田区外神田4丁目14-1"
+  address_en: "4-14-1 Sotokanda, Chiyoda, Tokyo"
+  prefecture: tokyo
+  municipality: chiyoda
+  category: other
+  visitability: public
+  visitability_note_en: "Office and event complex; plaza is public."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Akihabara Station"
+    name_ja: "秋葉原駅"
+    lines: ["JR Yamanote", "Tsukuba Express"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 5, transfers: 0, fare_jpy: 150 }
+  etiquette_en:
+    - "Plaza is public; offices are private."
+  last_verified: 2026-08-13
+
+- id: akihabara-electric-town
+  name_en: "Akihabara Electric Town Exit"
+  name_ja: "秋葉原駅電気街口"
+  lat: 35.699173
+  lng: 139.772629
+  address_ja: "東京都千代田区外神田1丁目"
+  address_en: "Sotokanda 1-chome, Chiyoda, Tokyo"
+  prefecture: tokyo
+  municipality: chiyoda
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Akihabara Station"
+    name_ja: "秋葉原駅"
+    lines: ["JR Yamanote", "Tsukuba Express"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 5, transfers: 0, fare_jpy: 150 }
+  etiquette_en:
+    - "Extremely busy; watch the step-free route map."
+  last_verified: 2026-08-13
+
+- id: akihabara-chuo-dori
+  name_en: "Akihabara Chuo-dori"
+  name_ja: "秋葉原中央通り"
+  lat: 35.703979
+  lng: 139.771981
+  address_ja: "東京都千代田区外神田"
+  address_en: "Sotokanda, Chiyoda, Tokyo"
+  prefecture: tokyo
+  municipality: chiyoda
+  category: shotengai
+  visitability: public
+  visitability_note_en: "The main electronics and anime shopping street."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Akihabara Station"
+    name_ja: "秋葉原駅"
+    lines: ["JR Yamanote"]
+    walk_min: 2
+  travel_from:
+    tokyo: { minutes: 5, transfers: 0, fare_jpy: 150 }
+  etiquette_en:
+    - "Some shops ban photography. Look for signs."
+  last_verified: 2026-08-13
+
+- id: kotobuki-dori
+  name_en: "Kotobuki-dori"
+  name_ja: "寿町通り"
+  lat: 35.698518
+  lng: 139.775484
+  address_ja: "東京都千代田区外神田3丁目"
+  address_en: "Sotokanda 3-chome, Chiyoda, Tokyo"
+  prefecture: tokyo
+  municipality: chiyoda
+  category: shotengai
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Akihabara Station"
+    name_ja: "秋葉原駅"
+    lines: ["JR Yamanote"]
+    walk_min: 6
+  travel_from:
+    tokyo: { minutes: 6, transfers: 0, fare_jpy: 150 }
+  etiquette_en:
+    - "Back street; quieter than Chuo-dori."
+  last_verified: 2026-08-13
+
+- id: seiseki-sakuragaoka-station
+  name_en: "Seiseki-Sakuragaoka Station"
+  name_ja: "聖蹟桜ヶ丘駅"
+  lat: 35.651281
+  lng: 139.446742
+  address_ja: "東京都多摩市関戸1丁目"
+  address_en: "Sekido 1-chome, Tama, Tokyo"
+  prefecture: tokyo
+  municipality: tama
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Seiseki-Sakuragaoka Station"
+    name_ja: "聖蹟桜ヶ丘駅"
+    lines: ["Keio Line"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 35, transfers: 1, fare_jpy: 360 }
+  etiquette_en:
+    - "Local area; keep quiet outside the station."
+  last_verified: 2026-08-13
+
+- id: sakuragaoka-park
+  name_en: "Sakuragaoka Park"
+  name_ja: "桜ヶ丘公園"
+  lat: 35.637982
+  lng: 139.460888
+  address_ja: "東京都多摩市連光寺"
+  address_en: "Renkoji, Tama, Tokyo"
+  prefecture: tokyo
+  municipality: tama
+  category: park
+  visitability: public
+  visitability_note_en: "Hilltop park with city views."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Seiseki-Sakuragaoka Station"
+    name_ja: "聖蹟桜ヶ丘駅"
+    lines: ["Keio Line"]
+    walk_min: 20
+  travel_from:
+    tokyo: { minutes: 45, transfers: 1, fare_jpy: 380 }
+  etiquette_en:
+    - "Steep hills; wear walking shoes."
+  last_verified: 2026-08-13
+
+- id: shimokitazawa-station
+  name_en: "Shimokitazawa Station"
+  name_ja: "下北沢駅"
+  lat: 35.661266
+  lng: 139.666921
+  address_ja: "東京都世田谷区北沢2丁目"
+  address_en: "Kitazawa 2-chome, Setagaya, Tokyo"
+  prefecture: tokyo
+  municipality: setagaya
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Shimokitazawa Station"
+    name_ja: "下北沢駅"
+    lines: ["Odakyu Line", "Keio Inokashira"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 20, transfers: 1, fare_jpy: 220 }
+  etiquette_en:
+    - "Narrow shopping streets; walk, don't block lanes."
+  last_verified: 2026-08-13
+
+- id: shimokitazawa-shotengai
+  name_en: "Shimokitazawa Shotengai"
+  name_ja: "下北沢商店街"
+  lat: 35.659903
+  lng: 139.667024
+  address_ja: "東京都世田谷区北沢2丁目"
+  address_en: "Kitazawa 2-chome, Setagaya, Tokyo"
+  prefecture: tokyo
+  municipality: setagaya
+  category: shotengai
+  visitability: public
+  visitability_note_en: "Lively vintage and live-music streets."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Shimokitazawa Station"
+    name_ja: "下北沢駅"
+    lines: ["Odakyu Line", "Keio Inokashira"]
+    walk_min: 1
+  travel_from:
+    tokyo: { minutes: 20, transfers: 1, fare_jpy: 220 }
+  etiquette_en:
+    - "Many shops are tiny; queue outside if full."
+  last_verified: 2026-08-13
+
+- id: kichijoji-station
+  name_en: "Kichijoji Station"
+  name_ja: "吉祥寺駅"
+  lat: 35.703337
+  lng: 139.580318
+  address_ja: "東京都武蔵野市吉祥寺南町1丁目"
+  address_en: "Kichijoji Minamicho 1-chome, Musashino, Tokyo"
+  prefecture: tokyo
+  municipality: musashino
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Kichijoji Station"
+    name_ja: "吉祥寺駅"
+    lines: ["JR Chuo Line", "Keio Inokashira"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 20, transfers: 0, fare_jpy: 230 }
+  etiquette_en:
+    - "Sunset Market area is quiet residential; respect locals."
+  last_verified: 2026-08-13
+
+- id: inokashira-park
+  name_en: "Inokashira Park"
+  name_ja: "井の頭恩賜公園"
+  lat: 35.697282
+  lng: 139.583157
+  address_ja: "東京都三鷹市・武蔵野市"
+  address_en: "Mitaka / Musashino, Tokyo"
+  prefecture: tokyo
+  municipality: musashino
+  category: park
+  visitability: public
+  visitability_note_en: "Lake, boats, and shrines."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Kichijoji Station"
+    name_ja: "吉祥寺駅"
+    lines: ["JR Chuo Line"]
+    walk_min: 8
+  travel_from:
+    tokyo: { minutes: 24, transfers: 0, fare_jpy: 230 }
+  etiquette_en:
+    - "Do not feed swans or carp."
+    - "Boats have strict capacity limits."
+  last_verified: 2026-08-13
+
+- id: koenji-station
+  name_en: "Koenji Station"
+  name_ja: "高円寺駅"
+  lat: 35.705339
+  lng: 139.650004
+  address_ja: "東京都杉並区高円寺南"
+  address_en: "Koenji Minami, Suginami, Tokyo"
+  prefecture: tokyo
+  municipality: suginami
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Koenji Station"
+    name_ja: "高円寺駅"
+    lines: ["JR Chuo Line"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 18, transfers: 0, fare_jpy: 210 }
+  etiquette_en:
+    - "Awa Odori crowds every August; plan around it."
+  last_verified: 2026-08-13
+
+- id: asagaya-station
+  name_en: "Asagaya Station"
+  name_ja: "阿佐ヶ谷駅"
+  lat: 35.704477
+  lng: 139.636421
+  address_ja: "東京都杉並区阿佐谷北"
+  address_en: "Asagaya Kita, Suginami, Tokyo"
+  prefecture: tokyo
+  municipality: suginami
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Asagaya Station"
+    name_ja: "阿佐ヶ谷駅"
+    lines: ["JR Chuo Line"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 20, transfers: 0, fare_jpy: 210 }
+  etiquette_en:
+    - "Residential; keep quiet after 21:00."
+  last_verified: 2026-08-13
+
+- id: nakano-broadway
+  name_en: "Nakano Broadway"
+  name_ja: "中野ブロードウェイ"
+  lat: 35.709241
+  lng: 139.665685
+  address_ja: "東京都中野区中野5丁目52-15"
+  address_en: "5-52-15 Nakano, Nakano, Tokyo"
+  prefecture: tokyo
+  municipality: nakano
+  category: shop
+  visitability: public
+  visitability_note_en: "Indoor mall famous for hobby shops."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Nakano Station"
+    name_ja: "中野駅"
+    lines: ["JR Chuo Line"]
+    walk_min: 3
+  travel_from:
+    tokyo: { minutes: 12, transfers: 0, fare_jpy: 210 }
+  etiquette_en:
+    - "Some dealers ban photos of stock. Respect signs."
+  last_verified: 2026-08-13
+
+# ---------- KANAGAWA ----------
+
+- id: kamakurakoko-mae-crossing
+  name_en: "Kamakurakoko-mae Crossing"
+  name_ja: "鎌倉高校前踏切"
+  lat: 35.306721
+  lng: 139.500710
+  address_ja: "神奈川県鎌倉市腰越1丁目"
+  address_en: "Koshigoe 1-chome, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: crossing
+  visitability: public
+  visitability_note_en: "Level crossing on the Enoden line."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Kamakurakoko-mae Station"
+    name_ja: "鎌倉高校前駅"
+    lines: ["Enoden"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 75, transfers: 2, fare_jpy: 940 }
+  etiquette_en:
+    - "Cars and students use this crossing. Never stand on the tracks."
+    - "Respect the school; do not enter campus."
+  last_verified: 2026-08-13
+
+- id: shichirigahama
+  name_en: "Shichirigahama Beach"
+  name_ja: "七里ヶ浜"
+  lat: 35.303993
+  lng: 139.514066
+  address_ja: "神奈川県鎌倉市七里ガ浜"
+  address_en: "Shichirigahama, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: nature
+  visitability: public
+  visitability_note_en: "Public beach with Mt. Fuji views on clear days."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Shichirigahama Station"
+    name_ja: "七里ヶ浜駅"
+    lines: ["Enoden"]
+    walk_min: 2
+  travel_from:
+    tokyo: { minutes: 70, transfers: 2, fare_jpy: 940 }
+  etiquette_en:
+    - "Swim only in the marked season."
+  last_verified: 2026-08-13
+
+- id: enoshima-island
+  name_en: "Enoshima Island"
+  name_ja: "江の島"
+  lat: 35.311044
+  lng: 139.487542
+  address_ja: "神奈川県藤沢市江の島"
+  address_en: "Enoshima, Fujisawa, Kanagawa"
+  prefecture: kanagawa
+  municipality: fujisawa
+  category: nature
+  visitability: public
+  visitability_note_en: "Island with shrines, sea caves, and observation decks."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Katase-Enoshima Station"
+    name_ja: "片瀬江ノ島駅"
+    lines: ["Odakyu Enoshima"]
+    walk_min: 8
+  travel_from:
+    tokyo: { minutes: 70, transfers: 1, fare_jpy: 780 }
+  etiquette_en:
+    - "Escalators up the island are paid; the path is free but steep."
+    - "The sea caves have a small entrance fee."
+  last_verified: 2026-08-13
+
+- id: enoshima-sea-candle
+  name_en: "Enoshima Sea Candle"
+  name_ja: "江の島展望灯台"
+  lat: 35.299654
+  lng: 139.478584
+  address_ja: "神奈川県藤沢市江の島2丁目3"
+  address_en: "2-3 Enoshima, Fujisawa, Kanagawa"
+  prefecture: kanagawa
+  municipality: fujisawa
+  category: other
+  visitability: public
+  visitability_note_en: "Observation lighthouse; entry fee applies."
+  entry_fee: paid
+  car_required: false
+  nearest_station:
+    name_en: "Katase-Enoshima Station"
+    name_ja: "片瀬江ノ島駅"
+    lines: ["Odakyu Enoshima"]
+    walk_min: 25
+  travel_from:
+    tokyo: { minutes: 80, transfers: 1, fare_jpy: 780 }
+  etiquette_en:
+    - "Check seasonal hours before climbing."
+  last_verified: 2026-08-13
+
+- id: kamakura-station
+  name_en: "Kamakura Station"
+  name_ja: "鎌倉駅"
+  lat: 35.318967
+  lng: 139.551062
+  address_ja: "神奈川県鎌倉市小町1丁目1-1"
+  address_en: "Komachi 1-1-1, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Kamakura Station"
+    name_ja: "鎌倉駅"
+    lines: ["JR Yokosuka", "Enoden"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 60, transfers: 0, fare_jpy: 890 }
+  etiquette_en:
+    - "Gate of Hachimangu (the main approach) is crowded; keep left."
+  last_verified: 2026-08-13
+
+- id: tsuruoka-hachimangu
+  name_en: "Tsuruoka Hachimangu"
+  name_ja: "鶴岡八幡宮"
+  lat: 35.325184
+  lng: 139.556179
+  address_ja: "神奈川県鎌倉市雪ノ下2丁目1-31"
+  address_en: "2-1-31 Yukinoshita, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: shrine
+  visitability: public
+  visitability_note_en: "Kamakura's main shrine; large festival grounds."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Kamakura Station"
+    name_ja: "鎌倉駅"
+    lines: ["JR Yokosuka"]
+    walk_min: 10
+  travel_from:
+    tokyo: { minutes: 65, transfers: 0, fare_jpy: 890 }
+  etiquette_en:
+    - "The main approach is a pedestrian mall; respect worshippers."
+  last_verified: 2026-08-13
+
+- id: hase-dera-kamakura
+  name_en: "Hase-dera"
+  name_ja: "長谷寺"
+  lat: 35.312269
+  lng: 139.533309
+  address_ja: "神奈川県鎌倉市長谷3丁目11-2"
+  address_en: "3-11-2 Hase, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: shrine
+  visitability: public
+  visitability_note_en: "Buddhist temple with ocean views and statues."
+  entry_fee: paid
+  car_required: false
+  nearest_station:
+    name_en: "Hase Station"
+    name_ja: "長谷駅"
+    lines: ["Enoden"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 70, transfers: 1, fare_jpy: 950 }
+  etiquette_en:
+    - "Inside the hall, no photography."
+  last_verified: 2026-08-13
+
+- id: verny-park
+  name_en: "Verny Park"
+  name_ja: "ヴェルニー公園"
+  lat: 35.283428
+  lng: 139.658978
+  address_ja: "神奈川県横須賀市汐入町1丁目1"
+  address_en: "1-1 Shioiri-cho, Yokosuka, Kanagawa"
+  prefecture: kanagawa
+  municipality: yokosuka
+  category: park
+  visitability: public
+  visitability_note_en: "Seaside park with a preserved dry dock."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Yokosuka Station"
+    name_ja: "横須賀駅"
+    lines: ["JR Yokosuka Line"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 65, transfers: 0, fare_jpy: 900 }
+  etiquette_en:
+    - "Naval base next door; do not photograph the base."
+  last_verified: 2026-08-13
+
+- id: yokosuka-station
+  name_en: "Yokosuka Station"
+  name_ja: "横須賀駅"
+  lat: 35.284520
+  lng: 139.656373
+  address_ja: "神奈川県横須賀市東逸見町1丁目"
+  address_en: "Higashi-Hemicho 1-chome, Yokosuka, Kanagawa"
+  prefecture: kanagawa
+  municipality: yokosuka
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Yokosuka Station"
+    name_ja: "横須賀駅"
+    lines: ["JR Yokosuka Line"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 65, transfers: 0, fare_jpy: 900 }
+  etiquette_en:
+    - "Terminal of the Yokosuka Line; walk downhill to the harbour."
+  last_verified: 2026-08-13
+
+- id: dobuita-street
+  name_en: "Dobuita Street"
+  name_ja: "どぶ板通り"
+  lat: 35.281885
+  lng: 139.665754
+  address_ja: "神奈川県横須賀市本町"
+  address_en: "Honcho, Yokosuka, Kanagawa"
+  prefecture: kanagawa
+  municipality: yokosuka
+  category: shotengai
+  visitability: public
+  visitability_note_en: "Shopping street with base-town history."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Yokosuka Chuo Station"
+    name_ja: "横須賀中央駅"
+    lines: ["Keikyu Main Line"]
+    walk_min: 8
+  travel_from:
+    tokyo: { minutes: 70, transfers: 1, fare_jpy: 1050 }
+  etiquette_en:
+    - "Street vendors shut early; arrive before 17:00."
+  last_verified: 2026-08-13
+
+- id: mikasa-park
+  name_en: "Mikasa Park"
+  name_ja: "三笠公園"
+  lat: 35.285382
+  lng: 139.674047
+  address_ja: "神奈川県横須賀市稲岡町82"
+  address_en: "82 Inaoka-cho, Yokosuka, Kanagawa"
+  prefecture: kanagawa
+  municipality: yokosuka
+  category: park
+  visitability: public
+  visitability_note_en: "Park around the preserved battleship Mikasa."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Yokosuka Chuo Station"
+    name_ja: "横須賀中央駅"
+    lines: ["Keikyu Main Line"]
+    walk_min: 12
+  travel_from:
+    tokyo: { minutes: 70, transfers: 1, fare_jpy: 1050 }
+  etiquette_en:
+    - "Boarding the ship has a fee and schedule."
+  last_verified: 2026-08-13
+
+- id: fujiko-fujio-museum
+  name_en: "Fujiko F. Fujio Museum"
+  name_ja: "川崎市藤子・F・不二雄ミュージアム"
+  lat: 35.610007
+  lng: 139.573578
+  address_ja: "神奈川県川崎市多摩区長尾2丁目8-1"
+  address_en: "2-8-1 Nagao, Tama-ku, Kawasaki, Kanagawa"
+  prefecture: kanagawa
+  municipality: kawasaki
+  category: other
+  visitability: limited
+  visitability_note_en: "Museum; advance timed tickets required."
+  entry_fee: paid
+  car_required: false
+  nearest_station:
+    name_en: "Noborito Station"
+    name_ja: "登戸駅"
+    lines: ["JR Nambu Line"]
+    walk_min: 15
+  travel_from:
+    tokyo: { minutes: 35, transfers: 1, fare_jpy: 350 }
+  etiquette_en:
+    - "No photography inside exhibition halls."
+    - "Book tickets online in advance."
+  last_verified: 2026-08-13
+
+# ---------- SAITAMA ----------
+
+- id: washinomiya-shrine
+  name_en: "Washinomiya Shrine"
+  name_ja: "鷲宮神社"
+  lat: 36.099975
+  lng: 139.654869
+  address_ja: "埼玉県久喜市鷲宮1丁目6-1"
+  address_en: "1-6-1 Washinomiya, Kuki, Saitama"
+  prefecture: saitama
+  municipality: kuki
+  category: shrine
+  visitability: public
+  visitability_note_en: "Kanto's oldest shrine; famous for Lucky Star ties."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Washinomiya Station"
+    name_ja: "鷲宮駅"
+    lines: ["Tobu Isesaki Line"]
+    walk_min: 15
+  travel_from:
+    tokyo: { minutes: 80, transfers: 1, fare_jpy: 900 }
+  etiquette_en:
+    - "A residential shrine; visit quietly."
+  last_verified: 2026-08-13
+
+- id: washinomiya-station
+  name_en: "Washinomiya Station"
+  name_ja: "鷲宮駅"
+  lat: 36.096443
+  lng: 139.656791
+  address_ja: "埼玉県久喜市鷲宮"
+  address_en: "Washinomiya, Kuki, Saitama"
+  prefecture: saitama
+  municipality: kuki
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Washinomiya Station"
+    name_ja: "鷲宮駅"
+    lines: ["Tobu Isesaki Line"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 75, transfers: 1, fare_jpy: 880 }
+  etiquette_en:
+    - "Local station; no taxis at night."
+  last_verified: 2026-08-13
+
+- id: chichibu-shrine
+  name_en: "Chichibu Shrine"
+  name_ja: "秩父神社"
+  lat: 35.997582
+  lng: 139.084245
+  address_ja: "埼玉県秩父市番場町1-3"
+  address_en: "1-3 Banba-cho, Chichibu, Saitama"
+  prefecture: saitama
+  municipality: chichibu
+  category: shrine
+  visitability: public
+  visitability_note_en: "Central shrine in Chichibu city."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Chichibu Station"
+    name_ja: "秩父駅"
+    lines: ["Chichibu Railway"]
+    walk_min: 8
+  travel_from:
+    tokyo: { minutes: 100, transfers: 2, fare_jpy: 1500 }
+  etiquette_en:
+    - "Home to winter night festival; check event days."
+  last_verified: 2026-08-13
+
+- id: chichibu-bridge
+  name_en: "Chichibu Bridge"
+  name_ja: "秩父橋"
+  lat: 36.018100
+  lng: 139.086040
+  address_ja: "埼玉県秩父市阿保町"
+  address_en: "Abo-machi, Chichibu, Saitama"
+  prefecture: saitama
+  municipality: chichibu
+  category: bridge
+  visitability: public
+  visitability_note_en: "Steel bridge over the Arakawa valley."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Ohanabatake Station"
+    name_ja: "御花畑駅"
+    lines: ["Chichibu Railway"]
+    walk_min: 25
+  travel_from:
+    tokyo: { minutes: 110, transfers: 2, fare_jpy: 1550 }
+  etiquette_en:
+    - "Narrow pedestrian walkway; keep to the side."
+  last_verified: 2026-08-13
+
+- id: chichibu-station
+  name_en: "Chichibu Station"
+  name_ja: "秩父駅"
+  lat: 35.998630
+  lng: 139.085668
+  address_ja: "埼玉県秩父市宮側町"
+  address_en: "Miyagawara-machi, Chichibu, Saitama"
+  prefecture: saitama
+  municipality: chichibu
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Chichibu Station"
+    name_ja: "秩父駅"
+    lines: ["Chichibu Railway"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 100, transfers: 2, fare_jpy: 1500 }
+  etiquette_en:
+    - "Small town; restaurants close early."
+  last_verified: 2026-08-13
+
+- id: seibu-chichibu-station
+  name_en: "Seibu-Chichibu Station"
+  name_ja: "西武秩父駅"
+  lat: 35.990212
+  lng: 139.083122
+  address_ja: "埼玉県秩父市野坂町1丁目16-15"
+  address_en: "1-16-15 Nosaka-cho, Chichibu, Saitama"
+  prefecture: saitama
+  municipality: chichibu
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Seibu-Chichibu Station"
+    name_ja: "西武秩父駅"
+    lines: ["Seibu Chichibu Line"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 80, transfers: 1, fare_jpy: 1420 }
+  etiquette_en:
+    - "Direct from Ikebukuro; easiest gateway to Chichibu."
+  last_verified: 2026-08-13
+
+- id: banba-street-chichibu
+  name_en: "Banba Street"
+  name_ja: "番場通り"
+  lat: 35.996156
+  lng: 139.084461
+  address_ja: "埼玉県秩父市番場町"
+  address_en: "Banba-cho, Chichibu, Saitama"
+  prefecture: saitama
+  municipality: chichibu
+  category: shotengai
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Chichibu Station"
+    name_ja: "秩父駅"
+    lines: ["Chichibu Railway"]
+    walk_min: 7
+  travel_from:
+    tokyo: { minutes: 100, transfers: 2, fare_jpy: 1500 }
+  etiquette_en:
+    - "Traditional shopping street; shops close early."
+  last_verified: 2026-08-13
+
+# ---------- CHIBA ----------
+
+- id: chiba-station
+  name_en: "Chiba Station"
+  name_ja: "千葉駅"
+  lat: 35.612828
+  lng: 140.115979
+  address_ja: "千葉県千葉市中央区新千葉1丁目"
+  address_en: "1-chome Shin-Chiba, Chuo-ku, Chiba"
+  prefecture: chiba
+  municipality: chiba
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Chiba Station"
+    name_ja: "千葉駅"
+    lines: ["JR Sobu Line", "Chiba Urban Monorail"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 40, transfers: 0, fare_jpy: 540 }
+  etiquette_en:
+    - "Busy transfer hub; keep to the left on escalators."
+  last_verified: 2026-08-13
+
+- id: makuhari-messe
+  name_en: "Makuhari Messe"
+  name_ja: "幕張メッセ"
+  lat: 35.647302
+  lng: 139.034652
+  address_ja: "千葉県千葉市美浜区中瀬2丁目1"
+  address_en: "2-1 Nakase, Mihama-ku, Chiba"
+  prefecture: chiba
+  municipality: chiba
+  category: other
+  visitability: limited
+  visitability_note_en: "Convention centre; open during events."
+  entry_fee: unknown
+  car_required: false
+  nearest_station:
+    name_en: "Kaihin-Makuhari Station"
+    name_ja: "海浜幕張駅"
+    lines: ["JR Keiyo Line"]
+    walk_min: 10
+  travel_from:
+    tokyo: { minutes: 35, transfers: 0, fare_jpy: 420 }
+  etiquette_en:
+    - "Check event schedules; halls close on non-event days."
+  last_verified: 2026-08-13
+
+- id: kaihin-makuhari-station
+  name_en: "Kaihin-Makuhari Station"
+  name_ja: "海浜幕張駅"
+  lat: 35.647646
+  lng: 139.043202
+  address_ja: "千葉県千葉市美浜区ひび野2丁目"
+  address_en: "2-chome Hibino, Mihama-ku, Chiba"
+  prefecture: chiba
+  municipality: chiba
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Kaihin-Makuhari Station"
+    name_ja: "海浜幕張駅"
+    lines: ["JR Keiyo Line"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 35, transfers: 0, fare_jpy: 420 }
+  etiquette_en:
+    - "Modern bayside district; windy in winter."
+  last_verified: 2026-08-13
+
+- id: chiba-minato-park
+  name_en: "Chiba Minato Area"
+  name_ja: "千葉港周辺"
+  lat: 35.606828
+  lng: 140.106301
+  address_ja: "千葉県千葉市中央区中央港"
+  address_en: "Chuo-ko, Chuo-ku, Chiba"
+  prefecture: chiba
+  municipality: chiba
+  category: park
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Chiba-Minato Station"
+    name_ja: "千葉みなと駅"
+    lines: ["JR Keiyo Line", "Chiba Urban Monorail"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 35, transfers: 0, fare_jpy: 440 }
+  etiquette_en:
+    - "Harbour area; watch for industrial traffic."
+  last_verified: 2026-08-13
+
+- id: shinanomachi-station
+  name_en: "Shinanomachi Station"
+  name_ja: "信濃町駅"
+  lat: 35.680024
+  lng: 139.720495
+  address_ja: "東京都新宿区信濃町"
+  address_en: "Shinanomachi, Shinjuku, Tokyo"
+  prefecture: tokyo
+  municipality: shinjuku
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Shinanomachi Station"
+    name_ja: "信濃町駅"
+    lines: ["JR Chuo-Sobu"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 15, transfers: 0, fare_jpy: 170 }
+  last_verified: 2026-08-13
+
+- id: shinjuku-pedestrian-deck
+  name_en: "Shinjuku East Exit Deck"
+  name_ja: "新宿駅東口デッキ"
+  lat: 35.692989
+  lng: 139.700317
+  address_ja: "東京都新宿区新宿3丁目"
+  address_en: "Shinjuku 3-chome, Shinjuku, Tokyo"
+  prefecture: tokyo
+  municipality: shinjuku
+  category: crossing
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Shinjuku Station"
+    name_ja: "新宿駅"
+    lines: ["JR", "Odakyu", "Keio"]
+    walk_min: 2
+  travel_from:
+    tokyo: { minutes: 15, transfers: 0, fare_jpy: 170 }
+  etiquette_en:
+    - "Look up for the famous view toward the NTT tower."
+  last_verified: 2026-08-13
+
+- id: shinjuku-central-park
+  name_en: "Shinjuku Central Park"
+  name_ja: "新宿中央公園"
+  lat: 35.690029
+  lng: 139.689585
+  address_ja: "東京都新宿区西新宿2丁目"
+  address_en: "Nishi-Shinjuku 2-chome, Shinjuku, Tokyo"
+  prefecture: tokyo
+  municipality: shinjuku
+  category: park
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Tochomae Station"
+    name_ja: "都庁前駅"
+    lines: ["Toei Oedo Line"]
+    walk_min: 4
+  travel_from:
+    tokyo: { minutes: 20, transfers: 1, fare_jpy: 240 }
+  etiquette_en:
+    - "Popular lunch spot; keep off the lawns when wet."
+  last_verified: 2026-08-13
+
+- id: shibuya-scramble
+  name_en: "Shibuya Scramble Crossing"
+  name_ja: "渋谷スクランブル交差点"
+  lat: 35.659495
+  lng: 139.700498
+  address_ja: "東京都渋谷区道玄坂2丁目"
+  address_en: "Dogenzaka 2-chome, Shibuya, Tokyo"
+  prefecture: tokyo
+  municipality: shibuya
+  category: crossing
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Shibuya Station"
+    name_ja: "渋谷駅"
+    lines: ["JR Yamanote", "Tokyo Metro", "Keio Inokashira", "Tokyu"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 12, transfers: 0, fare_jpy: 180 }
+  etiquette_en:
+    - "Busiest crossing in the world; photograph from the pedestrian islands."
+  last_verified: 2026-08-13
+
+- id: tokyo-tower
+  name_en: "Tokyo Tower"
+  name_ja: "東京タワー"
+  lat: 35.658449
+  lng: 139.745536
+  address_ja: "東京都港区芝公園4丁目2-8"
+  address_en: "4-2-8 Shiba-koen, Minato, Tokyo"
+  prefecture: tokyo
+  municipality: minato
+  category: other
+  visitability: public
+  visitability_note_en: "Observation decks with an entry fee."
+  entry_fee: paid
+  car_required: false
+  nearest_station:
+    name_en: "Akabanebashi Station"
+    name_ja: "赤羽橋駅"
+    lines: ["Toei Oedo Line"]
+    walk_min: 6
+  travel_from:
+    tokyo: { minutes: 20, transfers: 1, fare_jpy: 240 }
+  etiquette_en:
+    - "Deck tickets purchased at the gate."
+  last_verified: 2026-08-13
+
+- id: rainbow-bridge
+  name_en: "Rainbow Bridge"
+  name_ja: "レインボーブリッジ"
+  lat: 35.636377
+  lng: 139.763928
+  address_ja: "東京都港区海岸・江東区有明"
+  address_en: "Minato-ku / Koto-ku, Tokyo"
+  prefecture: tokyo
+  municipality: minato
+  category: bridge
+  visitability: public
+  visitability_note_en: "Pedestrian walkway open during daytime hours."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Shiokaze-no-oka Station"
+    name_ja: "海芝浦駅"
+    lines: ["Yurikamome"]
+    walk_min: 15
+  travel_from:
+    tokyo: { minutes: 35, transfers: 1, fare_jpy: 460 }
+  etiquette_en:
+    - "The walkway closes in strong winds; check the schedule."
+  last_verified: 2026-08-13
+
+- id: ginza-crossing
+  name_en: "Ginza Four-Corner Crossing"
+  name_ja: "銀座四丁目交差点"
+  lat: 35.671220
+  lng: 139.765036
+  address_ja: "東京都中央区銀座4丁目"
+  address_en: "Ginza 4-chome, Chuo, Tokyo"
+  prefecture: tokyo
+  municipality: chuo
+  category: crossing
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Ginza Station"
+    name_ja: "銀座駅"
+    lines: ["Tokyo Metro Ginza", "Marunouchi", "Hibiya"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 8, transfers: 0, fare_jpy: 170 }
+  etiquette_en:
+    - "Pedestrian-only on weekends in the afternoon."
+  last_verified: 2026-08-13
+
+- id: kanda-station
+  name_en: "Kanda Station"
+  name_ja: "神田駅"
+  lat: 35.694473
+  lng: 139.770698
+  address_ja: "東京都千代田区鍛冶町2丁目13-1"
+  address_en: "13-1 Kajicho 2-chome, Chiyoda, Tokyo"
+  prefecture: tokyo
+  municipality: chiyoda
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Kanda Station"
+    name_ja: "神田駅"
+    lines: ["JR Yamanote", "JR Keihin-Tohoku", "JR Chuo"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 3, transfers: 0, fare_jpy: 150 }
+  etiquette_en:
+    - "Business district; quiet after 20:00."
+  last_verified: 2026-08-13
+
+- id: ochanomizu-riverbank
+  name_en: "Ochanomizu Riverbank"
+  name_ja: "御茶ノ水・神田川"
+  lat: 35.700397
+  lng: 139.764244
+  address_ja: "東京都千代田区神田駿河台"
+  address_en: "Kanda-Surugadai, Chiyoda, Tokyo"
+  prefecture: tokyo
+  municipality: chiyoda
+  category: park
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Ochanomizu Station"
+    name_ja: "御茶ノ水駅"
+    lines: ["JR Chuo Line"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 8, transfers: 0, fare_jpy: 160 }
+  etiquette_en:
+    - "River walk below the tracks; watch for cyclists."
+  last_verified: 2026-08-13
+
+- id: inage-station
+  name_en: "Inage Station"
+  name_ja: "稲毛駅"
+  lat: 35.636985
+  lng: 140.092676
+  address_ja: "千葉県千葉市稲毛区小仲台"
+  address_en: "Konakadai, Inage-ku, Chiba"
+  prefecture: chiba
+  municipality: chiba
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Inage Station"
+    name_ja: "稲毛駅"
+    lines: ["JR Chuo-Sobu"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 30, transfers: 0, fare_jpy: 430 }
+  etiquette_en:
+    - "Residential area; quiet streets."
+  last_verified: 2026-08-13
+
+- id: soga-station
+  name_en: "Soga Station"
+  name_ja: "蘇我駅"
+  lat: 35.580766
+  lng: 140.132042
+  address_ja: "千葉県千葉市中央区蘇我"
+  address_en: "Soga, Chuo-ku, Chiba"
+  prefecture: chiba
+  municipality: chiba
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Soga Station"
+    name_ja: "蘇我駅"
+    lines: ["JR Keiyo Line", "JR Uchibo Line"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 30, transfers: 0, fare_jpy: 430 }
+  etiquette_en:
+    - "Big interchange; follow signage for the Keiyo line."
+  last_verified: 2026-08-13
+
+- id: chiba-city-hall
+  name_en: "Chiba City Hall"
+  name_ja: "千葉市役所"
+  lat: 35.607361
+  lng: 140.106553
+  address_ja: "千葉県千葉市中央区千葉港1番1号"
+  address_en: "1-1 Chiba-minato, Chuo-ku, Chiba"
+  prefecture: chiba
+  municipality: chiba
+  category: other
+  visitability: public
+  visitability_note_en: "Civic building; plaza open to the public."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Chiba-Minato Station"
+    name_ja: "千葉みなと駅"
+    lines: ["JR Keiyo Line", "Chiba Urban Monorail"]
+    walk_min: 4
+  travel_from:
+    tokyo: { minutes: 35, transfers: 0, fare_jpy: 440 }
+  etiquette_en:
+    - "Government building; do not wander offices."
+  last_verified: 2026-08-13
+
+- id: tama-center-station
+  name_en: "Tama Center Station"
+  name_ja: "多摩センター駅"
+  lat: 35.624042
+  lng: 139.422913
+  address_ja: "東京都多摩市落合2丁目"
+  address_en: "Ochiai 2-chome, Tama, Tokyo"
+  prefecture: tokyo
+  municipality: tama
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Tama Center Station"
+    name_ja: "多摩センター駅"
+    lines: ["Keio Sagamihara", "Odakyu Tama", "Tama Toshi Monorail"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 40, transfers: 1, fare_jpy: 480 }
+  etiquette_en:
+    - "New town centre; wide walkways."
+  last_verified: 2026-08-13
+
+- id: noborito-station
+  name_en: "Noborito Station"
+  name_ja: "登戸駅"
+  lat: 35.620191
+  lng: 139.570182
+  address_ja: "神奈川県川崎市多摩区登戸"
+  address_en: "Noborito, Tama-ku, Kawasaki, Kanagawa"
+  prefecture: kanagawa
+  municipality: kawasaki
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Noborito Station"
+    name_ja: "登戸駅"
+    lines: ["JR Nambu Line"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 30, transfers: 1, fare_jpy: 330 }
+  etiquette_en:
+    - "Gateway to the Doraemon museum; follow the mural signs."
+  last_verified: 2026-08-13
+
+- id: asagaya-pearl-center
+  name_en: "Asagaya Pearl Center"
+  name_ja: "阿佐ヶ谷パールセンター"
+  lat: 35.700109
+  lng: 139.637276
+  address_ja: "東京都杉並区阿佐谷南1丁目"
+  address_en: "Asagaya Minami 1-chome, Suginami, Tokyo"
+  prefecture: tokyo
+  municipality: suginami
+  category: shotengai
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Asagaya Station"
+    name_ja: "阿佐ヶ谷駅"
+    lines: ["JR Chuo Line"]
+    walk_min: 1
+  travel_from:
+    tokyo: { minutes: 20, transfers: 0, fare_jpy: 210 }
+  etiquette_en:
+    - "Covered arcade; lunch stalls get busy."
+  last_verified: 2026-08-13
+
+- id: nakano-sunmall
+  name_en: "Nakano Sun Mall"
+  name_ja: "中野サンモール"
+  lat: 35.707786
+  lng: 139.665590
+  address_ja: "東京都中野区中野5丁目"
+  address_en: "Nakano 5-chome, Nakano, Tokyo"
+  prefecture: tokyo
+  municipality: nakano
+  category: shotengai
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Nakano Station"
+    name_ja: "中野駅"
+    lines: ["JR Chuo Line"]
+    walk_min: 1
+  travel_from:
+    tokyo: { minutes: 12, transfers: 0, fare_jpy: 210 }
+  etiquette_en:
+    - "Covered arcade leading to Nakano Broadway."
+  last_verified: 2026-08-13
+
+- id: sangenjaya-station
+  name_en: "Sangenjaya Station"
+  name_ja: "三軒茶屋駅"
+  lat: 35.643726
+  lng: 139.671962
+  address_ja: "東京都世田谷区太子堂4丁目"
+  address_en: "Taishido 4-chome, Setagaya, Tokyo"
+  prefecture: tokyo
+  municipality: setagaya
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Sangenjaya Station"
+    name_ja: "三軒茶屋駅"
+    lines: ["Tokyu Den-en-toshi", "Tokyu Setagaya"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 25, transfers: 1, fare_jpy: 280 }
+  etiquette_en:
+    - "Vintage bars and shops; quiet in the morning."
+  last_verified: 2026-08-13
+
+- id: yuigahama
+  name_en: "Yuigahama Beach"
+  name_ja: "由比ヶ浜"
+  lat: 35.309120
+  lng: 139.542211
+  address_ja: "神奈川県鎌倉市由比ガ浜"
+  address_en: "Yuigahama, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: nature
+  visitability: public
+  visitability_note_en: "Popular swimming beach in summer."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Kamakura Station"
+    name_ja: "鎌倉駅"
+    lines: ["JR Yokosuka"]
+    walk_min: 15
+  travel_from:
+    tokyo: { minutes: 65, transfers: 0, fare_jpy: 890 }
+  etiquette_en:
+    - "Swim only inside the marked buoys."
+  last_verified: 2026-08-13
+
+- id: inamuragasaki
+  name_en: "Inamuragasaki Cape"
+  name_ja: "稲村ヶ崎"
+  lat: 35.30130
+  lng: 139.52550
+  address_ja: "神奈川県鎌倉市稲村ガ崎"
+  address_en: "Inamuragasaki, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: nature
+  visitability: public
+  visitability_note_en: "Headland with Enoshima and Fuji views."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Inamuragasaki Station"
+    name_ja: "稲村ヶ崎駅"
+    lines: ["Enoden"]
+    walk_min: 8
+  travel_from:
+    tokyo: { minutes: 70, transfers: 2, fare_jpy: 940 }
+  etiquette_en:
+    - "Rocky shore; wear sturdy shoes."
+  last_verified: 2026-08-13
+
+- id: ohanabatake-station
+  name_en: "Ohanabatake Station"
+  name_ja: "御花畑駅"
+  lat: 35.992507
+  lng: 139.083764
+  address_ja: "埼玉県秩父市上野町"
+  address_en: "Kamino-cho, Chichibu, Saitama"
+  prefecture: saitama
+  municipality: chichibu
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Ohanabatake Station"
+    name_ja: "御花畑駅"
+    lines: ["Chichibu Railway"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 100, transfers: 2, fare_jpy: 1500 }
+  etiquette_en:
+    - "Small station; no escalators."
+  last_verified: 2026-08-13
+
+- id: chichibu-muse-park
+  name_en: "Chichibu Muse Park"
+  name_ja: "秩父ミューズパーク"
+  lat: 35.992984
+  lng: 139.051788
+  address_ja: "埼玉県秩父市黒谷1787"
+  address_en: "1787 Kuroya, Chichibu, Saitama"
+  prefecture: saitama
+  municipality: chichibu
+  category: park
+  visitability: public
+  visitability_note_en: "Hilltop park with city and mountain views."
+  entry_fee: free
+  car_required: true
+  nearest_station:
+    name_en: "Ohanabatake Station"
+    name_ja: "御花畑駅"
+    lines: ["Chichibu Railway"]
+    walk_min: 40
+  travel_from:
+    tokyo: { minutes: 130, transfers: 2, fare_jpy: 1600 }
+  etiquette_en:
+    - "Steep slopes; drive or take the loop bus."
+  last_verified: 2026-08-13
+
+- id: kuki-station
+  name_en: "Kuki Station"
+  name_ja: "久喜駅"
+  lat: 36.065614
+  lng: 139.677525
+  address_ja: "埼玉県久喜市中央1丁目"
+  address_en: "1-chome Chuo, Kuki, Saitama"
+  prefecture: saitama
+  municipality: kuki
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Kuki Station"
+    name_ja: "久喜駅"
+    lines: ["JR Utsunomiya Line", "Tobu Isesaki"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 60, transfers: 0, fare_jpy: 780 }
+  etiquette_en:
+    - "Transfer hub for Washinomiya."
+  last_verified: 2026-08-13
+
+- id: ikuta-ryokuchi
+  name_en: "Ikuta Ryokuchi Park"
+  name_ja: "生田緑地"
+  lat: 35.609969
+  lng: 139.559480
+  address_ja: "神奈川県川崎市多摩区枡形7丁目"
+  address_en: "7 Masugata, Tama-ku, Kawasaki, Kanagawa"
+  prefecture: kanagawa
+  municipality: kawasaki
+  category: park
+  visitability: public
+  visitability_note_en: "Forest park near the Doraemon museum."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Noborito Station"
+    name_ja: "登戸駅"
+    lines: ["JR Nambu Line"]
+    walk_min: 20
+  travel_from:
+    tokyo: { minutes: 35, transfers: 1, fare_jpy: 350 }
+  etiquette_en:
+    - "Keep to trails; the forest is protected."
+  last_verified: 2026-08-13
+
+- id: enoshima-shrine
+  name_en: "Enoshima Shrine"
+  name_ja: "江島神社"
+  lat: 35.300340
+  lng: 139.479845
+  address_ja: "神奈川県藤沢市江の島2丁目3-8"
+  address_en: "2-3-8 Enoshima, Fujisawa, Kanagawa"
+  prefecture: kanagawa
+  municipality: fujisawa
+  category: shrine
+  visitability: public
+  visitability_note_en: "Three shrines along the island's main path."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Katase-Enoshima Station"
+    name_ja: "片瀬江ノ島駅"
+    lines: ["Odakyu Enoshima"]
+    walk_min: 10
+  travel_from:
+    tokyo: { minutes: 70, transfers: 1, fare_jpy: 780 }
+  etiquette_en:
+    - "Pray at each shrine; paid escalators bypass the lower path."
+  last_verified: 2026-08-13
+
+- id: enoshima-aquarium
+  name_en: "Enoshima Aquarium"
+  name_ja: "新江ノ島水族館"
+  lat: 35.310075
+  lng: 139.479439
+  address_ja: "神奈川県藤沢市片瀬海岸2丁目19-1"
+  address_en: "2-19-1 Katase-kaigan, Fujisawa, Kanagawa"
+  prefecture: kanagawa
+  municipality: fujisawa
+  category: other
+  visitability: public
+  visitability_note_en: "Aquarium at the base of Enoshima bridge."
+  entry_fee: paid
+  car_required: false
+  nearest_station:
+    name_en: "Enoshima Station"
+    name_ja: "江ノ島駅"
+    lines: ["Enoden"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 70, transfers: 1, fare_jpy: 780 }
+  etiquette_en:
+    - "Dolphin show times vary; check the schedule."
+  last_verified: 2026-08-13
+
+- id: kita-kamakura-station
+  name_en: "Kita-Kamakura Station"
+  name_ja: "北鎌倉駅"
+  lat: 35.337184
+  lng: 139.545157
+  address_ja: "神奈川県鎌倉市山ノ内"
+  address_en: "Yamanouchi, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Kita-Kamakura Station"
+    name_ja: "北鎌倉駅"
+    lines: ["JR Yokosuka"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 55, transfers: 0, fare_jpy: 850 }
+  etiquette_en:
+    - "Small temple town; temple gates are quiet zones."
+  last_verified: 2026-08-13
+
+- id: kenchoji-temple
+  name_en: "Kencho-ji Temple"
+  name_ja: "建長寺"
+  lat: 35.332446
+  lng: 139.557534
+  address_ja: "神奈川県鎌倉市山ノ内8"
+  address_en: "8 Yamanouchi, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: shrine
+  visitability: public
+  visitability_note_en: "Kamakura's oldest Zen temple."
+  entry_fee: paid
+  car_required: false
+  nearest_station:
+    name_en: "Kita-Kamakura Station"
+    name_ja: "北鎌倉駅"
+    lines: ["JR Yokosuka"]
+    walk_min: 12
+  travel_from:
+    tokyo: { minutes: 60, transfers: 0, fare_jpy: 850 }
+  etiquette_en:
+    - "No photography inside the Dharma hall."
+  last_verified: 2026-08-13
+
+- id: engakuji-temple
+  name_en: "Engaku-ji Temple"
+  name_ja: "円覚寺"
+  lat: 35.337936
+  lng: 139.547820
+  address_ja: "神奈川県鎌倉市山ノ内409"
+  address_en: "409 Yamanouchi, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: shrine
+  visitability: public
+  visitability_note_en: "Rinzai Zen temple with a national-treasure hall."
+  entry_fee: paid
+  car_required: false
+  nearest_station:
+    name_en: "Kita-Kamakura Station"
+    name_ja: "北鎌倉駅"
+    lines: ["JR Yokosuka"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 58, transfers: 0, fare_jpy: 850 }
+  etiquette_en:
+    - "Autumn foliage is stunning but crowded."
+  last_verified: 2026-08-13
+
+- id: kotokuin-daibutsu
+  name_en: "Kotoku-in Great Buddha"
+  name_ja: "高徳院 大仏"
+  lat: 35.31690
+  lng: 139.53560
+  address_ja: "神奈川県鎌倉市長谷4丁目2-28"
+  address_en: "4-2-28 Hase, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: shrine
+  visitability: public
+  visitability_note_en: "Bronze Amida Buddha, the city's icon."
+  entry_fee: paid
+  car_required: false
+  nearest_station:
+    name_en: "Hase Station"
+    name_ja: "長谷駅"
+    lines: ["Enoden"]
+    walk_min: 8
+  travel_from:
+    tokyo: { minutes: 70, transfers: 1, fare_jpy: 950 }
+  etiquette_en:
+    - "Grounds fee is cash only."
+  last_verified: 2026-08-13
+
+- id: ikebukuro-station
+  name_en: "Ikebukuro Station"
+  name_ja: "池袋駅"
+  lat: 35.731229
+  lng: 139.708409
+  address_ja: "東京都豊島区南池袋1丁目"
+  address_en: "1-chome Minami-Ikebukuro, Toshima, Tokyo"
+  prefecture: tokyo
+  municipality: toshima
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Ikebukuro Station"
+    name_ja: "池袋駅"
+    lines: ["JR Yamanote", "JR Saikyo", "Seibu", "Tobu", "Tokyo Metro"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 18, transfers: 0, fare_jpy: 200 }
+  etiquette_en:
+    - "Direct trains to Seibu-Chichibu leave from here."
+  last_verified: 2026-08-13
+
+- id: ueno-station
+  name_en: "Ueno Station"
+  name_ja: "上野駅"
+  lat: 35.714041
+  lng: 139.777116
+  address_ja: "東京都台東区上野7丁目"
+  address_en: "7-chome Ueno, Taito, Tokyo"
+  prefecture: tokyo
+  municipality: taito
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Ueno Station"
+    name_ja: "上野駅"
+    lines: ["JR Yamanote", "JR Keihin-Tohoku", "Shinkansen"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 7, transfers: 0, fare_jpy: 160 }
+  etiquette_en:
+    - "Gateway to museums and Ueno Park."
+  last_verified: 2026-08-13
+
+- id: ueno-park
+  name_en: "Ueno Park"
+  name_ja: "上野恩賜公園"
+  lat: 35.714160
+  lng: 139.772700
+  address_ja: "東京都台東区上野公園"
+  address_en: "Ueno-koen, Taito, Tokyo"
+  prefecture: tokyo
+  municipality: taito
+  category: park
+  visitability: public
+  visitability_note_en: "Large park with museums, zoo, and shrines."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Ueno Station"
+    name_ja: "上野駅"
+    lines: ["JR Yamanote"]
+    walk_min: 3
+  travel_from:
+    tokyo: { minutes: 8, transfers: 0, fare_jpy: 160 }
+  etiquette_en:
+    - "Cherry season crowds; picnic on sheets in marked areas."
+  last_verified: 2026-08-13
+
+- id: sensoji
+  name_en: "Senso-ji Temple"
+  name_ja: "浅草寺"
+  lat: 35.713403
+  lng: 139.795527
+  address_ja: "東京都台東区浅草2丁目3-1"
+  address_en: "2-3-1 Asakusa, Taito, Tokyo"
+  prefecture: tokyo
+  municipality: taito
+  category: shrine
+  visitability: public
+  visitability_note_en: "Tokyo's oldest temple, with Thunder Gate."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Asakusa Station"
+    name_ja: "浅草駅"
+    lines: ["Tokyo Metro Ginza", "Toei Asakusa", "Tobu"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 12, transfers: 1, fare_jpy: 190 }
+  etiquette_en:
+    - "The gate is crowded; incense is free to offer."
+  last_verified: 2026-08-13
+
+- id: meiji-shrine
+  name_en: "Meiji Jingu"
+  name_ja: "明治神宮"
+  lat: 35.674842
+  lng: 139.699627
+  address_ja: "東京都渋谷区代々木神園町1-1"
+  address_en: "1-1 Yoyogi-Kamizonocho, Shibuya, Tokyo"
+  prefecture: tokyo
+  municipality: shibuya
+  category: shrine
+  visitability: public
+  visitability_note_en: "Forest shrine near Harajuku."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Harajuku Station"
+    name_ja: "原宿駅"
+    lines: ["JR Yamanote"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 15, transfers: 0, fare_jpy: 200 }
+  etiquette_en:
+    - "Walking on the main path: keep to the left side."
+  last_verified: 2026-08-13
+
+- id: yoyogi-park
+  name_en: "Yoyogi Park"
+  name_ja: "代々木公園"
+  lat: 35.671405
+  lng: 139.695172
+  address_ja: "東京都渋谷区代々木神園町2-1"
+  address_en: "2-1 Yoyogi-Kamizonocho, Shibuya, Tokyo"
+  prefecture: tokyo
+  municipality: shibuya
+  category: park
+  visitability: public
+  visitability_note_en: "Open park across from Meiji Jingu."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Harajuku Station"
+    name_ja: "原宿駅"
+    lines: ["JR Yamanote"]
+    walk_min: 6
+  travel_from:
+    tokyo: { minutes: 16, transfers: 0, fare_jpy: 200 }
+  etiquette_en:
+    - "Weekend events; check noise rules for gatherings."
+  last_verified: 2026-08-13
+
+- id: mitaka-station
+  name_en: "Mitaka Station"
+  name_ja: "三鷹駅"
+  lat: 35.702120
+  lng: 139.560821
+  address_ja: "東京都三鷹市下連雀3丁目"
+  address_en: "3-chome Shimo-renjaku, Mitaka, Tokyo"
+  prefecture: tokyo
+  municipality: mitaka
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Mitaka Station"
+    name_ja: "三鷹駅"
+    lines: ["JR Chuo Line"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 25, transfers: 0, fare_jpy: 250 }
+  etiquette_en:
+    - "Gateway to the Ghibli Museum area."
+  last_verified: 2026-08-13
+
+- id: enoshima-benten-bridge
+  name_en: "Benten Bridge"
+  name_ja: "弁天橋"
+  lat: 35.304460
+  lng: 139.482194
+  address_ja: "神奈川県藤沢市片瀬海岸"
+  address_en: "Katase-kaigan, Fujisawa, Kanagawa"
+  prefecture: kanagawa
+  municipality: fujisawa
+  category: bridge
+  visitability: public
+  visitability_note_en: "Land bridge connecting Enoshima to the mainland."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Katase-Enoshima Station"
+    name_ja: "片瀬江ノ島駅"
+    lines: ["Odakyu Enoshima"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 68, transfers: 1, fare_jpy: 780 }
+  etiquette_en:
+    - "Bikes and cars share the bridge; walkers use the outer path."
+  last_verified: 2026-08-13
+
+- id: kamakura-wakamiya-oji
+  name_en: "Wakamiya-oji"
+  name_ja: "若宮大路"
+  lat: 35.316326
+  lng: 139.550396
+  address_ja: "神奈川県鎌倉市小町・雪ノ下"
+  address_en: "Komachi / Yukinoshita, Kamakura, Kanagawa"
+  prefecture: kanagawa
+  municipality: kamakura
+  category: shotengai
+  visitability: public
+  visitability_note_en: "The broad approach to Tsuruoka Hachimangu."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Kamakura Station"
+    name_ja: "鎌倉駅"
+    lines: ["JR Yokosuka"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 62, transfers: 0, fare_jpy: 890 }
+  etiquette_en:
+    - "Pedestrian-friendly walk; shops line the route."
+  last_verified: 2026-08-13
+
+- id: yokosuka-seaside-park
+  name_en: "Umikaze Park"
+  name_ja: "うみかぜ公園"
+  lat: 35.276787
+  lng: 139.682705
+  address_ja: "神奈川県横須賀市小川町"
+  address_en: "Ogawa-cho, Yokosuka, Kanagawa"
+  prefecture: kanagawa
+  municipality: yokosuka
+  category: park
+  visitability: public
+  visitability_note_en: "Seaside green space in the harbour."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Yokosuka Chuo Station"
+    name_ja: "横須賀中央駅"
+    lines: ["Keikyu Main Line"]
+    walk_min: 6
+  travel_from:
+    tokyo: { minutes: 68, transfers: 1, fare_jpy: 1050 }
+  etiquette_en:
+    - "Base nearby; do not photograph naval facilities."
+  last_verified: 2026-08-13
+
+- id: todoroki-station
+  name_en: "Todoroki Station"
+  name_ja: "等々力駅"
+  lat: 35.608362
+  lng: 139.648024
+  address_ja: "東京都世田谷区等々力3丁目"
+  address_en: "3-chome Todoroki, Setagaya, Tokyo"
+  prefecture: tokyo
+  municipality: setagaya
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Todoroki Station"
+    name_ja: "等々力駅"
+    lines: ["Tokyu Oimachi"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 30, transfers: 1, fare_jpy: 330 }
+  etiquette_en:
+    - "Gateway to the ravine walk."
+  last_verified: 2026-08-13
+
+- id: todoroki-ryokuchi
+  name_en: "Todoroki Valley"
+  name_ja: "等々力渓谷"
+  lat: 35.606840
+  lng: 139.646205
+  address_ja: "東京都世田谷区等々力1丁目"
+  address_en: "1-chome Todoroki, Setagaya, Tokyo"
+  prefecture: tokyo
+  municipality: setagaya
+  category: nature
+  visitability: public
+  visitability_note_en: "Tokyo's only natural river valley walk."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Todoroki Station"
+    name_ja: "等々力駅"
+    lines: ["Tokyu Oimachi"]
+    walk_min: 3
+  travel_from:
+    tokyo: { minutes: 32, transfers: 1, fare_jpy: 330 }
+  etiquette_en:
+    - "Keep voices low; it is a quiet residential ravine."
+  last_verified: 2026-08-13
+
+- id: gakugeidaigaku-station
+  name_en: "Gakugei-daigaku Station"
+  name_ja: "学芸大学駅"
+  lat: 35.629873
+  lng: 139.686216
+  address_ja: "東京都目黒区中根2丁目"
+  address_en: "2-chome Nakane, Meguro, Tokyo"
+  prefecture: tokyo
+  municipality: meguro
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Gakugei-daigaku Station"
+    name_ja: "学芸大学駅"
+    lines: ["Tokyu Toyoko"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 25, transfers: 1, fare_jpy: 250 }
+  etiquette_en:
+    - "Friendly local shopping streets."
+  last_verified: 2026-08-13
+
+- id: komazawa-park
+  name_en: "Komazawa Olympic Park"
+  name_ja: "駒沢オリンピック公園"
+  lat: 35.625018
+  lng: 139.661776
+  address_ja: "東京都世田谷区駒沢公園"
+  address_en: "Komazawa-koen, Setagaya, Tokyo"
+  prefecture: tokyo
+  municipality: setagaya
+  category: park
+  visitability: public
+  visitability_note_en: "Large sports park in Setagaya."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Komazawa-daigaku Station"
+    name_ja: "駒沢大学駅"
+    lines: ["Tokyu Den-en-toshi"]
+    walk_min: 12
+  travel_from:
+    tokyo: { minutes: 30, transfers: 1, fare_jpy: 300 }
+  etiquette_en:
+    - "Running tracks close during events."
+  last_verified: 2026-08-13
+
+- id: futakotamagawa
+  name_en: "Futako-Tamagawa"
+  name_ja: "二子玉川駅周辺"
+  lat: 35.611387
+  lng: 139.629109
+  address_ja: "東京都世田谷区玉川2丁目"
+  address_en: "2-chome Tamagawa, Setagaya, Tokyo"
+  prefecture: tokyo
+  municipality: setagaya
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Futako-Tamagawa Station"
+    name_ja: "二子玉川駅"
+    lines: ["Tokyu Den-en-toshi"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 28, transfers: 1, fare_jpy: 280 }
+  etiquette_en:
+    - "Riverside park at the Tama riverbank."
+  last_verified: 2026-08-13
+
+- id: jiyugaoka-station
+  name_en: "Jiyugaoka Station"
+  name_ja: "自由が丘駅"
+  lat: 35.607828
+  lng: 139.668547
+  address_ja: "東京都目黒区自由が丘"
+  address_en: "Jiyugaoka, Meguro, Tokyo"
+  prefecture: tokyo
+  municipality: meguro
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Jiyugaoka Station"
+    name_ja: "自由が丘駅"
+    lines: ["Tokyu Toyoko", "Tokyu Oimachi"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 22, transfers: 1, fare_jpy: 250 }
+  etiquette_en:
+    - "Boutique streets; many are narrow."
+  last_verified: 2026-08-13
+
+- id: shinjuku-sanchome
+  name_en: "Shinjuku 3-chome"
+  name_ja: "新宿三丁目交差点"
+  lat: 35.692525
+  lng: 139.705768
+  address_ja: "東京都新宿区新宿3丁目"
+  address_en: "Shinjuku 3-chome, Shinjuku, Tokyo"
+  prefecture: tokyo
+  municipality: shinjuku
+  category: crossing
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Shinjuku-sanchome Station"
+    name_ja: "新宿三丁目駅"
+    lines: ["Tokyo Metro Marunouchi", "Fukutoshin", "Toei Shinjuku"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 15, transfers: 1, fare_jpy: 200 }
+  etiquette_en:
+    - "Business junction; busy all day."
+  last_verified: 2026-08-13
+
+- id: takadanobaba-station
+  name_en: "Takadanobaba Station"
+  name_ja: "高田馬場駅"
+  lat: 35.713483
+  lng: 139.704474
+  address_ja: "東京都新宿区高田馬場1丁目"
+  address_en: "1-chome Takadanobaba, Shinjuku, Tokyo"
+  prefecture: tokyo
+  municipality: shinjuku
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Takadanobaba Station"
+    name_ja: "高田馬場駅"
+    lines: ["JR Yamanote", "Seibu Shinjuku", "Tokyo Metro Tozai"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 18, transfers: 0, fare_jpy: 200 }
+  etiquette_en:
+    - "Student neighbourhood; ramen lanes get busy."
+  last_verified: 2026-08-13
+
+- id: waseda-station
+  name_en: "Waseda Station"
+  name_ja: "早稲田駅"
+  lat: 35.705803
+  lng: 139.721191
+  address_ja: "東京都新宿区西早稲田2丁目"
+  address_en: "2-chome Nishi-Waseda, Shinjuku, Tokyo"
+  prefecture: tokyo
+  municipality: shinjuku
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Waseda Station"
+    name_ja: "早稲田駅"
+    lines: ["Tokyo Metro Tozai"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 20, transfers: 1, fare_jpy: 200 }
+  etiquette_en:
+    - "University district; quiet after dark."
+  last_verified: 2026-08-13
+
+- id: nogata-station
+  name_en: "Nogata Station"
+  name_ja: "野方駅"
+  lat: 35.718521
+  lng: 139.653092
+  address_ja: "東京都中野区野方5丁目"
+  address_en: "5-chome Nogata, Nakano, Tokyo"
+  prefecture: tokyo
+  municipality: nakano
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Nogata Station"
+    name_ja: "野方駅"
+    lines: ["Seibu Shinjuku"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 20, transfers: 1, fare_jpy: 250 }
+  etiquette_en:
+    - "Local shopping street with retro vibe."
+  last_verified: 2026-08-13
+
+- id: numabukuro-station
+  name_en: "Numabukuro Station"
+  name_ja: "沼袋駅"
+  lat: 35.719530
+  lng: 139.663430
+  address_ja: "東京都中野区沼袋1丁目"
+  address_en: "1-chome Numabukuro, Nakano, Tokyo"
+  prefecture: tokyo
+  municipality: nakano
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Numabukuro Station"
+    name_ja: "沼袋駅"
+    lines: ["Seibu Shinjuku"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 21, transfers: 1, fare_jpy: 250 }
+  etiquette_en:
+    - "Quiet residential stop."
+  last_verified: 2026-08-13
+
+- id: sugamo-station
+  name_en: "Sugamo Station"
+  name_ja: "巣鴨駅"
+  lat: 35.733412
+  lng: 139.739427
+  address_ja: "東京都豊島区巣鴨1丁目"
+  address_en: "1-chome Sugamo, Toshima, Tokyo"
+  prefecture: tokyo
+  municipality: toshima
+  category: station
+  visitability: public
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Sugamo Station"
+    name_ja: "巣鴨駅"
+    lines: ["JR Yamanote"]
+    walk_min: 0
+  travel_from:
+    tokyo: { minutes: 20, transfers: 0, fare_jpy: 220 }
+  etiquette_en:
+    - "Home of the 'gran' shopping street."
+  last_verified: 2026-08-13
+
+- id: sugamo-jizo-dori
+  name_en: "Sugamo Jizo-dori"
+  name_ja: "巣鴨地蔵通り"
+  lat: 35.736809
+  lng: 139.733300
+  address_ja: "東京都豊島区巣鴨4丁目"
+  address_en: "4-chome Sugamo, Toshima, Tokyo"
+  prefecture: tokyo
+  municipality: toshima
+  category: shotengai
+  visitability: public
+  visitability_note_en: "Famous 'grandma's Harajuku' arcade."
+  entry_fee: free
+  car_required: false
+  nearest_station:
+    name_en: "Sugamo Station"
+    name_ja: "巣鴨駅"
+    lines: ["JR Yamanote"]
+    walk_min: 5
+  travel_from:
+    tokyo: { minutes: 22, transfers: 0, fare_jpy: 220 }
+  etiquette_en:
+    - "Red underwear shop lines up in the morning."
+  last_verified: 2026-08-13

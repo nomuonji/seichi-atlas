@@ -1,0 +1,114 @@
+﻿---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import { prefectures, locations, worksForLocation } from '../../lib/data';
+
+export function getStaticPaths() {
+  return prefectures.map((p) => ({ params: { slug: p.id }, props: { pref: p } }));
+}
+
+const { pref } = Astro.props;
+const locs = locations.filter((l) => l.prefecture === pref.id).sort((a, b) => a.municipality.localeCompare(b.municipality) || a.name_en.localeCompare(b.name_en));
+const allWorks = [...new Set(locs.flatMap((l) => l._works || []))];
+const byMuni: Record<string, typeof locs> = {};
+for (const l of locs) (byMuni[l.municipality] ||= []).push(l);
+---
+
+<Base title={`${pref.name_en} seichi`} description={`Anime pilgrimage locations in ${pref.name_en} Prefecture (${pref.name_ja}) with coordinates and travel time from Tokyo.`}>
+  <section class="section">
+    <div class="container">
+      <a class="breadcrumb" href="/prefecture"><span>← All prefectures</span></a>
+
+      <div class="page-head">
+        <p class="micro">{pref.region} region</p>
+        <h1 class="display-lg">{pref.name_en} <span class="mono page-head__ja">{pref.name_ja}</span></h1>
+        <p class="lede">
+          {locs.length} mapped locations · {allWorks.length} series represented.
+        </p>
+        <div class="page-head__chips">
+          <span class="badge"><Icon name="pin" size={12} /> {locs.length} sites</span>
+          {allWorks.slice(0, 8).map((wid) => (
+            <a class="badge badge--outline" href={`/anime/${wid}/`}>{wid.split('-').map((w) => w[0]?.toUpperCase() + w.slice(1)).join(' ')}</a>
+          ))}
+        </div>
+      </div>
+
+      {Object.entries(byMuni).map(([muni, group]) => (
+        <div class="muni-block">
+          <h2 class="muni-block__name display-md">
+            {muni.charAt(0).toUpperCase() + muni.slice(1)}
+            <span class="mono muni-block__count">{group.length}</span>
+          </h2>
+          <div class="loc-grid">
+            {group.map((l) => {
+              const tf = l.travel_from?.tokyo;
+              const worksHere = (l._works || []).length;
+              return (
+                <a class="loc-card" href={`/location/${l.slug}/`}>
+                  <div class="loc-card__head">
+                    <span class="loc-card__name">{l.name_en}</span>
+                    <span class={`badge badge--${l.visitability}`}>{l.visitability}</span>
+                  </div>
+                  <span class="loc-card__ja mono">{l.name_ja}</span>
+                  <div class="loc-card__meta mono">
+                    {l.nearest_station?.name_en && <span><Icon name="train" size={13} /> {l.nearest_station.name_en}</span>}
+                    {tf && <span><Icon name="clock" size={13} /> {tf.minutes} min</span>}
+                    <span><Icon name="pin" size={13} /> {worksHere} series</span>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .breadcrumb { display: inline-block; margin-bottom: 1.8rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-decoration: none; }
+  .breadcrumb:hover { color: var(--accent); }
+
+  .page-head { max-width: 70ch; margin-bottom: 2.6rem; }
+  .page-head h1 { margin: 0.7rem 0 0.8rem; }
+  .page-head__ja { color: var(--text-faint); font-size: 1.2rem; }
+  .page-head .lede { margin-bottom: 1.2rem; }
+  .page-head__chips { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+  .page-head__chips .badge { display: inline-flex; align-items: center; gap: 0.3rem; }
+
+  .muni-block { margin-bottom: 2.4rem; }
+  .muni-block__name {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--paper-line);
+  }
+  .muni-block__count { font-size: 0.7rem; color: var(--text-faint); }
+
+  .loc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
+  @media (max-width: 1023px) { .loc-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .loc-grid { grid-template-columns: 1fr; } }
+
+  .loc-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--paper-line);
+    border-radius: var(--r-card);
+    background: var(--paper-raised);
+    box-shadow: var(--shadow-card);
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .loc-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .loc-card__head { display: flex; justify-content: space-between; gap: 0.6rem; align-items: center; }
+  .loc-card__name { font-family: var(--font-display); font-weight: 600; font-size: 0.98rem; }
+  .loc-card__ja { font-size: 0.72rem; color: var(--text-faint); }
+  .loc-card__meta { display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.7rem; color: var(--text-muted); margin-top: 0.3rem; }
+  .loc-card__meta span { display: inline-flex; align-items: center; gap: 0.3rem; }
+</style>

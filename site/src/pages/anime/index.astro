@@ -1,0 +1,84 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import { works, stats, dayTripLocationsForWork } from '../../lib/data';
+
+const ordered = [...works].sort((a, b) => (stats.perWork[b.id]?.total || 0) - (stats.perWork[a.id]?.total || 0));
+---
+
+<Base title="All series" description="Every anime series in the Seichi Atlas database, with mapped pilgrimage sites in Tokyo, Kanagawa, Saitama, and Chiba.">
+  <section class="section">
+    <div class="container">
+      <div class="page-head">
+        <p class="micro">Anime index</p>
+        <h1 class="display-lg">Browse by series</h1>
+        <p class="lede">
+          {works.length} series mapped across the Kanto day-trip zone. Open a series to see every
+          verified location on one map, with travel time from Tokyo.
+        </p>
+      </div>
+
+      <div class="work-grid">
+        {
+          ordered.map((w) => {
+            const s = stats.perWork[w.id];
+            const daytrip = dayTripLocationsForWork(w.id).length;
+            return (
+              <a class="work-card" href={`/anime/${w.slug}/`}>
+                <div class="work-card__top">
+                  <span class="work-card__year mono">{w.year}</span>
+                  <span class="badge">{w.type === 'film' ? 'Film' : w.type === 'tv' ? 'TV' : w.type}</span>
+                </div>
+                <h2 class="work-card__title display-md">{w.title_en}</h2>
+                <p class="work-card__ja mono">{w.title_ja}</p>
+                <div class="work-card__foot">
+                  <span class="work-card__stat mono">
+                    <Icon name="pin" size={14} /> {s?.total || 0} sites
+                  </span>
+                  <span class="work-card__stat mono">
+                    <Icon name="train" size={14} /> {daytrip} day-trip
+                  </span>
+                  <span class="work-card__arrow"><Icon name="arrow-up-right" size={16} /></span>
+                </div>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page-head { max-width: 58ch; margin-bottom: 2.6rem; }
+  .page-head h1 { margin: 0.7rem 0 0.8rem; }
+  .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+  @media (max-width: 1023px) { .work-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .work-grid { grid-template-columns: 1fr; } }
+
+  .work-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1.4rem;
+    border: 1px solid var(--paper-line);
+    border-radius: var(--r-card);
+    background: var(--paper-raised);
+    box-shadow: var(--shadow-card);
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .work-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-pop);
+  }
+  .work-card__top { display: flex; justify-content: space-between; align-items: center; }
+  .work-card__year { font-size: 0.75rem; color: var(--text-faint); }
+  .work-card__title { margin-top: 0.9rem; font-size: 1.3rem; }
+  .work-card__ja { font-size: 0.8rem; color: var(--text-faint); }
+  .work-card__foot { display: flex; gap: 0.9rem; align-items: center; margin-top: 1.2rem; }
+  .work-card__stat { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.72rem; color: var(--text-muted); }
+  .work-card__arrow { margin-left: auto; color: var(--accent); }
+</style>

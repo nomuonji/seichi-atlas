@@ -1,0 +1,17 @@
+{
+  "name": "Seichi Atlas — Anime pilgrimage, mapped",
+  "short_name": "Seichi Atlas",
+  "description": "Anime pilgrimage sites with real coordinates, travel time from Tokyo, and visitability.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f3ec",
+  "theme_color": "#1a1d22",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
