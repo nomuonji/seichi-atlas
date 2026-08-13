@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Icon from '../../components/Icon.astro';
-import { locationBySlug, worksForLocation, appearancesForLocation, prefectureById, photoFor } from '../../lib/data';
+import { locationBySlug, worksForLocation, appearancesForLocation, prefectureById, photoFor, locations, locationsForWork } from '../../lib/data';
 import photoCredits from '../../data/photos.json';
 
 export function getStaticPaths() {
@@ -17,6 +17,16 @@ const appr = appearancesForLocation(loc.id);
 const pref = prefectureById.get(loc.prefecture);
 const tf = loc.travel_from?.tokyo;
 const visMap = { public: 'Open to the public', limited: 'Limited access', private: 'Private', closed: 'Closed' } as const;
+
+// Nearby spots in the same series: other locations of the first work here,
+// ordered by travel time from Tokyo (a rough "pair it with" suggestion).
+const siblingWork = works[0];
+const siblings = siblingWork
+  ? locationsForWork(siblingWork.id)
+      .filter((l) => l.id !== loc.id)
+      .sort((a, b) => (a.travel_from?.tokyo?.minutes ?? 999) - (b.travel_from?.tokyo?.minutes ?? 999))
+      .slice(0, 4)
+  : [];
 
 const catMap: Record<string, string> = {
   station: 'Station', shrine: 'Shrine & temple', school: 'School', shotengai: 'Shopping street',
@@ -150,6 +160,32 @@ const photoCredit = photoFile ? (photoCredits as Record<string, { title?: string
           })}
         </div>
       </div>
+
+      {siblingWork && siblings.length > 0 && (
+        <div class="siblings">
+          <h2 class="siblings__title display-md">
+            Pair it with {siblingWork.title_en}
+          </h2>
+          <p class="siblings__sub mono">Other {siblingWork.title_en} seichi, ordered by travel time from Tokyo</p>
+          <div class="siblings__grid">
+            {siblings.map((s) => {
+              const stf = s.travel_from?.tokyo;
+              const shot = photoFor(s.id);
+              return (
+                <a class="sib-card" href={`/location/${s.slug}/`}>
+                  {shot && <div class="sib-card__media"><img src={shot} alt="" loading="lazy" decoding="async" /></div>}
+                  <div class="sib-card__body">
+                    <span class="sib-card__name">{s.name_en}</span>
+                    <span class="sib-card__meta mono">
+                      {stf ? `~${stf.minutes} min from Tokyo` : ''}{s.nearest_station?.name_en ? ` · ${s.nearest_station.name_en}` : ''}
+                    </span>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   </section>
 </Base>
@@ -241,4 +277,29 @@ const photoCredit = photoFile ? (photoCredits as Record<string, { title?: string
   .appear-item__tags { display: flex; flex-direction: column; gap: 0.4rem; align-items: flex-end; flex-shrink: 0; }
   .appear-item__source { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.7rem; color: var(--text-faint); text-decoration: none; }
   .appear-item__source:hover { color: var(--accent); }
+
+  .siblings { margin-top: 2.6rem; padding-top: 2rem; border-top: 1px solid var(--paper-line); }
+  .siblings__title { font-size: 1.4rem; margin-bottom: 0.2rem; }
+  .siblings__sub { font-size: 0.72rem; color: var(--text-faint); margin-bottom: 1.2rem; }
+  .siblings__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.9rem; }
+  @media (max-width: 1023px) { .siblings__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .siblings__grid { grid-template-columns: 1fr; } }
+  .sib-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--paper-line);
+    border-radius: var(--r-card);
+    background: var(--paper-raised);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .sib-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .sib-card__media { aspect-ratio: 16 / 9; overflow: hidden; background: var(--paper-sunken); }
+  .sib-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .sib-card__body { display: flex; flex-direction: column; gap: 0.25rem; padding: 0.8rem 0.9rem; }
+  .sib-card__name { font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; }
+  .sib-card__meta { font-size: 0.68rem; color: var(--text-faint); }
 </style>
