@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /map/
 
-Sitemap: https://seichiatlas.com/sitemap-index.xml
+Sitemap: https://seichi.antonbase.com/sitemap-index.xml

@@ -49,6 +49,23 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
     <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="theme-color" content="#1a1d22" />
     <script is:inline>
+      // Google Analytics 4 — fires only on the production host.
+      // Prevents localhost/fork traffic from polluting the property.
+      (function () {
+        var PROD_HOST = 'seichi.antonbase.com';
+        if (location.hostname !== PROD_HOST) return;
+        var gtagId = 'G-FCDBW64M40';
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', gtagId);
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + gtagId;
+        document.head.appendChild(s);
+      })();
+    </script>
+    <script is:inline>
       // Theme bootstrap; runs before paint to avoid flash of wrong theme.
       (function () {
         var KEY = 'seichi-theme';
