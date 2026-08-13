@@ -9,10 +9,18 @@ import locationsRaw from '../data/locations.json';
 import appearancesRaw from '../data/appearances.json';
 import prefecturesRaw from '../data/prefectures.json';
 import statsRaw from '../data/stats.json';
+import photosManifestRaw from '../data/photos-manifest.json';
 
 export const works = worksRaw as Work[];
 export const locations = locationsRaw as Location[];
 export const appearances = appearancesRaw as Appearance[];
+
+// Local photo manifest: id -> { file: '/photos/x.jpg' }
+export const photoFiles = photosManifestRaw as Record<string, { file: string }>;
+
+export function photoFor(locationId: string): string | null {
+  return photoFiles[locationId]?.file || null;
+}
 export const prefectures = prefecturesRaw as { id: string; name_en: string; name_ja: string; region: string }[];
 export const stats = statsRaw as DataBundle['stats'];
 

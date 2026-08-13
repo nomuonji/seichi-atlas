@@ -1,0 +1,497 @@
+{
+  "suga-shrine": {
+    "file": "/photos/suga-shrine.jpg",
+    "ext": ".jpg",
+    "bytes": 212220
+  },
+  "ntt-docomo-yoyogi": {
+    "file": "/photos/ntt-docomo-yoyogi.jpg",
+    "ext": ".jpg",
+    "bytes": 410490
+  },
+  "hie-shrine": {
+    "file": "/photos/hie-shrine.jpg",
+    "ext": ".jpg",
+    "bytes": 195733
+  },
+  "shinjuku-station-west-exit": {
+    "file": "/photos/shinjuku-station-west-exit.jpg",
+    "ext": ".jpg",
+    "bytes": 368207
+  },
+  "tokyo-metro-gov": {
+    "file": "/photos/tokyo-metro-gov.jpg",
+    "ext": ".jpg",
+    "bytes": 636134
+  },
+  "kachidoki-bridge": {
+    "file": "/photos/kachidoki-bridge.jpg",
+    "ext": ".jpg",
+    "bytes": 329168
+  },
+  "yasuda-auditorium": {
+    "file": "/photos/yasuda-auditorium.jpg",
+    "ext": ".jpg",
+    "bytes": 525766
+  },
+  "tokyo-station-marunouchi": {
+    "file": "/photos/tokyo-station-marunouchi.jpg",
+    "ext": ".jpg",
+    "bytes": 305717
+  },
+  "radio-kaikan": {
+    "file": "/photos/radio-kaikan.jpg",
+    "ext": ".jpg",
+    "bytes": 694756
+  },
+  "kanda-myojin": {
+    "file": "/photos/kanda-myojin.jpg",
+    "ext": ".jpg",
+    "bytes": 135780
+  },
+  "akihabara-udx": {
+    "file": "/photos/akihabara-udx.jpg",
+    "ext": ".jpg",
+    "bytes": 330209
+  },
+  "akihabara-electric-town": {
+    "file": "/photos/akihabara-electric-town.jpg",
+    "ext": ".jpg",
+    "bytes": 123970
+  },
+  "akihabara-chuo-dori": {
+    "file": "/photos/akihabara-chuo-dori.jpg",
+    "ext": ".jpg",
+    "bytes": 355719
+  },
+  "seiseki-sakuragaoka-station": {
+    "file": "/photos/seiseki-sakuragaoka-station.jpg",
+    "ext": ".jpg",
+    "bytes": 219694
+  },
+  "sakuragaoka-park": {
+    "file": "/photos/sakuragaoka-park.jpg",
+    "ext": ".jpg",
+    "bytes": 140624
+  },
+  "shimokitazawa-station": {
+    "file": "/photos/shimokitazawa-station.jpg",
+    "ext": ".jpg",
+    "bytes": 415247
+  },
+  "kichijoji-station": {
+    "file": "/photos/kichijoji-station.jpg",
+    "ext": ".jpg",
+    "bytes": 241262
+  },
+  "inokashira-park": {
+    "file": "/photos/inokashira-park.jpg",
+    "ext": ".jpg",
+    "bytes": 620781
+  },
+  "koenji-station": {
+    "file": "/photos/koenji-station.jpg",
+    "ext": ".jpg",
+    "bytes": 231924
+  },
+  "asagaya-station": {
+    "file": "/photos/asagaya-station.jpg",
+    "ext": ".jpg",
+    "bytes": 413049
+  },
+  "nakano-broadway": {
+    "file": "/photos/nakano-broadway.jpg",
+    "ext": ".jpg",
+    "bytes": 366497
+  },
+  "kamakurakoko-mae-crossing": {
+    "file": "/photos/kamakurakoko-mae-crossing.jpg",
+    "ext": ".jpg",
+    "bytes": 421261
+  },
+  "shichirigahama": {
+    "file": "/photos/shichirigahama.jpg",
+    "ext": ".jpg",
+    "bytes": 290624
+  },
+  "enoshima-island": {
+    "file": "/photos/enoshima-island.jpg",
+    "ext": ".jpg",
+    "bytes": 294759
+  },
+  "enoshima-sea-candle": {
+    "file": "/photos/enoshima-sea-candle.jpg",
+    "ext": ".jpg",
+    "bytes": 156347
+  },
+  "kamakura-station": {
+    "file": "/photos/kamakura-station.jpg",
+    "ext": ".jpg",
+    "bytes": 256106
+  },
+  "tsuruoka-hachimangu": {
+    "file": "/photos/tsuruoka-hachimangu.jpg",
+    "ext": ".jpg",
+    "bytes": 297216
+  },
+  "hase-dera-kamakura": {
+    "file": "/photos/hase-dera-kamakura.jpg",
+    "ext": ".jpg",
+    "bytes": 725265
+  },
+  "verny-park": {
+    "file": "/photos/verny-park.jpg",
+    "ext": ".jpg",
+    "bytes": 298294
+  },
+  "yokosuka-station": {
+    "file": "/photos/yokosuka-station.jpg",
+    "ext": ".jpg",
+    "bytes": 214502
+  },
+  "dobuita-street": {
+    "file": "/photos/dobuita-street.jpg",
+    "ext": ".jpg",
+    "bytes": 213010
+  },
+  "mikasa-park": {
+    "file": "/photos/mikasa-park.jpg",
+    "ext": ".jpg",
+    "bytes": 308024
+  },
+  "fujiko-fujio-museum": {
+    "file": "/photos/fujiko-fujio-museum.jpg",
+    "ext": ".jpg",
+    "bytes": 334762
+  },
+  "washinomiya-shrine": {
+    "file": "/photos/washinomiya-shrine.jpg",
+    "ext": ".jpg",
+    "bytes": 36511
+  },
+  "washinomiya-station": {
+    "file": "/photos/washinomiya-station.jpg",
+    "ext": ".jpg",
+    "bytes": 54299
+  },
+  "chichibu-shrine": {
+    "file": "/photos/chichibu-shrine.jpg",
+    "ext": ".jpg",
+    "bytes": 278560
+  },
+  "chichibu-bridge": {
+    "file": "/photos/chichibu-bridge.jpg",
+    "ext": ".jpg",
+    "bytes": 178136
+  },
+  "chichibu-station": {
+    "file": "/photos/chichibu-station.jpg",
+    "ext": ".jpg",
+    "bytes": 489543
+  },
+  "seibu-chichibu-station": {
+    "file": "/photos/seibu-chichibu-station.jpg",
+    "ext": ".jpg",
+    "bytes": 173383
+  },
+  "banba-street-chichibu": {
+    "file": "/photos/banba-street-chichibu.jpg",
+    "ext": ".jpg",
+    "bytes": 479590
+  },
+  "chiba-station": {
+    "file": "/photos/chiba-station.jpg",
+    "ext": ".jpg",
+    "bytes": 278524
+  },
+  "makuhari-messe": {
+    "file": "/photos/makuhari-messe.jpg",
+    "ext": ".jpg",
+    "bytes": 234773
+  },
+  "kaihin-makuhari-station": {
+    "file": "/photos/kaihin-makuhari-station.jpg",
+    "ext": ".jpg",
+    "bytes": 398517
+  },
+  "shinanomachi-station": {
+    "file": "/photos/shinanomachi-station.jpg",
+    "ext": ".jpg",
+    "bytes": 279793
+  },
+  "shinjuku-central-park": {
+    "file": "/photos/shinjuku-central-park.jpg",
+    "ext": ".jpg",
+    "bytes": 752221
+  },
+  "shibuya-scramble": {
+    "file": "/photos/shibuya-scramble.jpg",
+    "ext": ".jpg",
+    "bytes": 341993
+  },
+  "tokyo-tower": {
+    "file": "/photos/tokyo-tower.jpg",
+    "ext": ".jpg",
+    "bytes": 285046
+  },
+  "rainbow-bridge": {
+    "file": "/photos/rainbow-bridge.jpg",
+    "ext": ".jpg",
+    "bytes": 199084
+  },
+  "ginza-crossing": {
+    "file": "/photos/ginza-crossing.jpg",
+    "ext": ".jpg",
+    "bytes": 296463
+  },
+  "kanda-station": {
+    "file": "/photos/kanda-station.jpg",
+    "ext": ".jpg",
+    "bytes": 294519
+  },
+  "ochanomizu-riverbank": {
+    "file": "/photos/ochanomizu-riverbank.jpg",
+    "ext": ".jpg",
+    "bytes": 403939
+  },
+  "inage-station": {
+    "file": "/photos/inage-station.jpg",
+    "ext": ".jpg",
+    "bytes": 109756
+  },
+  "soga-station": {
+    "file": "/photos/soga-station.jpg",
+    "ext": ".jpg",
+    "bytes": 327019
+  },
+  "chiba-city-hall": {
+    "file": "/photos/chiba-city-hall.jpg",
+    "ext": ".jpg",
+    "bytes": 120986
+  },
+  "tama-center-station": {
+    "file": "/photos/tama-center-station.jpg",
+    "ext": ".jpg",
+    "bytes": 273096
+  },
+  "noborito-station": {
+    "file": "/photos/noborito-station.jpg",
+    "ext": ".jpg",
+    "bytes": 408682
+  },
+  "asagaya-pearl-center": {
+    "file": "/photos/asagaya-pearl-center.jpg",
+    "ext": ".jpg",
+    "bytes": 351400
+  },
+  "nakano-sunmall": {
+    "file": "/photos/nakano-sunmall.jpg",
+    "ext": ".jpg",
+    "bytes": 240740
+  },
+  "sangenjaya-station": {
+    "file": "/photos/sangenjaya-station.jpg",
+    "ext": ".jpg",
+    "bytes": 168014
+  },
+  "yuigahama": {
+    "file": "/photos/yuigahama.jpg",
+    "ext": ".jpg",
+    "bytes": 429163
+  },
+  "inamuragasaki": {
+    "file": "/photos/inamuragasaki.jpg",
+    "ext": ".jpg",
+    "bytes": 266919
+  },
+  "ohanabatake-station": {
+    "file": "/photos/ohanabatake-station.jpg",
+    "ext": ".jpg",
+    "bytes": 697428
+  },
+  "chichibu-muse-park": {
+    "file": "/photos/chichibu-muse-park.jpg",
+    "ext": ".jpg",
+    "bytes": 496448
+  },
+  "kuki-station": {
+    "file": "/photos/kuki-station.jpg",
+    "ext": ".jpg",
+    "bytes": 285634
+  },
+  "ikuta-ryokuchi": {
+    "file": "/photos/ikuta-ryokuchi.jpg",
+    "ext": ".jpg",
+    "bytes": 358474
+  },
+  "enoshima-shrine": {
+    "file": "/photos/enoshima-shrine.jpg",
+    "ext": ".jpg",
+    "bytes": 433409
+  },
+  "enoshima-aquarium": {
+    "file": "/photos/enoshima-aquarium.jpg",
+    "ext": ".jpg",
+    "bytes": 404941
+  },
+  "kita-kamakura-station": {
+    "file": "/photos/kita-kamakura-station.jpg",
+    "ext": ".jpg",
+    "bytes": 340827
+  },
+  "kenchoji-temple": {
+    "file": "/photos/kenchoji-temple.jpg",
+    "ext": ".jpg",
+    "bytes": 449870
+  },
+  "engakuji-temple": {
+    "file": "/photos/engakuji-temple.jpg",
+    "ext": ".jpg",
+    "bytes": 578440
+  },
+  "kotokuin-daibutsu": {
+    "file": "/photos/kotokuin-daibutsu.jpg",
+    "ext": ".jpg",
+    "bytes": 107791
+  },
+  "ikebukuro-station": {
+    "file": "/photos/ikebukuro-station.jpg",
+    "ext": ".jpg",
+    "bytes": 312233
+  },
+  "ueno-station": {
+    "file": "/photos/ueno-station.jpg",
+    "ext": ".jpg",
+    "bytes": 362057
+  },
+  "ueno-park": {
+    "file": "/photos/ueno-park.jpg",
+    "ext": ".jpg",
+    "bytes": 228615
+  },
+  "sensoji": {
+    "file": "/photos/sensoji.jpg",
+    "ext": ".jpg",
+    "bytes": 321201
+  },
+  "meiji-shrine": {
+    "file": "/photos/meiji-shrine.jpg",
+    "ext": ".jpg",
+    "bytes": 434184
+  },
+  "yoyogi-park": {
+    "file": "/photos/yoyogi-park.jpg",
+    "ext": ".jpg",
+    "bytes": 532241
+  },
+  "mitaka-station": {
+    "file": "/photos/mitaka-station.jpg",
+    "ext": ".jpg",
+    "bytes": 445639
+  },
+  "enoshima-benten-bridge": {
+    "file": "/photos/enoshima-benten-bridge.jpg",
+    "ext": ".jpg",
+    "bytes": 219820
+  },
+  "kamakura-wakamiya-oji": {
+    "file": "/photos/kamakura-wakamiya-oji.jpg",
+    "ext": ".jpg",
+    "bytes": 349640
+  },
+  "yokosuka-seaside-park": {
+    "file": "/photos/yokosuka-seaside-park.jpg",
+    "ext": ".jpg",
+    "bytes": 106185
+  },
+  "todoroki-station": {
+    "file": "/photos/todoroki-station.jpg",
+    "ext": ".jpg",
+    "bytes": 355885
+  },
+  "todoroki-ryokuchi": {
+    "file": "/photos/todoroki-ryokuchi.jpg",
+    "ext": ".jpg",
+    "bytes": 731213
+  },
+  "gakugeidaigaku-station": {
+    "file": "/photos/gakugeidaigaku-station.jpg",
+    "ext": ".jpg",
+    "bytes": 292529
+  },
+  "komazawa-park": {
+    "file": "/photos/komazawa-park.jpg",
+    "ext": ".jpg",
+    "bytes": 301639
+  },
+  "futakotamagawa": {
+    "file": "/photos/futakotamagawa.jpg",
+    "ext": ".jpg",
+    "bytes": 106409
+  },
+  "jiyugaoka-station": {
+    "file": "/photos/jiyugaoka-station.jpg",
+    "ext": ".jpg",
+    "bytes": 354874
+  },
+  "shinjuku-sanchome": {
+    "file": "/photos/shinjuku-sanchome.jpg",
+    "ext": ".jpg",
+    "bytes": 259969
+  },
+  "takadanobaba-station": {
+    "file": "/photos/takadanobaba-station.jpg",
+    "ext": ".jpg",
+    "bytes": 265225
+  },
+  "waseda-station": {
+    "file": "/photos/waseda-station.jpg",
+    "ext": ".jpg",
+    "bytes": 303701
+  },
+  "nogata-station": {
+    "file": "/photos/nogata-station.jpg",
+    "ext": ".jpg",
+    "bytes": 315109
+  },
+  "numabukuro-station": {
+    "file": "/photos/numabukuro-station.jpg",
+    "ext": ".jpg",
+    "bytes": 264346
+  },
+  "sugamo-station": {
+    "file": "/photos/sugamo-station.jpg",
+    "ext": ".jpg",
+    "bytes": 293654
+  },
+  "sugamo-jizo-dori": {
+    "file": "/photos/sugamo-jizo-dori.jpg",
+    "ext": ".jpg",
+    "bytes": 403312
+  },
+  "yotsuya-station-crossing": {
+    "file": "/photos/yotsuya-station-crossing.jpg",
+    "ext": ".jpg",
+    "bytes": 307857
+  },
+  "shimokitazawa-shotengai": {
+    "file": "/photos/shimokitazawa-shotengai.jpg",
+    "ext": ".jpg",
+    "bytes": 373530
+  },
+  "chiba-minato-park": {
+    "file": "/photos/chiba-minato-park.jpg",
+    "ext": ".jpg",
+    "bytes": 367398
+  },
+  "shinjuku-pedestrian-deck": {
+    "file": "/photos/shinjuku-pedestrian-deck.jpg",
+    "ext": ".jpg",
+    "bytes": 352649
+  },
+  "suga-shrine-steps": {
+    "file": "/photos/suga-shrine-steps.jpg",
+    "ext": ".jpg",
+    "bytes": 464944
+  }
+}
