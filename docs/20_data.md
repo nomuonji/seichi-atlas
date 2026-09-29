@@ -41,14 +41,25 @@ car_required: false
 nearest_station:
   name_en: "Yotsuya-sanchome Station"
   name_ja: "四谷三丁目駅"
-  lines: ["Tokyo Metro Marunouchi"]
+  lines: ["Tokyo Metro Marunouchi Line"]
   walk_min: 7
-travel_from:                                  # 起点別。Phase 0 は tokyo のみでよい
-  tokyo:   { minutes: 18, transfers: 1, fare_jpy: 200 }
+  official_urls: ["https://www.tokyometro.jp/station/yotsuya-sanchome/index.html"]
+travel_from:
+  tokyo:
+    minutes: 22                              # 概算。実行可能な旅程の保証ではない
+    transfers: 1
+    fare_jpy: 220                            # IC運賃の概算
+    origin_name_en: "Tokyo Station"          # tokyo は必ず東京駅を意味する
+    origin_name_ja: "東京駅"
+    checked_at: 2026-09-30
+    route_source_urls:
+      - "https://www.tokyometro.jp/transit/index.php"
+    estimate_note_en: "Approximate; recheck before travel."
 etiquette_en:                                 # マナー注意。差別化かつ炎上防止
   - "Residents live here. Do not block the stairs."
 photos: []                                    # 権利のクリアなもののみ。docs/40_legal.md 必読
-last_verified: 2026-08-08
+official_source_url: "https://..."            # 住所・施設位置の一次ソース
+last_verified: 2026-09-30
 ```
 
 ### appearance（作品 × 場所）— 設計の核心
@@ -131,3 +142,12 @@ sources:                                      # 1件以上必須
 
 作品の選定基準：**海外での視聴可能性（Netflix/Crunchyroll配信の有無）× 実在ロケーションの多さ**。
 日本国内の人気順で選ばない。ここを間違えると全部が空振りする。
+
+
+### travel_from の運用ルール
+
+- `travel_from.tokyo` の起点は **Tokyo Station / 東京駅** に固定する。
+- `minutes` / `fare_jpy` / `transfers` は、確認日の代表経路に基づく**概算**。時刻表・運賃・乗換条件で変わるため、最新値を保証しない。
+- `checked_at` と `route_source_urls` を必ず持たせ、UIでは「estimate checked YYYY-MM-DD」として表示する。
+- 駅そのものの住所・路線は `nearest_station.official_urls`、地点の住所・開門情報などは `official_source_url` へ分けて記録する。
+- day-trip 画面では各地点の東京駅からの片道概算だけを並べ、地点間の移動や滞在時間を含む「総所要時間」は計算しない。
