@@ -16,31 +16,30 @@ const daytrip = dayTripLocationsForWork(work.id).sort((a, b) => {
   const tb = b.travel_from?.tokyo?.minutes ?? 999;
   return ta - tb;
 });
-const totalMinutes = daytrip.length
-  ? daytrip.reduce((acc, l) => acc + (l.travel_from?.tokyo?.minutes ?? 0), 0)
-  : 0;
 const maxMin = daytrip.length ? Math.max(...daytrip.map((l) => l.travel_from?.tokyo?.minutes ?? 0)) : 0;
 ---
 
-<Base title={`${work.title_en} · day-trip seichi`} description={`The best ${work.title_en} (${work.title_ja}) anime pilgrimage locations for a day trip from Tokyo, ordered by travel time.`}>
+<Base title={`${work.title_en} · Tokyo-access locations`} description={`${work.title_en} (${work.title_ja}) locations with one-way access estimates from Tokyo Station. Sorted by each place's own Tokyo access time, not a multi-stop route.`}>
   <section class="section">
     <div class="container">
       <a class="breadcrumb" href={`/anime/${work.slug}/`}><span>← {work.title_en}</span></a>
       <div class="page-head">
-        <p class="micro">Day-trip edition</p>
-        <h1 class="display-lg">{work.title_en}: a day of seichi</h1>
+        <p class="micro">Tokyo Station access list</p>
+        <h1 class="display-lg">{work.title_en}: locations within 3 hours one way</h1>
         <p class="lede">
-          {daytrip.length} locations reachable from Tokyo in under 3 hours, ordered by how long
-          each takes to get to. {daytrip.length > 0 && `Farthest is ${maxMin} minutes away.`}
+          {daytrip.length} mapped locations whose stored estimate is no more than 3 hours one way from Tokyo Station.
+          They are sorted by each location's own Tokyo access time — <strong>not</strong> by a practical visiting order.
+          This page does not add those one-way times together or claim that all locations can be visited in one day.
+          {daytrip.length > 0 && ` The farthest listed one-way estimate is ${maxMin} minutes.`}
         </p>
         <div class="trip-summary">
           <div class="trip-summary__item">
             <span class="display-md mono">{daytrip.length}</span>
-            <span class="micro">stops</span>
+            <span class="micro">locations</span>
           </div>
           <div class="trip-summary__item">
-            <span class="display-md mono">{totalMinutes}</span>
-            <span class="micro">total travel min</span>
+            <span class="display-md mono">{maxMin || '—'}</span>
+            <span class="micro">max one-way min</span>
           </div>
           <div class="trip-summary__item">
             <span class="display-md mono">{work.year}</span>
@@ -61,7 +60,7 @@ const maxMin = daytrip.length ? Math.max(...daytrip.map((l) => l.travel_from?.to
                 <span class="route-row__ja mono">{l.name_ja}</span>
                 {tf && (
                   <div class="route-row__meta mono">
-                    <Icon name="clock" size={13} /> {tf.minutes} min · {tf.transfers} transfer{tf.transfers === 1 ? '' : 's'} · ¥{tf.fare_jpy}
+                    <Icon name="clock" size={13} /> ~{tf.minutes} min one way from {tf.origin_name_en || 'Tokyo Station'} · {tf.transfers} transfer{tf.transfers === 1 ? '' : 's'} · ≈¥{tf.fare_jpy}{tf.checked_at ? ` · checked ${tf.checked_at}` : ''}
                   </div>
                 )}
               </div>
@@ -69,6 +68,7 @@ const maxMin = daytrip.length ? Math.max(...daytrip.map((l) => l.travel_from?.to
                 <span class={`badge badge--${l.visitability}`}>{l.visitability}</span>
                 <span class="badge">{worksOnSite > 1 ? `${worksOnSite} series here` : 'exclusive'}</span>
                 {l.nearest_station && <span class="badge badge--outline">{l.nearest_station.name_en}</span>}
+                <a class="badge badge--outline" href={`https://www.google.com/maps/search/${l.lat},${l.lng}`} target="_blank" rel="noopener">Google Maps</a>
               </div>
             </div>
           );
@@ -78,10 +78,9 @@ const maxMin = daytrip.length ? Math.max(...daytrip.map((l) => l.travel_from?.to
       <div class="route-cta">
         <Icon name="map" size={22} />
         <div>
-          <h2 class="display-md">Planning the route on your phone?</h2>
-          <p class="mono route-cta__sub">Export these as a Google Maps list or GPX track.</p>
+          <h2 class="display-md">Plan each leg before you travel</h2>
+          <p class="mono route-cta__sub">Open a location page or its Google Maps link above. Times here are Tokyo Station one-way estimates, not an optimized multi-stop itinerary.</p>
         </div>
-        <a class="btn btn--primary" href="/route">Export route</a>
       </div>
     </div>
   </section>

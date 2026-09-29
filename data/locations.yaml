@@ -11,25 +11,36 @@
   lng: 139.722526
   address_ja: "東京都新宿区須賀町5"
   address_en: "5 Sugacho, Shinjuku, Tokyo"
+  official_source_url: "https://sugajinjya.or.jp/faq/"
   prefecture: tokyo
   municipality: shinjuku
   category: shrine
   visitability: public
-  visitability_note_en: "Public staircase. Residential neighbourhood, keep quiet."
+  visitability_note_en: "Suga Shrine states gate hours of 06:00-17:00, with opening at 06:30 from November through February. The amulet/goshuin office has separate hours."
   entry_fee: free
   car_required: false
   nearest_station:
     name_en: "Yotsuya-sanchome Station"
     name_ja: "四谷三丁目駅"
-    lines: ["Tokyo Metro Marunouchi"]
+    lines: ["Tokyo Metro Marunouchi Line"]
     walk_min: 7
+    official_urls:
+      - "https://www.tokyometro.jp/station/yotsuya-sanchome/index.html"
   travel_from:
-    tokyo: { minutes: 22, transfers: 1, fare_jpy: 220 }
+    tokyo:
+      minutes: 22
+      transfers: 1
+      fare_jpy: 220
+      origin_name_en: "Tokyo Station"
+      origin_name_ja: "東京駅"
+      checked_at: "2026-09-30"
+      route_source_urls:
+        - "https://www.tokyometro.jp/transit/index.php"
+      estimate_note_en: "Approximate travel time and fare; recheck the current route before travel."
   etiquette_en:
     - "Residents live here. Do not block the stairs."
-    - "Photographing the steps is fine; keep voices low."
-  last_verified: 2026-08-13
-
+    - "Keep voices low and follow the shrine's posted visiting hours."
+  last_verified: 2026-09-30
 - id: suga-shrine
   name_en: "Suga Shrine"
   name_ja: "須賀神社"
@@ -1589,8 +1600,9 @@
   name_ja: "三軒茶屋駅"
   lat: 35.643726
   lng: 139.671962
-  address_ja: "東京都世田谷区太子堂4丁目"
-  address_en: "Taishido 4-chome, Setagaya, Tokyo"
+  address_ja: "東京都世田谷区太子堂2-15"
+  address_en: "2-15 Taishido, Setagaya, Tokyo"
+  official_source_url: "https://www.tokyu.co.jp/area/sangen-jaya/station/"
   prefecture: tokyo
   municipality: setagaya
   category: station
@@ -1600,14 +1612,25 @@
   nearest_station:
     name_en: "Sangenjaya Station"
     name_ja: "三軒茶屋駅"
-    lines: ["Tokyu Den-en-toshi", "Tokyu Setagaya"]
+    lines: ["Tokyu Den-en-toshi Line", "Tokyu Setagaya Line"]
     walk_min: 0
+    official_urls:
+      - "https://www.tokyu.co.jp/area/sangen-jaya/station/"
   travel_from:
-    tokyo: { minutes: 25, transfers: 1, fare_jpy: 280 }
+    tokyo:
+      minutes: 30
+      transfers: 1
+      fare_jpy: 389
+      origin_name_en: "Tokyo Station"
+      origin_name_ja: "東京駅"
+      checked_at: "2026-09-30"
+      route_source_urls:
+        - "https://www.tokyometro.jp/transit/index.php"
+        - "https://www.tokyu.co.jp/area/sangen-jaya/station/"
+      estimate_note_en: "Approximate IC fare and travel time. Departure time and route choice can change the result; recheck before travel."
   etiquette_en:
-    - "Vintage bars and shops; quiet in the morning."
-  last_verified: 2026-08-13
-
+    - "Use station and street space without blocking commuters or shop entrances."
+  last_verified: 2026-09-30
 - id: yuigahama
   name_en: "Yuigahama Beach"
   name_ja: "由比ヶ浜"
@@ -2206,8 +2229,9 @@
   name_ja: "学芸大学駅"
   lat: 35.629873
   lng: 139.686216
-  address_ja: "東京都目黒区中根2丁目"
-  address_en: "2-chome Nakane, Meguro, Tokyo"
+  address_ja: "東京都目黒区鷹番3-2-1"
+  address_en: "3-2-1 Takaban, Meguro, Tokyo"
+  official_source_url: "https://www.tokyu.co.jp/area/gakugei-daigaku/station/"
   prefecture: tokyo
   municipality: meguro
   category: station
@@ -2217,14 +2241,25 @@
   nearest_station:
     name_en: "Gakugei-daigaku Station"
     name_ja: "学芸大学駅"
-    lines: ["Tokyu Toyoko"]
+    lines: ["Tokyu Toyoko Line"]
     walk_min: 0
+    official_urls:
+      - "https://www.tokyu.co.jp/area/gakugei-daigaku/station/"
   travel_from:
-    tokyo: { minutes: 25, transfers: 1, fare_jpy: 250 }
+    tokyo:
+      minutes: 38
+      transfers: 1
+      fare_jpy: 349
+      origin_name_en: "Tokyo Station"
+      origin_name_ja: "東京駅"
+      checked_at: "2026-09-30"
+      route_source_urls:
+        - "https://www.tokyometro.jp/transit/index.php"
+        - "https://www.tokyu.co.jp/area/gakugei-daigaku/station/"
+      estimate_note_en: "Approximate IC fare and travel time. Departure time and route choice can change the result; recheck before travel."
   etiquette_en:
-    - "Friendly local shopping streets."
-  last_verified: 2026-08-13
-
+    - "This is a working commuter station. Keep entrances, ticket gates, and nearby residential streets clear."
+  last_verified: 2026-09-30
 - id: komazawa-park
   name_en: "Komazawa Olympic Park"
   name_ja: "駒沢オリンピック公園"
@@ -2423,8 +2458,9 @@
   name_ja: "巣鴨駅"
   lat: 35.733412
   lng: 139.739427
-  address_ja: "東京都豊島区巣鴨1丁目"
-  address_en: "1-chome Sugamo, Toshima, Tokyo"
+  address_ja: "東京都豊島区巣鴨3-27-7"
+  address_en: "3-27-7 Sugamo, Toshima, Tokyo"
+  official_source_url: "https://www.kotsu.metro.tokyo.jp/subway/stations/sugamo.html"
   prefecture: tokyo
   municipality: toshima
   category: station
@@ -2434,14 +2470,25 @@
   nearest_station:
     name_en: "Sugamo Station"
     name_ja: "巣鴨駅"
-    lines: ["JR Yamanote"]
+    lines: ["JR Yamanote Line", "Toei Mita Line"]
     walk_min: 0
+    official_urls:
+      - "https://www.jreast.co.jp/estation/station/info.aspx?StationCd=896"
+      - "https://www.kotsu.metro.tokyo.jp/subway/stations/sugamo.html"
   travel_from:
-    tokyo: { minutes: 20, transfers: 0, fare_jpy: 220 }
+    tokyo:
+      minutes: 19
+      transfers: 0
+      fare_jpy: 209
+      origin_name_en: "Tokyo Station"
+      origin_name_ja: "東京駅"
+      checked_at: "2026-09-30"
+      route_source_urls:
+        - "https://www.jreast.co.jp/estation/station/info.aspx?StationCd=896"
+      estimate_note_en: "Approximate IC fare and travel time on JR. Departure time can change the result; recheck before travel."
   etiquette_en:
-    - "Home of the 'gran' shopping street."
-  last_verified: 2026-08-13
-
+    - "Keep station entrances and platforms clear for commuters."
+  last_verified: 2026-09-30
 - id: sugamo-jizo-dori
   name_en: "Sugamo Jizo-dori"
   name_ja: "巣鴨地蔵通り"
@@ -3384,8 +3431,9 @@
   name_ja: "目白駅"
   lat: 35.720338
   lng: 139.706189
-  address_ja: "東京都豊島区目白3丁目"
-  address_en: "3-chome Mejiro, Toshima, Tokyo"
+  address_ja: "東京都豊島区目白3-3-1"
+  address_en: "3-3-1 Mejiro, Toshima, Tokyo"
+  official_source_url: "https://www.jreast.co.jp/estation/stations/1553.html"
   prefecture: tokyo
   municipality: toshima
   category: station
@@ -3395,14 +3443,24 @@
   nearest_station:
     name_en: "Mejiro Station"
     name_ja: "目白駅"
-    lines: ["JR Yamanote"]
+    lines: ["JR Yamanote Line"]
     walk_min: 0
+    official_urls:
+      - "https://www.jreast.co.jp/estation/stations/1553.html"
   travel_from:
-    tokyo: { minutes: 20, transfers: 0, fare_jpy: 220 }
+    tokyo:
+      minutes: 26
+      transfers: 0
+      fare_jpy: 253
+      origin_name_en: "Tokyo Station"
+      origin_name_ja: "東京駅"
+      checked_at: "2026-09-30"
+      route_source_urls:
+        - "https://www.jreast.co.jp/estation/stations/1553.html"
+      estimate_note_en: "Approximate IC fare and travel time on JR. Departure time can change the result; recheck before travel."
   etiquette_en:
-    - "Elegant residential station."
-  last_verified: 2026-08-14
-
+    - "Keep the compact station entrance and surrounding pedestrian routes clear."
+  last_verified: 2026-09-30
 - id: sunshine-city
   name_en: "Sunshine City"
   name_ja: "サンシャインシティ"

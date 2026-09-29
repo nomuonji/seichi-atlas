@@ -14,6 +14,14 @@ export interface Work {
   mal_id?: number;
   anilist_id?: number;
   official_url?: string;
+  /** Optional per-work search metadata; display title remains title_en. */
+  seo_title?: string;
+  seo_description?: string;
+  /** Optional featured place for high-intent location discovery on the work page. */
+  featured_location_id?: string;
+  featured_location_label_en?: string;
+  featured_visit_source_url?: string;
+  featured_visit_note_en?: string;
   // derived
   slug: string;
 }
@@ -37,12 +45,20 @@ export interface StationRef {
   name_ja: string;
   lines: string[];
   walk_min: number;
+  /** Current official station/operator information pages. */
+  official_urls?: string[];
 }
 
 export interface TravelFrom {
   minutes: number;
   transfers: number;
   fare_jpy: number;
+  /** Origin is explicit because "Tokyo" is otherwise ambiguous. */
+  origin_name_en?: string;
+  origin_name_ja?: string;
+  checked_at?: string;
+  route_source_urls?: string[];
+  estimate_note_en?: string;
 }
 
 export interface Location {
@@ -53,6 +69,8 @@ export interface Location {
   lng: number;
   address_ja: string;
   address_en?: string;
+  /** Primary official source for the location/address when available. */
+  official_source_url?: string;
   prefecture: string;
   municipality: string;
   category: Category;

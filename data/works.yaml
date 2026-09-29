@@ -13,6 +13,12 @@
   mal_id: 32281
   anilist_id: 21519
   official_url: "https://www.kiminona.com/"
+  seo_title: "Your Name (Kimi no Na wa) locations in Tokyo"
+  seo_description: "Your Name (Kimi no Na wa) filming-inspired locations in Tokyo, including the Suga Shrine Steps (Otokozaka), address, verified access notes, and Google Maps coordinates."
+  featured_location_id: "suga-shrine-steps"
+  featured_location_label_en: "Suga Shrine Steps (Otokozaka)"
+  featured_visit_source_url: "https://sugajinjya.or.jp/faq/"
+  featured_visit_note_en: "Official shrine FAQ: gates are 06:00-17:00; November-February opening is 06:30. Goshuin/amulet office hours are separate."
 
 - id: weathering-with-you
   title_en: "Weathering with You"
