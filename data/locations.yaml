@@ -33,7 +33,7 @@
       fare_jpy: 220
       origin_name_en: "Tokyo Station"
       origin_name_ja: "東京駅"
-      checked_at: 2026-09-30
+      checked_at: "2026-09-30"
       route_source_urls:
         - "https://www.tokyometro.jp/transit/index.php"
       estimate_note_en: "Approximate travel time and fare; recheck the current route before travel."
@@ -1623,7 +1623,7 @@
       fare_jpy: 389
       origin_name_en: "Tokyo Station"
       origin_name_ja: "東京駅"
-      checked_at: 2026-09-30
+      checked_at: "2026-09-30"
       route_source_urls:
         - "https://www.tokyometro.jp/transit/index.php"
         - "https://www.tokyu.co.jp/area/sangen-jaya/station/"
@@ -2252,7 +2252,7 @@
       fare_jpy: 349
       origin_name_en: "Tokyo Station"
       origin_name_ja: "東京駅"
-      checked_at: 2026-09-30
+      checked_at: "2026-09-30"
       route_source_urls:
         - "https://www.tokyometro.jp/transit/index.php"
         - "https://www.tokyu.co.jp/area/gakugei-daigaku/station/"
@@ -2482,7 +2482,7 @@
       fare_jpy: 209
       origin_name_en: "Tokyo Station"
       origin_name_ja: "東京駅"
-      checked_at: 2026-09-30
+      checked_at: "2026-09-30"
       route_source_urls:
         - "https://www.jreast.co.jp/estation/station/info.aspx?StationCd=896"
       estimate_note_en: "Approximate IC fare and travel time on JR. Departure time can change the result; recheck before travel."
@@ -3454,7 +3454,7 @@
       fare_jpy: 253
       origin_name_en: "Tokyo Station"
       origin_name_ja: "東京駅"
-      checked_at: 2026-09-30
+      checked_at: "2026-09-30"
       route_source_urls:
         - "https://www.jreast.co.jp/estation/stations/1553.html"
       estimate_note_en: "Approximate IC fare and travel time on JR. Departure time can change the result; recheck before travel."
