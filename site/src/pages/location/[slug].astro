@@ -143,23 +143,47 @@ const jsonLd = {
               <span class="access-row__val">
                 {loc.nearest_station?.name_en || '·'}<span class="mono" style="color:var(--text-faint);"> {loc.nearest_station?.name_ja || ''}</span>
               </span>
-              {loc.nearest_station?.walk_min && (
+              {loc.nearest_station?.lines?.length ? (
+                <span class="access-row__sub mono">{loc.nearest_station.lines.join(' · ')}</span>
+              ) : null}
+              {loc.nearest_station?.walk_min ? (
                 <span class="access-row__sub mono">{loc.nearest_station.walk_min} min walk</span>
-              )}
+              ) : null}
+              {loc.nearest_station?.official_urls?.length ? (
+                <span class="access-row__sub mono">
+                  {loc.nearest_station.official_urls.map((url, index) => (
+                    <>
+                      {index > 0 ? ' · ' : ''}
+                      <a href={url} target="_blank" rel="noopener">official station info{loc.nearest_station!.official_urls!.length > 1 ? ` ${index + 1}` : ''}</a>
+                    </>
+                  ))}
+                </span>
+              ) : null}
             </div>
           </div>
           {tf && (
             <div class="access-row">
               <Icon name="clock" size={18} />
               <div>
-                <span class="access-row__label micro">From Tokyo Station</span>
+                <span class="access-row__label micro">From {tf.origin_name_en || 'Tokyo Station'}</span>
                 <span class="access-row__val mono">~{tf.minutes} min · {tf.transfers} transfer{tf.transfers === 1 ? '' : 's'}</span>
-                <span class="access-row__sub mono">≈ ¥{tf.fare_jpy}</span>
+                <span class="access-row__sub mono">≈ ¥{tf.fare_jpy} IC fare · estimate{tf.checked_at ? ` checked ${tf.checked_at}` : ''}</span>
+                {tf.estimate_note_en ? <span class="access-row__sub">{tf.estimate_note_en}</span> : null}
+                {tf.route_source_urls?.length ? (
+                  <span class="access-row__sub mono">
+                    {tf.route_source_urls.map((url, index) => (
+                      <>
+                        {index > 0 ? ' · ' : ''}
+                        <a href={url} target="_blank" rel="noopener">route / operator source{tf.route_source_urls!.length > 1 ? ` ${index + 1}` : ''}</a>
+                      </>
+                    ))}
+                  </span>
+                ) : null}
               </div>
             </div>
           )}
-          <a class="btn btn--ghost btn--sm" href={`https://www.google.com/maps/dir/35.681236,139.767125/${loc.lat},${loc.lng}`} target="_blank" rel="noopener">
-            <Icon name="map" size={15} /> Directions from Tokyo
+          <a class="btn btn--ghost btn--sm" href={`https://www.google.com/maps/dir/Tokyo+Station/${loc.lat},${loc.lng}`} target="_blank" rel="noopener">
+            <Icon name="map" size={15} /> Recheck route from Tokyo Station
           </a>
         </div>
 
@@ -174,6 +198,11 @@ const jsonLd = {
           {!loc.etiquette_en?.length && (
             <p class="access-note">Be respectful of this place and the people around it.</p>
           )}
+          {loc.official_source_url ? (
+            <p class="source-note mono">
+              <a href={loc.official_source_url} target="_blank" rel="noopener">Official location / access source</a>
+            </p>
+          ) : null}
         </div>
       </div>
 
