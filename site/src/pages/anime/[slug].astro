@@ -19,6 +19,7 @@ const prefIds = [...new Set(locs.map((l) => l.prefecture))];
 const prefs = prefIds.map((p) => prefectureById.get(p)?.name_en || p);
 const aliases = work.aliases?.filter((a) => a.toLowerCase() !== work.title_en.toLowerCase());
 const cover = workCover(work.id);
+const featuredLocation = work.featured_location_id ? locations.find((l) => l.id === work.featured_location_id) : undefined;
 
 // Category breakdown
 const catLabels: Record<string, string> = {
@@ -57,7 +58,7 @@ const jsonLd = {
 };
 ---
 
-<Base title={work.title_en} description={`All verified anime pilgrimage locations for ${work.title_en} (${work.title_ja}), with coordinates, travel time from Tokyo, and access notes.`} ogImage={`/og/anime-${work.slug}.png`} ogType={work.type === 'film' || work.type === 'ova' ? 'video.movie' : 'video.tv_show'}>
+<Base title={work.seo_title || work.title_en} description={work.seo_description || `All verified anime pilgrimage locations for ${work.title_en} (${work.title_ja}), with coordinates, travel time from Tokyo, and access notes.`} ogImage={`/og/anime-${work.slug}.png`} ogType={work.type === 'film' || work.type === 'ova' ? 'video.movie' : 'video.tv_show'}>
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <section class="section section--paper">
     <div class="container">
@@ -102,6 +103,21 @@ const jsonLd = {
         </div>
       </div>
 
+      {featuredLocation && (
+        <div class="featured-location card">
+          <p class="micro">Featured location</p>
+          <h2 class="display-md">{work.featured_location_label_en || featuredLocation.name_en}</h2>
+          <p class="mono">{featuredLocation.name_ja} · {featuredLocation.address_en || featuredLocation.address_ja}</p>
+          <p class="access-note">For Your Name / Kimi no Na wa visitors, this is the Suga Shrine Otokozaka staircase. Open the dedicated location page for coordinates, access estimates, etiquette, and the map.</p>
+          <div class="work-head__links">
+            <a class="btn btn--primary btn--sm" href={`/location/${featuredLocation.slug}/`}>View location</a>
+            <a class="btn btn--ghost btn--sm" href={`https://www.google.com/maps/search/${featuredLocation.lat},${featuredLocation.lng}`} target="_blank" rel="noopener"><Icon name="map" size={15} /> Google Maps</a>
+            {work.featured_visit_source_url ? <a class="btn btn--ghost btn--sm" href={work.featured_visit_source_url} target="_blank" rel="noopener"><Icon name="external" size={15} /> Official shrine hours</a> : null}
+          </div>
+          {work.featured_visit_note_en ? <p class="source-note mono">{work.featured_visit_note_en}</p> : null}
+        </div>
+      )}
+
       {catEntries.length > 0 && (
         <div class="cat-strip">
           {catEntries.map(([cat, n]) => (
@@ -142,13 +158,13 @@ const jsonLd = {
       <div class="daytrip-banner">
         <Icon name="train" size={20} />
         <div>
-          <strong>{daytrip.length} sites are reachable as a day trip from Tokyo</strong>
+          <strong>{daytrip.length} sites have a stored one-way Tokyo Station estimate of 3 hours or less</strong>
           <span class="mono daytrip-banner__sub">
-            {daytrip.length > 0 ? 'open each site for the route and Japanese address' : 'all mapped sites are within reach'}
+            {daytrip.length > 0 ? 'this is an access filter, not a promise that every site fits into one day' : 'no locations currently meet this one-way threshold'}
           </span>
         </div>
         {daytrip.length > 0 && (
-          <a class="btn btn--primary btn--sm" href={`/anime/${work.slug}/day-trip/`}>View day-trip list</a>
+          <a class="btn btn--primary btn--sm" href={`/anime/${work.slug}/day-trip/`}>View Tokyo-access list</a>
         )}
       </div>
 
